@@ -10,31 +10,31 @@ import Game from './components/game/Game';
 
 export default function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <Router>
         <div>
           <nav>
             <ul>
               <li>
-                <Link to='/'>Home</Link>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to='/start'>Start</Link>
+                <Link to="/start">Start</Link>
               </li>
               <li>
-                <Link to='/game'>Game</Link>
+                <Link to="/game">Game</Link>
               </li>
               <li>
-                <Link to='/about'>About</Link>
+                <Link to="/about">About</Link>
               </li>
             </ul>
           </nav>
           <Switch>
-            <Route exact path='/' component={Home} />
-            <Route path='/start' component={Start} />
-            <Route path='/game' component={Game} />
-            <Route path='/planet/:id' component={Planet} />
-            <Route path='/about' component={About} />
+            <Route exact path="/" component={Home} />
+            <Route path="/start" component={Start} />
+            <Route path="/game" component={Game} />
+            <Route path="/planet/:id" component={Planet} />
+            <Route path="/about" component={About} />
           </Switch>
         </div>
       </Router>
