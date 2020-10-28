@@ -33,7 +33,7 @@ export default function App() {
             <Route exact path="/" component={Home} />
             <Route path="/start" component={Start} />
             <Route path="/game" component={Game} />
-            <Route path="/planet/:id" component={Planet} />
+            <Route path="/planet/" component={Planet} />
             <Route path="/about" component={About} />
           </Switch>
         </div>
