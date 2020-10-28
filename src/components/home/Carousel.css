@@ -1,0 +1,14 @@
+.carousel-status {
+  display: none;
+}
+
+.carousel .thumbs {
+  display: none;
+}
+.carousel .control-dots {
+  display: none;
+}
+
+.carousel .control-arrow:before,
+.carousel.carousel-slider .control-arrow:before {
+}
