@@ -1,10 +1,7 @@
-.carousel-status {
-  display: none;
+.carousel-root {
+  width: 50%;
+  margin: auto;
 }
-
 .carousel .thumbs {
-  display: none;
-}
-.carousel .control-dots {
   display: none;
 }
