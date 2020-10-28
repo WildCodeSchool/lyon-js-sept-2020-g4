@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import DisplayPlanets from './DisplayPlanets';
+import { ExtraProps } from './ExtraProp';
 
 class Planets extends React.Component {
   constructor(props) {
@@ -9,19 +10,29 @@ class Planets extends React.Component {
       carac: [],
     };
   }
+
   componentDidMount() {
     axios
       .get(
         'https://api.le-systeme-solaire.net/rest/bodies/?filter[]=isPlanet,neq,true&&filter[]=id,neq,ceres&&filter[]=id,neq,eris&&filter[]=id,neq,haumea&&filter[]=id,neq,makemake'
       )
       .then((response) => {
-        /*console.log(response.data);*/
-        this.setState({ carac: response.data.bodies });
+        const arrFromApi = response.data.bodies;
+        const finalArr = arrFromApi.map((item) => {
+          const propToAdd = ExtraProps[item.id] ? ExtraProps[item.id] : {};
+          console.log(propToAdd);
+          return { ...item, ...propToAdd };
+        });
+        this.setState({
+          carac: finalArr,
+        });
+        console.log(finalArr);
       })
       .catch((error) => {
         console.log(error);
       });
   }
+
   render() {
     const { carac } = this.state;
     return (
