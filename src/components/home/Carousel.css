@@ -1,7 +1,35 @@
-.carousel-root {
-  width: 50%;
-  margin: auto;
+.carousel-container {
+  color: black;
+  text-align: center;
+
+  display: flex;
 }
-.carousel .thumbs {
-  display: none;
+
+.carousel-viewport {
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+  border: 3px solid black;
+  flex-grow: 1;
+}
+
+.carousel-nav {
+  flex-basis: 35px;
+  flex-shrink: 0;
+  cursor: pointer;
+  background-color: cornflowerblue;
+  border: 1px solid blue;
+  outline: none;
+}
+.carousel-nav:focus {
+  border: 1px solid darkblue;
+}
+.carousel-nav:hover {
+  opacity: 1;
+}
+
+.carousel-left-navigation-button {
+}
+
+.carousel-right-navigation-button {
 }

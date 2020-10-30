@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1",
+    "name": "Mercury",
+    "image": "http://space-facts.com/wp-content/uploads/mercury-transparent.png"
+  },
+  {
+    "id": "2",
+    "name": "Venus",
+    "image": "http://space-facts.com/wp-content/uploads/venus-transparent.png"
+  },
+  {
+    "id": "3",
+    "name": "Earth",
+    "image": "http://space-facts.com/wp-content/uploads/earth-transparent.png"
+  },
+  {
+    "id": "4",
+    "name": "Mars",
+    "image": "http://space-facts.com/wp-content/uploads/mars-transparent.png"
+  },
+  {
+    "id": "5",
+    "name": "Jupiter",
+    "image": "http://space-facts.com/wp-content/uploads/jupiter-transparent.png"
+  },
+  {
+    "id": "6",
+    "name": "Saturn",
+    "image": "http://space-facts.com/wp-content/uploads/saturn-transparent.png"
+  },
+  {
+    "id": "7",
+    "name": "Uranus",
+    "image": "http://space-facts.com/wp-content/uploads/uranus-transparent.png"
+  },
+  {
+    "id": "8",
+    "name": "Neptune",
+    "image": "http://space-facts.com/wp-content/uploads/neptune-transparent.png"
+  },
+  {
+    "id": "9",
+    "name": "Sun",
+    "image": "http://pngimg.com/uploads/sun/sun_PNG13424.png"
+  }
+]
