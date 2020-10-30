@@ -3,6 +3,7 @@
   text-align: center;
 
   display: flex;
+  margin: 100px;
 }
 
 .carousel-viewport {
@@ -32,4 +33,8 @@
 }
 
 .carousel-right-navigation-button {
+}
+
+h1 {
+  text-align: center;
 }
