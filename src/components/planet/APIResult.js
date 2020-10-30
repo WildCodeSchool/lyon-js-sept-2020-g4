@@ -1,15 +1,15 @@
 import React from 'react';
+import Home from '../home/Home';
+import { ExtraProps } from './ExtraProp';
 import axios from 'axios';
-import DisplayPlanets from '../planet/DisplayPlanets';
-import { ExtraProps } from '../planet/ExtraProp';
-import PlanetsDetails from '../planet/PlanetsDetails';
 
-class Home extends React.Component {
+
+class APIResult extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      carac: [],
-    };
+    this.state = { 
+      data: []
+     }
   }
 
   componentDidMount() {
@@ -31,14 +31,9 @@ class Home extends React.Component {
         console.log(error);
       });
   }
-
-  render() {
-    const { carac } = this.state;
-    return (
-      <div className="renderingPlanets">
-        {carac ? <DisplayPlanets carac={carac} /> : <p>No data yet</p>}
-      </div>
-    );
+  render() { 
+    return (  );
   }
 }
-export default Home;
+ 
+export default APIResult;

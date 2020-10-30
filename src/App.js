@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import About from './components/about/About';
 import Planet from './components/planet/Planet';
-
+import PlanetsDetails from './components/planet/PlanetsDetails';
 import Home from './components/home/Home';
 import Start from './components/home/Start';
 import Game from './components/game/Game';
@@ -33,7 +33,7 @@ export default function App() {
             <Route exact path="/" component={Home} />
             <Route path="/start" component={Start} />
             <Route path="/game" component={Game} />
-            <Route path="/planet/" component={Planet} />
+            <Route exact path="/:id" component={PlanetsDetails} />
             <Route path="/about" component={About} />
           </Switch>
         </div>

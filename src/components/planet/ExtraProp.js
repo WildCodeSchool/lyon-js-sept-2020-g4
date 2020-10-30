@@ -99,3 +99,5 @@ export const ExtraProps = {
       "Vénus est la deuxième planète du Système solaire par ordre d'éloignement au Soleil, et la sixième plus grosse aussi bien par la masse que le diamètre. Elle doit son nom à la déesse romaine de l'amour. Vénus orbite autour du Soleil tous les 224,7 jours terrestres. ",
   },
 };
+
+export { ExtraProps as default };
