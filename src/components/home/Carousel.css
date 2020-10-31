@@ -1,7 +1,7 @@
 .carousel-container {
   color: black;
   text-align: center;
-
+  /* background-image: url('https://blenderartists.org/uploads/default/original/3X/e/5/e52e38b9be52c6ebb37a73df1a31478a3988bd6f.jpg'); */
   display: flex;
   margin: 100px;
 }
@@ -18,21 +18,17 @@
   flex-basis: 35px;
   flex-shrink: 0;
   cursor: pointer;
-  background-color: cornflowerblue;
-  border: 1px solid blue;
+  background-color: grey;
+  border: 1px solid black;
   outline: none;
+  height: 30px;
+  align-self: center;
 }
 .carousel-nav:focus {
-  border: 1px solid darkblue;
+  border: 1px solid black;
 }
 .carousel-nav:hover {
   opacity: 1;
-}
-
-.carousel-left-navigation-button {
-}
-
-.carousel-right-navigation-button {
 }
 
 h1 {

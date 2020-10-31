@@ -31,19 +31,12 @@ class Carousel extends Component {
 
   handleRightNavigation = () => {
     const { carouselViewport } = this.refs;
-    const { numberOfSlidesToScroll } = this.state;
-    const widthOfSlide = 120;
-    const newPosition =
-      carouselViewport.scrollLeft + numberOfSlidesToScroll * widthOfSlide;
-    const timeToMoveOneSlide = 200;
-    const totalTimeToMove = Math.min(
-      numberOfSlidesToScroll * timeToMoveOneSlide,
-      400
-    );
+    const { widthToScroll, timeToScroll } = this.widthAndTimeToScroll();
+    const newPosition = carouselViewport.scrollLeft + widthToScroll;
     scrollToAnimate({
       element: carouselViewport,
       to: newPosition,
-      duration: totalTimeToMove,
+      duration: timeToScroll,
       scrollDirection: 'scrollLeft',
     });
   };
@@ -61,28 +54,38 @@ class Carousel extends Component {
     }
   }
 
-  handleLeftNavigation() {
+  widthAndTimeToScroll() {
     const { carouselViewport } = this.refs;
     const { numberOfSlidesToScroll } = this.state;
+    if (numberOfSlidesToScroll === 'full') {
+      return {
+        widthToScroll: carouselViewport.offSetWidth,
+        timeToScroll: 400,
+      };
+    }
     const widthOfSlide = 120;
-    const newPosition =
-      carouselViewport.scrollLeft - numberOfSlidesToScroll * widthOfSlide;
     const timeToMoveOneSlide = 200;
-    const totalTimeToMove = Math.min(
-      numberOfSlidesToScroll * timeToMoveOneSlide,
-      400
-    );
+    return {
+      widthToScroll: numberOfSlidesToScroll * widthOfSlide,
+      timeToScroll: Math.min(numberOfSlidesToScroll * timeToMoveOneSlide, 400),
+    };
+  }
+
+  handleLeftNavigation() {
+    const { carouselViewport } = this.refs;
+    const { widthToScroll, timeToScroll } = this.widthAndTimeToScroll();
+    const newPosition = carouselViewport.scrollLeft - widthToScroll;
     scrollToAnimate({
       element: carouselViewport,
       to: newPosition,
-      duration: totalTimeToMove,
+      duration: timeToScroll,
       scrollDirection: 'scrollLeft',
     });
   }
 
   renderSlides() {
     return this.obj.map((item) => {
-      return <Slide name={item.name} key={item.id} />;
+      return <Slide src={item.image} key={item.id} />;
     });
   }
 
