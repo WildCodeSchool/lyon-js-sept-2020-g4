@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import DisplayPlanets from '../planet/DisplayPlanets';
 import { ExtraProps } from '../planet/ExtraProp';
-import PlanetsDetails from '../planet/PlanetsDetails';
 
 class Home extends React.Component {
   constructor(props) {

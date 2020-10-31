@@ -1,15 +1,13 @@
 import React from 'react';
-import Home from '../home/Home';
-import { ExtraProps } from './ExtraProp';
 import axios from 'axios';
-
+import { ExtraProps } from './ExtraProp';
 
 class APIResult extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      data: []
-     }
+    this.state = {
+      data: [],
+    };
   }
 
   componentDidMount() {
@@ -31,9 +29,10 @@ class APIResult extends React.Component {
         console.log(error);
       });
   }
-  render() { 
-    return (  );
+
+  render() {
+    return <div />;
   }
 }
- 
+
 export default APIResult;

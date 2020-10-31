@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import About from './components/about/About';
-import Planet from './components/planet/Planet';
 import PlanetsDetails from './components/planet/PlanetsDetails';
 import Home from './components/home/Home';
 import Start from './components/home/Start';
