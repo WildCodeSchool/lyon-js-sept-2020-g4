@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import Start from './Start';
+import IssStatus from '../iss/Iss';
 import DisplayPlanets from '../planet/DisplayPlanets';
 import { ExtraProps } from '../planet/ExtraProp';
 
@@ -36,6 +38,8 @@ class Home extends React.Component {
     return (
       <div className="renderingPlanets">
         {carac ? <DisplayPlanets carac={carac} /> : <p>No data yet</p>}
+        <Start />
+        <IssStatus />
       </div>
     );
   }
