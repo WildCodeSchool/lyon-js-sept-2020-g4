@@ -1,7 +1,6 @@
 .slide {
   display: inline-block;
   vertical-align: top;
-  border-right: 1px solid black;
   height: 500px;
   width: 500px;
   padding: 5px;
@@ -9,4 +8,8 @@
 }
 .slide:last-child {
   border-right: none;
+}
+
+.slide:hover {
+  transform: scale(1.5);
 }
