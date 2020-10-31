@@ -1,7 +1,6 @@
 .carousel-container {
-  color: black;
   text-align: center;
-  /* background-image: url('https://blenderartists.org/uploads/default/original/3X/e/5/e52e38b9be52c6ebb37a73df1a31478a3988bd6f.jpg'); */
+  background-image: url('https://blenderartists.org/uploads/default/original/3X/e/5/e52e38b9be52c6ebb37a73df1a31478a3988bd6f.jpg');
   display: flex;
   margin: 100px;
 }
@@ -10,7 +9,6 @@
   white-space: nowrap;
   overflow-y: hidden;
   overflow-x: auto;
-  border: 3px solid black;
   flex-grow: 1;
 }
 
@@ -19,7 +17,6 @@
   flex-shrink: 0;
   cursor: pointer;
   background-color: grey;
-  border: 1px solid black;
   outline: none;
   height: 30px;
   align-self: center;

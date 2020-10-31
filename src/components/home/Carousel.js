@@ -85,7 +85,7 @@ class Carousel extends Component {
 
   renderSlides() {
     return this.obj.map((item) => {
-      return <Slide src={item.image} key={item.id} />;
+      return <Slide url={item.url} key={item.id} />;
     });
   }
 
