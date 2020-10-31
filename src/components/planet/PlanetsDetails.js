@@ -11,11 +11,14 @@ class PlanetDetails extends React.Component {
   }
 
   componentDidMount() {
-    const data = this.props.match.params;
-
+    const {
+      match: {
+        params: { id },
+      },
+    } = this.props;
     axios
       .get(
-        `https://api.le-systeme-solaire.net/rest/bodies/?filter[]=id,eq,${data.id}`
+        `https://api.le-systeme-solaire.net/rest/bodies/?filter[]=id,eq,${id}`
       )
       .then((response) => {
         const arrFromApi = response.data.bodies;
@@ -31,12 +34,14 @@ class PlanetDetails extends React.Component {
         console.log(error);
       });
   }
+
   render() {
     const { carac } = this.state;
+
     return (
       <div className="DisplayPlanets">
-        {carac.map((e, index) => (
-          <div key={index} className="box">
+        {carac.map((e) => (
+          <div key={e.id} className="box">
             <ul>
               <h3>{e.name}</h3>
               <li>Distance du soleil:{e.fromSun} millions de km</li>

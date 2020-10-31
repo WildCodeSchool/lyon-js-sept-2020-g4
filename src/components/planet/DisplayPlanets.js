@@ -7,7 +7,7 @@ function DisplayPlanets({ carac }) {
     <div className="DisplayPlanets">
       <h2>Planets Details</h2>
       {carac.map((e) => (
-        <div className="caroussel">
+        <div key={e.id} className="caroussel">
           <Link to={{ pathname: `/${e.id}` }}>
             <h3>{e.name}</h3>
           </Link>
