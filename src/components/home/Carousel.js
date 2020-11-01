@@ -14,6 +14,7 @@ class Carousel extends Component {
     this.state = {
       numberOfSlidesToScroll: 4,
     };
+    this.carouselViewport = React.createRef();
   }
 
   componentDidMount() {
@@ -30,7 +31,7 @@ class Carousel extends Component {
   }
 
   handleRightNavigation = () => {
-    const { carouselViewport } = this.refs;
+    const carouselViewport = this.carouselViewport.current;
     const { widthToScroll, timeToScroll } = this.widthAndTimeToScroll();
     const newPosition = carouselViewport.scrollLeft + widthToScroll;
     scrollToAnimate({
@@ -55,7 +56,7 @@ class Carousel extends Component {
   }
 
   widthAndTimeToScroll() {
-    const { carouselViewport } = this.refs;
+    const carouselViewport = this.carouselViewport.current;
     const { numberOfSlidesToScroll } = this.state;
     if (numberOfSlidesToScroll === 'full') {
       return {
@@ -72,7 +73,7 @@ class Carousel extends Component {
   }
 
   handleLeftNavigation() {
-    const { carouselViewport } = this.refs;
+    const carouselViewport = this.carouselViewport.current;
     const { widthToScroll, timeToScroll } = this.widthAndTimeToScroll();
     const newPosition = carouselViewport.scrollLeft - widthToScroll;
     scrollToAnimate({
@@ -99,7 +100,7 @@ class Carousel extends Component {
         >
           &#60;
         </button>
-        <div className="carousel-viewport" ref="carouselViewport">
+        <div className="carousel-viewport" ref={this.carouselViewport}>
           {this.renderSlides()}
         </div>
         <button
