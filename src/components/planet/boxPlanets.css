@@ -1,8 +1,7 @@
 .box {
-  border: solid white;
+  border: solid;
   margin: 10px;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  color: white;
   width: 600px;
   height: auto;
   display: flex;
@@ -19,8 +18,6 @@ h2 {
 
 html {
   height: 100vh;
-  background: url('../../pictures/spacebackground2.png');
-  background-size: cover no-repeat;
 }
 
 .DisplayPlanets {

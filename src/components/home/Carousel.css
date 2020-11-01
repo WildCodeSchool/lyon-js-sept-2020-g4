@@ -1,0 +1,33 @@
+.carousel-container {
+  text-align: center;
+  background-image: url('https://blenderartists.org/uploads/default/original/3X/e/5/e52e38b9be52c6ebb37a73df1a31478a3988bd6f.jpg');
+  display: flex;
+  margin: 100px;
+}
+
+.carousel-viewport {
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+  flex-grow: 1;
+}
+
+.carousel-nav {
+  flex-basis: 35px;
+  flex-shrink: 0;
+  cursor: pointer;
+  background-color: grey;
+  outline: none;
+  height: 30px;
+  align-self: center;
+}
+.carousel-nav:focus {
+  border: 1px solid black;
+}
+.carousel-nav:hover {
+  opacity: 1;
+}
+
+h1 {
+  text-align: center;
+}

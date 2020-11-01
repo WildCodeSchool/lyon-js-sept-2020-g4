@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import Carousel from './Carousel';
+import './Carousel.css';
 import Start from './Start';
 import IssStatus from '../iss/Iss';
 import DisplayPlanets from '../planet/DisplayPlanets';
@@ -39,6 +41,7 @@ class Home extends React.Component {
       <div className="renderingPlanets">
         {carac ? <DisplayPlanets carac={carac} /> : <p>No data yet</p>}
         <Start />
+        <Carousel />
         <IssStatus />
       </div>
     );
