@@ -5,7 +5,6 @@ import './boxPlanets.css';
 function DisplayPlanets({ carac }) {
   return (
     <div className="DisplayPlanets">
-      <h2>Planets Details</h2>
       {carac.map((e) => (
         <div key={e.id} className="caroussel">
           <Link to={{ pathname: `/${e.id}` }}>

@@ -1,9 +1,28 @@
 .box {
-  border: solid;
+  border: solid white;
   margin: 10px;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  color: white;
 }
 
 h2 {
   text-align: center;
+}
+
+html {
+  height: 100vh;
+  background: url('../../pictures/spacebackground2.png');
+  background-size: cover no-repeat;
+}
+
+.DisplayPlanets {
+  display: flex;
+  justify-content: center;
+}
+.caroussel {
+  margin: 0 20px;
+}
+.caroussel a {
+  text-decoration: none;
+  color: white;
 }

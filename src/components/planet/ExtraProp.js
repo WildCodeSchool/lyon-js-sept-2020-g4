@@ -86,6 +86,8 @@ export const ExtraProps = {
     fromSun: 150,
     description:
       "La Terre est la troisième planète du système solaire. Il s'agit d'une planète tellurique. Elle tourne autour du Soleil en 365.25 jours et sur elle-même en 1 jour. La Terre n'est pas ronde, il s'agit d'un ellipsoïde aplati.",
+    url:
+      'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Ffr%2Fpng-hkwav&psig=AOvVaw3ePZ_aL5C-SArBX4B069WV&ust=1604319964460000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOix1t-r4ewCFQAAAAAdAAAAABAa',
   },
   venus: {
     tempMin: -482,

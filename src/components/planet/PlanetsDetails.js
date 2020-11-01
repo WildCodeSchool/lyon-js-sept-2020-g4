@@ -42,19 +42,22 @@ class PlanetDetails extends React.Component {
       <div className="DisplayPlanets">
         {carac.map((e) => (
           <div key={e.id} className="box">
-            <ul>
-              <h3>{e.name}</h3>
-              <li>Distance du soleil:{e.fromSun} millions de km</li>
-              <li>Composition:{e.composition}</li>
-              <li>Temperature Min:{e.tempMin}°</li>
-              <li>Temperature Max:{e.tempMax}°</li>
-              <li>Vitesse de rotation:{e.rotation} km/h</li>
-              <li>Période de roration:{e.periodeRotation}h</li>
-              <li>Révolution Solaire:{e.revolutionSolaire} jours</li>
-              <li>Gravity:{e.gravity}</li>
-              <li>Density:{e.density}</li>
-            </ul>
-            <p>{e.description}</p>
+            <div id="caracList">
+              <ul>
+                <h3>{e.name}</h3>
+                <img src="../../pictures/earth.png" alt="laterre" />
+                <li>Distance du soleil:{e.fromSun} millions de km</li>
+                <li>Composition:{e.composition}</li>
+                <li>Temperature Min:{e.tempMin}°</li>
+                <li>Temperature Max:{e.tempMax}°</li>
+                <li>Vitesse de rotation:{e.rotation} km/h</li>
+                <li>Période de roration:{e.periodeRotation}h</li>
+                <li>Révolution Solaire:{e.revolutionSolaire} jours</li>
+                <li>Gravity:{e.gravity}</li>
+                <li>Density:{e.density}</li>
+                <li>{e.description}</li>
+              </ul>
+            </div>
           </div>
         ))}
       </div>
