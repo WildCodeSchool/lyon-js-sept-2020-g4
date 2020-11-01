@@ -1,0 +1,37 @@
+/*body{
+    background-image: url("https://i.ytimg.com/vi/DQJa-uy3Kq8/maxresdefault.jpg");
+    background-size: 100%;
+    background-repeat: repeat;
+}*/
+
+.form-contact{
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-name{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact-lastname{
+  width: 20%;
+}
+
+.contact-firstname{
+  width: 20%;
+}
+
+.contact-email{
+  width: 40%;
+}
+
+.contact-message{
+  width: 40%;
+}  
+
