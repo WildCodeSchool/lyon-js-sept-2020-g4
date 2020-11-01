@@ -1,7 +1,10 @@
+import '../../pictures/earth.png';
+
 export const ExtraProps = {
   mars: {
     tempMin: -133,
     tempMax: 27,
+    url: './earth.png',
     composition: 'Gaz carbonique',
     rotation: 868,
     periodeRotation: 24.6,
@@ -13,6 +16,7 @@ export const ExtraProps = {
   neptune: {
     tempMin: -220,
     tempMax: -210,
+    url: './earth.png',
     composition: 'Hydrogène, Hélium et méthane',
     rotation: 9660,
     periodeRotation: 16.6,
@@ -24,6 +28,7 @@ export const ExtraProps = {
   uranus: {
     tempMin: -224,
     tempMax: -216,
+    url: './earth.png',
     composition: 'Hydrogène, Hélium et méthane',
     rotation: 9320,
     periodeRotation: 17,
@@ -35,6 +40,7 @@ export const ExtraProps = {
   pluton: {
     tempMin: -184,
     tempMax: -173,
+    url: './earth.png',
     composition: 'Azote, Monoxyde de carbone',
     rotation: 3700,
     periodeRotation: 6.387,
@@ -46,6 +52,7 @@ export const ExtraProps = {
   jupiter: {
     tempMin: -129,
     tempMax: -118,
+    url: './earth.png',
     composition: 'Hydrogène, Hélium',
     rotation: 47051,
     periodeRotation: 9.55,
@@ -57,6 +64,7 @@ export const ExtraProps = {
   mercure: {
     tempMin: -183,
     tempMax: 427,
+    url: './earth.png',
     composition: 'Hydrogène, Hélium',
     rotation: 1000,
     periodeRotation: 1392,
@@ -68,6 +76,7 @@ export const ExtraProps = {
   saturne: {
     tempMin: -184,
     tempMax: -173,
+    url: './earth.png',
     composition: 'Hydrogène, Hélium, eau, méthane, ammoniac',
     rotation: 34000,
     periodeRotation: 10.33,
@@ -79,6 +88,7 @@ export const ExtraProps = {
   terre: {
     tempMin: -184,
     tempMax: -173,
+    url: 'https://i.ibb.co/6N3kR3M/earth-test.png',
     composition: 'Azote, Oxygène, gaz carbonique',
     rotation: 1700,
     periodeRotation: 24,
@@ -86,12 +96,11 @@ export const ExtraProps = {
     fromSun: 150,
     description:
       "La Terre est la troisième planète du système solaire. Il s'agit d'une planète tellurique. Elle tourne autour du Soleil en 365.25 jours et sur elle-même en 1 jour. La Terre n'est pas ronde, il s'agit d'un ellipsoïde aplati.",
-    url:
-      'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Ffr%2Fpng-hkwav&psig=AOvVaw3ePZ_aL5C-SArBX4B069WV&ust=1604319964460000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOix1t-r4ewCFQAAAAAdAAAAABAa',
   },
   venus: {
     tempMin: -482,
     tempMax: -446,
+    url: './earth.png',
     composition: 'Dioxyde de carbone, diazote',
     rotation: 6.52,
     periodeRotation: -5832,

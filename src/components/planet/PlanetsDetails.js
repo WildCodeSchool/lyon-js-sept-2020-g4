@@ -39,13 +39,15 @@ class PlanetDetails extends React.Component {
     const { carac } = this.state;
 
     return (
-      <div className="DisplayPlanets">
+      <div className="caracsContainer">
         {carac.map((e) => (
           <div key={e.id} className="box">
+            <div className="planetsImg">
+              <img src={e.url} alt={e.name} />
+            </div>
             <div id="caracList">
               <ul>
                 <h3>{e.name}</h3>
-                <img src="../../pictures/earth.png" alt="laterre" />
                 <li>Distance du soleil:{e.fromSun} millions de km</li>
                 <li>Composition:{e.composition}</li>
                 <li>Temperature Min:{e.tempMin}°</li>
