@@ -1,42 +1,52 @@
 [
   {
-    "id": "1",
+    "id": "mercure",
     "name": "Mercury",
     "url": "./mercureTest.png"
   },
   {
-    "id": "2",
+    "id": "venus",
     "name": "Venus",
     "url": "http://space-facts.com/wp-content/uploads/venus-transparent.png"
   },
   {
-    "id": "3",
+    "id": "terre",
     "name": "Earth",
     "url": "./terreTest.png"
   },
   {
-    "id": "4",
+    "id": "mars",
     "name": "Mars",
     "url": "./marsTest.png"
   },
   {
-    "id": "5",
+    "id": "jupiter",
     "name": "Jupiter",
     "url": "./jupiterTest.png"
   },
   {
-    "id": "6",
+    "id": "saturne",
     "name": "Saturn",
     "url": "./saturneTest.png"
   },
   {
-    "id": "7",
+    "id": "uranus",
     "name": "Uranus",
     "url": "./uranusTest.png"
   },
   {
-    "id": "8",
+    "id": "pluton",
     "name": "Neptune",
     "url": "./neptuneTest.png"
+  },
+  {
+    "id": "soleil",
+    "name": "Sun",
+    "url": "http://pngimg.com/uploads/sun/sun_PNG13424.png"
+  },
+  {
+    "id": "lune",
+    "name": "Moon",
+    "url": "http://pngimg.com/uploads/moon/moon_PNG52.png"
   }
 ]

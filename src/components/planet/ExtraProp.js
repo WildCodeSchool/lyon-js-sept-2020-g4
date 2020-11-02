@@ -1,10 +1,8 @@
-import '../../pictures/earth.png';
-
 export const ExtraProps = {
   mars: {
     tempMin: -133,
     tempMax: 27,
-    url: './earth.png',
+    url: './pictures/earth.png',
     composition: 'Gaz carbonique',
     rotation: 868,
     periodeRotation: 24.6,
@@ -16,7 +14,7 @@ export const ExtraProps = {
   neptune: {
     tempMin: -220,
     tempMax: -210,
-    url: './earth.png',
+    url: './pictures/earth.png',
     composition: 'Hydrogène, Hélium et méthane',
     rotation: 9660,
     periodeRotation: 16.6,
@@ -28,7 +26,7 @@ export const ExtraProps = {
   uranus: {
     tempMin: -224,
     tempMax: -216,
-    url: './earth.png',
+    url: './pictures/earth.png',
     composition: 'Hydrogène, Hélium et méthane',
     rotation: 9320,
     periodeRotation: 17,
@@ -40,7 +38,7 @@ export const ExtraProps = {
   pluton: {
     tempMin: -184,
     tempMax: -173,
-    url: './earth.png',
+    url: './pictures/plutonTest.png',
     composition: 'Azote, Monoxyde de carbone',
     rotation: 3700,
     periodeRotation: 6.387,
@@ -52,7 +50,7 @@ export const ExtraProps = {
   jupiter: {
     tempMin: -129,
     tempMax: -118,
-    url: './earth.png',
+    url: './pictures/earth.png',
     composition: 'Hydrogène, Hélium',
     rotation: 47051,
     periodeRotation: 9.55,
@@ -64,7 +62,7 @@ export const ExtraProps = {
   mercure: {
     tempMin: -183,
     tempMax: 427,
-    url: './earth.png',
+    url: './pictures/earth.png',
     composition: 'Hydrogène, Hélium',
     rotation: 1000,
     periodeRotation: 1392,
@@ -76,7 +74,7 @@ export const ExtraProps = {
   saturne: {
     tempMin: -184,
     tempMax: -173,
-    url: './earth.png',
+    url: './pictures/earth.png',
     composition: 'Hydrogène, Hélium, eau, méthane, ammoniac',
     rotation: 34000,
     periodeRotation: 10.33,
@@ -88,7 +86,7 @@ export const ExtraProps = {
   terre: {
     tempMin: -184,
     tempMax: -173,
-    url: 'https://i.ibb.co/6N3kR3M/earth-test.png',
+    url: './pictures/earth.png',
     composition: 'Azote, Oxygène, gaz carbonique',
     rotation: 1700,
     periodeRotation: 24,
@@ -108,6 +106,30 @@ export const ExtraProps = {
     fromSun: 104,
     description:
       "Vénus est la deuxième planète du Système solaire par ordre d'éloignement au Soleil, et la sixième plus grosse aussi bien par la masse que le diamètre. Elle doit son nom à la déesse romaine de l'amour. Vénus orbite autour du Soleil tous les 224,7 jours terrestres. ",
+  },
+  soleil: {
+    tempMin: 4200,
+    tempMax: 8500,
+    url: './earth.png',
+    composition: 'Hydrogene, Hélium',
+    rotation: 7200,
+    periodeRotation: 648,
+    revolutionSolaire: 'N/A',
+    fromSun: 0,
+    description:
+      "Le soleil est une étoile de type naine jaune. C'est donc une énorme boule de gaz dans laquelle se produit une fusion nucléaire. Le soleil possède un diamètre d'environ 1 400 000 km. Il est 110 fois plus gros que la Terre. Il représente 99,86% du système solaire, soit 330 000 fois celle de la Terre.",
+  },
+  lune: {
+    tempMin: -223,
+    tempMax: 123,
+    url: './earth.png',
+    composition: 'Hélium, Néon',
+    rotation: 3683,
+    periodeRotation: 168,
+    revolution: 'N/A',
+    fromSun: 150,
+    description:
+      "La Lune, ou Terre I, est un objet céleste qui orbite autour de la planète Terre et le seul satellite naturel permanent de la Terre. C'est le cinquième plus grand satellite naturel du Système solaire et le plus grand des satellites planétaires par rapport à la taille de la planète autour de laquelle elle orbite. ",
   },
 };
 
