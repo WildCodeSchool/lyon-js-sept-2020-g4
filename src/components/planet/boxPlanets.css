@@ -14,10 +14,12 @@
 
 h2 {
   text-align: center;
+  color: white;
 }
 
 html {
   height: 100vh;
+  color: white;
 }
 
 .DisplayPlanets {

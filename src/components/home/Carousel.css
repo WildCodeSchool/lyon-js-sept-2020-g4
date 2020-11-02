@@ -1,8 +1,9 @@
 .carousel-container {
   text-align: center;
-  background-image: url('https://blenderartists.org/uploads/default/original/3X/e/5/e52e38b9be52c6ebb37a73df1a31478a3988bd6f.jpg');
+  background-image: url('/public/spacebackground3.png');
   display: flex;
-  margin: 100px;
+  margin: 10px;
+  margin-top: 100px;
 }
 
 .carousel-viewport {
@@ -16,7 +17,8 @@
   flex-basis: 35px;
   flex-shrink: 0;
   cursor: pointer;
-  background-color: grey;
+  background-color: white;
+  border-color: white;
   outline: none;
   height: 30px;
   align-self: center;

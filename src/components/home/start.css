@@ -1,5 +1,5 @@
 p {
-  color: blue;
+  color: white;
 }
 
 .accessApp {
@@ -11,5 +11,5 @@ p {
   height: 400px;
   margin: auto;
   text-align: center;
-  border: solid black 2px;
+  border: solid white 2px;
 }
