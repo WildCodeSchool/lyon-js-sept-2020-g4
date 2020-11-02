@@ -4,7 +4,7 @@
     background-repeat: repeat;
 }*/
 
-.form-contact{
+.form-contact {
   height: 600px;
   display: flex;
   flex-direction: column;
@@ -12,26 +12,25 @@
   align-items: center;
 }
 
-.contact-name{
+.contact-name {
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100%;
 }
 
-.contact-lastname{
+.contact-lastname {
   width: 20%;
 }
 
-.contact-firstname{
+.contact-firstname {
   width: 20%;
 }
 
-.contact-email{
+.contact-email {
   width: 40%;
 }
 
-.contact-message{
+.contact-message {
   width: 40%;
-}  
-
+}
