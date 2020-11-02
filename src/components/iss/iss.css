@@ -5,11 +5,17 @@
 }
 
 .issContainer {
+  margin-top: 100px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.issContainer h1 {
+  margin-bottom: 50px;
+}
 
 button {
   align-self: center;
+  margin-top: 30px;
 }

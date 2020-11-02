@@ -20,11 +20,16 @@
 #caracList h3 {
   color: white;
   font-size: 30px;
+  font-family: 'Comic Neue', cursive;
+}
+#caracList ul {
+  font-family: 'Comic Neue', cursive;
 }
 
 h2 {
   text-align: center;
   color: white;
+  font-family: 'Comic Neue', cursive;
 }
 
 html {
