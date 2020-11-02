@@ -30,3 +30,8 @@ html {
 .caroussel a {
   text-decoration: none;
 }
+.planetsImg {
+  width: 200px;
+  height: 200px;
+  border: solid;
+}
