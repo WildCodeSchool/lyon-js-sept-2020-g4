@@ -1,14 +1,11 @@
 .slide {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   width: 300px;
   padding: 5px;
+  margin: 25px;
   white-space: normal;
 }
 .slide:last-child {
   border-right: none;
-}
-
-.slide:hover {
-  transform: scale(1.2);
 }

@@ -28,9 +28,6 @@
 .carousel-nav:focus {
   border: 1px solid black;
 }
-.carousel-nav:hover {
-  opacity: 1;
-}
 
 h1 {
   text-align: center;

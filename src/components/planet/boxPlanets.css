@@ -3,13 +3,23 @@
   margin: 10px;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   width: 600px;
-  height: auto;
   display: flex;
+  padding: 50px;
 }
 
 .caracsContainer {
+  margin-top: 200px;
   display: flex;
   justify-content: center;
+}
+
+.planetsImg {
+  align-self: center;
+}
+
+#caracList h3 {
+  color: white;
+  font-size: 30px;
 }
 
 h2 {
@@ -31,9 +41,4 @@ html {
 }
 .caroussel a {
   text-decoration: none;
-}
-.planetsImg {
-  width: 200px;
-  height: 200px;
-  border: solid;
 }

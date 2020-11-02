@@ -10,14 +10,14 @@ h3 {
   color: white;
 }
 
-ul {
+nav ul {
   display: flex;
   justify-content: space-evenly;
   list-style: none;
   border-bottom: solid 1px white;
 }
 
-a {
+nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;

@@ -7,7 +7,7 @@
   {
     "id": "venus",
     "name": "Venus",
-    "url": "http://space-facts.com/wp-content/uploads/venus-transparent.png"
+    "url": "./venus.png"
   },
   {
     "id": "terre",
@@ -42,11 +42,11 @@
   {
     "id": "soleil",
     "name": "Sun",
-    "url": "http://pngimg.com/uploads/sun/sun_PNG13424.png"
+    "url": "./sun.png"
   },
   {
     "id": "lune",
     "name": "Moon",
-    "url": "http://pngimg.com/uploads/moon/moon_PNG52.png"
+    "url": "./moon.png"
   }
 ]
