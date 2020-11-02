@@ -3,3 +3,13 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+.issContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  margin-top: 50px;
+}

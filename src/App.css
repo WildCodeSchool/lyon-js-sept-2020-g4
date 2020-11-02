@@ -1,7 +1,31 @@
 body {
-  background-image: url('./pictures/spacebackground2.png');
+  background-image: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/cartoon-space-background-with-colorful-elena-eskevich.jpg');
+  /* background-image: url('https://img.freepik.com/free-vector/background-with-spaceship-many-planets-space_1639-13829.jpg?size=626&ext=jpg');
+  background-image: url('https://cdn5.vectorstock.com/i/1000x1000/93/84/space-cartoon-background-for-a-game-vector-21429384.jpg');
+  */
+  background-size: cover;
 }
 
 h3 {
   color: white;
 }
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  border-bottom: solid 1px white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+/*change hover effect
+a:hover {
+  text-decoration: underline;
+}
+*/
