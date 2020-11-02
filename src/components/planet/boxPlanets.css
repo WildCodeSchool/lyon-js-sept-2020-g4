@@ -1,0 +1,32 @@
+.box {
+  border: solid;
+  margin: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  width: 600px;
+  height: auto;
+  display: flex;
+}
+
+.caracsContainer {
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+html {
+  height: 100vh;
+}
+
+.DisplayPlanets {
+  display: flex;
+  justify-content: center;
+}
+.caroussel {
+  margin: 0 20px;
+}
+.caroussel a {
+  text-decoration: none;
+}

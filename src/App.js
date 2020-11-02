@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import About from './components/about/About';
-import Planet from './components/planet/Planet';
+import PlanetsDetails from './components/planet/PlanetsDetails';
 import Home from './components/home/Home';
 import Start from './components/home/Start';
 import Game from './components/game/Game';
@@ -33,7 +33,6 @@ export default function App() {
             <Route exact path="/" component={Home} />
             <Route path="/start" component={Start} />
             <Route path="/game" component={Game} />
-            <Route path="/planet/:id" component={Planet} />
             <Route path="/about">
               <FormValidation />
               <About
@@ -57,6 +56,7 @@ export default function App() {
                 avatar="https://randomuser.me/api/portraits/men/61.jpg"
               />
             </Route>
+            <Route exact path="/:id" component={PlanetsDetails} />
           </Switch>
         </div>
       </Router>
