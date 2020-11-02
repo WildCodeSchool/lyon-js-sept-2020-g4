@@ -1,5 +1,6 @@
 /* eslint-disable react/no-string-refs */
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Carousel.css';
 import data from './data.json';
 import Slide from './Slide';
@@ -86,7 +87,11 @@ class Carousel extends Component {
 
   renderSlides() {
     return this.obj.map((item) => {
-      return <Slide url={item.url} key={item.id} />;
+      return (
+        <Link to={{ pathname: `/${item.id}` }}>
+          <Slide url={item.url} key={item.id} />
+        </Link>
+      );
     });
   }
 

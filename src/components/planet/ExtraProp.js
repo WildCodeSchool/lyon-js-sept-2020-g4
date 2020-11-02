@@ -107,6 +107,30 @@ export const ExtraProps = {
     description:
       "Vénus est la deuxième planète du Système solaire par ordre d'éloignement au Soleil, et la sixième plus grosse aussi bien par la masse que le diamètre. Elle doit son nom à la déesse romaine de l'amour. Vénus orbite autour du Soleil tous les 224,7 jours terrestres. ",
   },
+  soleil: {
+    tempMin: 4200,
+    tempMax: 8500,
+    url: './earth.png',
+    composition: 'Hydrogene, Hélium',
+    rotation: 7200,
+    periodeRotation: 648,
+    revolutionSolaire: 'N/A',
+    fromSun: 0,
+    description:
+      "Le soleil est une étoile de type naine jaune. C'est donc une énorme boule de gaz dans laquelle se produit une fusion nucléaire. Le soleil possède un diamètre d'environ 1 400 000 km. Il est 110 fois plus gros que la Terre. Il représente 99,86% du système solaire, soit 330 000 fois celle de la Terre.",
+  },
+  lune: {
+    tempMin: -223,
+    tempMax: 123,
+    url: './earth.png',
+    composition: 'Hélium, Néon',
+    rotation: 3683,
+    periodeRotation: 168,
+    revolution: 'N/A',
+    fromSun: 150,
+    description:
+      "La Lune, ou Terre I, est un objet céleste qui orbite autour de la planète Terre et le seul satellite naturel permanent de la Terre. C'est le cinquième plus grand satellite naturel du Système solaire et le plus grand des satellites planétaires par rapport à la taille de la planète autour de laquelle elle orbite. ",
+  },
 };
 
 export { ExtraProps as default };
