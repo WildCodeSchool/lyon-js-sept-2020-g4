@@ -6,6 +6,7 @@ import PlanetsDetails from './components/planet/PlanetsDetails';
 import Home from './components/home/Home';
 import Start from './components/home/Start';
 import Game from './components/game/Game';
+import FormValidation from './components/about/Form';
 
 export default function App() {
   return (
@@ -32,8 +33,30 @@ export default function App() {
             <Route exact path="/" component={Home} />
             <Route path="/start" component={Start} />
             <Route path="/game" component={Game} />
+            <Route path="/about">
+              <FormValidation />
+              <About
+                name="Romain"
+                description="je suis un membre de la Wild Code School"
+                avatar="https://randomuser.me/api/portraits/men/40.jpg"
+              />
+              <About
+                name="Laurence"
+                description="je suis un membre de la Wild Code School"
+                avatar="https://randomuser.me/api/portraits/women/22.jpg"
+              />
+              <About
+                name="Antoine"
+                description="je suis un membre de la Wild Code School"
+                avatar="https://randomuser.me/api/portraits/men/22.jpg"
+              />
+              <About
+                name="Aymeric"
+                description="je suis un membre de la Wild Code School"
+                avatar="https://randomuser.me/api/portraits/men/61.jpg"
+              />
+            </Route>
             <Route exact path="/:id" component={PlanetsDetails} />
-            <Route path="/about" component={About} />
           </Switch>
         </div>
       </Router>
