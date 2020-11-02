@@ -1,5 +1,6 @@
 import React from 'react';
 import './start.css';
+import Button from '@material-ui/core/Button';
 
 class Start extends React.Component {
   constructor(props) {
@@ -27,9 +28,14 @@ class Start extends React.Component {
             trouverez sur cette page une présentation détaillée de ce qui
             compose le système solaire : Notre étoile le Soleil et ses planètes
           </p>
-          <button type="submit" onClick={this.onClick}>
+          <Button
+            type="submit"
+            onClick={this.onClick}
+            variant="contained"
+            color="primary"
+          >
             Commencer le voyage
-          </button>
+          </Button>
         </div>
       )
     );
