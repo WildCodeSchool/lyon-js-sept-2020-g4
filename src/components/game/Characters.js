@@ -1,4 +1,5 @@
 import React from 'react';
+import './Character.css';
 
 class Characters extends React.Component {
   constructor(props) {
@@ -7,7 +8,11 @@ class Characters extends React.Component {
   }
 
   render() {
-    return <div />;
+    return (
+      <div className="Characters">
+        <h2>Choose a Character</h2>
+      </div>
+    );
   }
 }
 
