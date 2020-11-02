@@ -1,10 +1,8 @@
-import '../../pictures/earth.png';
-
 export const ExtraProps = {
   mars: {
     tempMin: -133,
     tempMax: 27,
-    url: './earth.png',
+    url: './pictures/earth.png',
     composition: 'Gaz carbonique',
     rotation: 868,
     periodeRotation: 24.6,
@@ -16,7 +14,7 @@ export const ExtraProps = {
   neptune: {
     tempMin: -220,
     tempMax: -210,
-    url: './earth.png',
+    url: './pictures/earth.png',
     composition: 'Hydrogène, Hélium et méthane',
     rotation: 9660,
     periodeRotation: 16.6,
@@ -28,7 +26,7 @@ export const ExtraProps = {
   uranus: {
     tempMin: -224,
     tempMax: -216,
-    url: './earth.png',
+    url: './pictures/earth.png',
     composition: 'Hydrogène, Hélium et méthane',
     rotation: 9320,
     periodeRotation: 17,
@@ -40,7 +38,7 @@ export const ExtraProps = {
   pluton: {
     tempMin: -184,
     tempMax: -173,
-    url: './earth.png',
+    url: './pictures/plutonTest.png',
     composition: 'Azote, Monoxyde de carbone',
     rotation: 3700,
     periodeRotation: 6.387,
@@ -52,7 +50,7 @@ export const ExtraProps = {
   jupiter: {
     tempMin: -129,
     tempMax: -118,
-    url: './earth.png',
+    url: './pictures/earth.png',
     composition: 'Hydrogène, Hélium',
     rotation: 47051,
     periodeRotation: 9.55,
@@ -64,7 +62,7 @@ export const ExtraProps = {
   mercure: {
     tempMin: -183,
     tempMax: 427,
-    url: './earth.png',
+    url: './pictures/earth.png',
     composition: 'Hydrogène, Hélium',
     rotation: 1000,
     periodeRotation: 1392,
@@ -76,7 +74,7 @@ export const ExtraProps = {
   saturne: {
     tempMin: -184,
     tempMax: -173,
-    url: './earth.png',
+    url: './pictures/earth.png',
     composition: 'Hydrogène, Hélium, eau, méthane, ammoniac',
     rotation: 34000,
     periodeRotation: 10.33,
@@ -88,7 +86,7 @@ export const ExtraProps = {
   terre: {
     tempMin: -184,
     tempMax: -173,
-    url: 'https://i.ibb.co/6N3kR3M/earth-test.png',
+    url: './pictures/earth.png',
     composition: 'Azote, Oxygène, gaz carbonique',
     rotation: 1700,
     periodeRotation: 24,
