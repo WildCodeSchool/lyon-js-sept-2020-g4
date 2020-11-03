@@ -2,22 +2,34 @@ body {
   /* 
   background-image: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/cartoon-space-background-with-colorful-elena-eskevich.jpg');
   background-image: url('https://img.freepik.com/free-vector/background-with-spaceship-many-planets-space_1639-13829.jpg?size=626&ext=jpg');
-  */
-  background-image: url('https://cdn5.vectorstock.com/i/1000x1000/93/84/space-cartoon-background-for-a-game-vector-21429384.jpg');
 
+  background-image: url('https://cdn5.vectorstock.com/i/1000x1000/93/84/space-cartoon-background-for-a-game-vector-21429384.jpg');
+  
+  background-image: url('  https://i.pinimg.com/originals/5d/11/35/5d1135b8f44dd9e92fb86fbf3730e973.jpg
+');
+  background-image: url('https://images6.alphacoders.com/912/thumb-1920-912042.jpg');
+    background-image: url('https://cdn.dribbble.com/users/1620156/screenshots/5552872/rocket.gif');
+
+  */
+
+  background-image: url('https://img4.goodfon.com/wallpaper/nbig/8/23/raketa-nebo-kosmos-zvezdy-luna-oblaka-risunok.jpg');
   background-size: cover;
 }
 
-h3 {
+h1 {
   color: white;
   font-family: 'Comic Neue', cursive;
 }
 
 nav ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   list-style: none;
   font-family: 'Comic Neue', cursive;
+  background-color: rgb(31, 83, 115);
+  padding: 30px;
+
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 nav a {
@@ -26,10 +38,132 @@ nav a {
   font-weight: bold;
   font-size: 25px;
   font-family: 'Comic Neue', cursive;
+  margin: 50px;
 }
 
-/*change hover effect
 a:hover {
-  text-decoration: underline;
+  font-size: 33px;
 }
-*/
+@media screen and (max-width: 600px) {
+  .toggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+
+    z-index: 1;
+
+    user-select: none;
+  }
+
+  .toggle a {
+    text-decoration: none;
+    color: white;
+
+    transition: color 0.3s ease;
+  }
+
+  .toggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+  }
+
+  /*
+   * Just a quick hamburger
+   */
+  .toggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: white;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  .toggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  .toggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /* 
+   * Transform all the slices of hamburger
+   * into a crossmark.
+   */
+  .toggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: white;
+  }
+
+  /*
+   * But let's hide the middle one.
+   */
+  .toggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+   * Ohyeah and the last one should go the other direction
+   */
+  .toggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+   * Make this absolute positioned
+   * at the top left of the screen
+   */
+  nav ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    box-shadow: none;
+
+    list-style-type: none;
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  nav li {
+    padding: 10px 0;
+    font-size: 22px;
+    border-bottom: solid 1px white;
+  }
+
+  /*
+   * And let's slide it in from the left
+   */
+  .toggle input:checked ~ ul {
+    transform: none;
+  }
+}

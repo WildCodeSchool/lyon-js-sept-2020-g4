@@ -19,16 +19,26 @@
   flex-basis: 35px;
   flex-shrink: 0;
   cursor: pointer;
-  background-color: white;
-  border-color: white;
+  background-color: transparent;
+  border-color: rgb(31, 83, 115);
   outline: none;
   height: 30px;
   align-self: center;
 }
-.carousel-nav:focus {
-  border: 1px solid black;
+.carousel-nav:hover {
+  border: 1px solid rgb(31, 83, 115);
 }
 
 h1 {
   text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .carousel-container {
+    width: 100%;
+    align-self: center;
+  }
+  .carousel-nav {
+    width: 100%;
+  }
 }
