@@ -1,5 +1,9 @@
-.Rules{
-    width: 30%;
-    height: 400px;
-    border: 1px solid black;
+.Rules {
+  width: 30%;
+  height: 400px;
+  border: 1px solid black;
+}
+
+.Rules-off{
+  display: none;
 }

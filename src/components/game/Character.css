@@ -1,5 +1,9 @@
-.Characters{
-    width: 30%;
-    height: 400px;
-    border: 1px solid black;
+.Characters {
+  width: 30%;
+  height: 400px;
+  border: 1px solid black;
+}
+
+.Characters-off{
+  display: none;
 }

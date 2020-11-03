@@ -1,19 +1,14 @@
 import React from 'react';
 import './Character.css';
 
-class Characters extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    return (
-      <div className="Characters">
-        <h2>Choose a Character</h2>
-      </div>
-    );
-  }
+function Characters(props) {
+  const { showCharacter } = props;
+  return (
+    <div className={showCharacter ? 'Characters' : 'Characters-off'}>
+      <h2>Choose a Character</h2>
+      <button type="submit">Play</button>
+    </div>
+  );
 }
 
 export default Characters;
