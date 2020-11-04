@@ -11,19 +11,17 @@
   display: none;
 }
 
-.img-characters{
+.img-characters {
   display: flex;
   justify-content: center;
 }
 
-img{
+img {
   width: 200px;
   height: 200px;
   margin: 20px;
 }
 
-button{
+button {
   width: 20%;
 }
-
-
