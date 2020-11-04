@@ -26,7 +26,7 @@ export const ExtraProps = {
   uranus: {
     tempMin: -224,
     tempMax: -216,
-    url: './uranus.png',
+    url: './uranusTest.png',
     composition: 'Hydrogène, Hélium et méthane',
     rotation: 9320,
     periodeRotation: 17,
@@ -38,7 +38,7 @@ export const ExtraProps = {
   pluton: {
     tempMin: -184,
     tempMax: -173,
-    url: './pictures/plutonTest.png',
+    url: './pluton.png',
     composition: 'Azote, Monoxyde de carbone',
     rotation: 3700,
     periodeRotation: 6.387,

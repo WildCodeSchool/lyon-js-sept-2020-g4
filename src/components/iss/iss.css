@@ -17,5 +17,36 @@
 
 button {
   align-self: center;
-  margin-top: 30px;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 30px;
+  background-color: rgb(31, 83, 115);
+  box-shadow: 10px 10px 5px 0px rgba(70, 45, 45, 0.75);
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  font-family: 'Comic Neue', cursive;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+button:hover {
+  animation: bounce 1s;
 }
