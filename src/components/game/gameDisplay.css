@@ -1,8 +1,14 @@
-.gameBackground {
+.gameBackgroundOn {
   background-image: url('./spacebackground3.png');
   background-size: cover;
   height: 500px;
   color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.gameBackgroundOff {
+  display: none;
 }
 
 img {
@@ -13,11 +19,6 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.gameBackground {
-  display: flex;
-  justify-content: space-around;
 }
 
 .descriptions {

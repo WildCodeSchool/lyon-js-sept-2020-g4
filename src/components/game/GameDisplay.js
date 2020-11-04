@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import planets from './Ressources';
 import './gameDisplay.css';
+import Victory from './Victory';
+import Loose from './Loose';
 
 function Game() {
   /* DECLARATION DES HOOKS STATE AVEC USESTATE, UNE POUR CHAQUE VARIABLE: */
@@ -13,6 +15,8 @@ function Game() {
   const [cannon, setCannon] = useState('Choose a Range Canon');
 
   const [canonDescription, setCanonDescription] = useState('');
+
+  const [victory, setVictory] = useState('');
   //-----------------------------------------
   // USE EFFECT LIE AU SETPLANET DU DESSUS POUR EVITER QU'UNE NOUVELLE PLANETE SOIT GENEREE A CHAQUE MODIFICATION DU STATE
   useEffect(() => {
@@ -55,9 +59,72 @@ function Game() {
     }
   };
   //-----------------------------------------
+  //-----------------------------------------
+  // LA FONCTION ON CLICK QUI VA DETERMINER SI LES STATES MATCH AVEC LES CARACTERISTIQUES DE LA PLANETE POUR SAVOIR SI VICTOIRE OU DEFAITE
+
+  const matchGame = () => {
+    if (
+      planet.planet === 'mars' &&
+      ammo === 'Algues' &&
+      cannon === 'Canon Court'
+    ) {
+      setVictory(true);
+    } else if (
+      planet.planet === 'Jupiter' &&
+      ammo === 'Napalm' &&
+      cannon === 'Canon Court'
+    ) {
+      setVictory(true);
+    } else if (
+      planet.planet === 'Saturne' &&
+      ammo === 'Napalm' &&
+      cannon === 'Canon Long'
+    ) {
+      setVictory(true);
+    } else if (
+      planet.planet === 'Uranus' &&
+      ammo === 'Foreuse' &&
+      cannon === 'Canon Long'
+    ) {
+      setVictory(true);
+    } else if (
+      planet.planet === 'Mercure' &&
+      ammo === 'Napalm' &&
+      cannon === 'Canon Court'
+    ) {
+      setVictory(true);
+    } else if (
+      planet.planet === 'Venus' &&
+      ammo === 'Algues' &&
+      cannon === 'Canon Court'
+    ) {
+      setVictory(true);
+    } else if (
+      planet.planet === 'Pluton' &&
+      ammo === 'Foreuse' &&
+      cannon === 'Canon Long'
+    ) {
+      setVictory(true);
+    } else if (
+      planet.planet === 'Neptune' &&
+      ammo === 'foreuse' &&
+      cannon === 'Canon Long'
+    ) {
+      setVictory(true);
+    } else if (
+      planet.planet === 'Terre' &&
+      ammo === 'Napalm' &&
+      cannon === 'Canon Court'
+    ) {
+      setVictory(true);
+    } else {
+      setVictory(false);
+    }
+    setPlanet(planets[0][Math.floor(Math.random() * planets[0].length)]);
+  };
   return (
     <div>
-      <div className="gameBackground">
+      <div className="gameBackgroundOn">
         <div className="chooseWeapon">
           <div className="characterSelected">
             RETOUR DU PERSONNAGE PRECEDEMENT SELECTIONNE
@@ -109,8 +176,9 @@ function Game() {
             <p>{canonDescription}</p>
           </div>
 
-          <button type="submit">TIRER !!</button>
-          <div className="cockpit" />
+          <button onClick={matchGame} type="submit">
+            TIRER !!
+          </button>
         </div>
 
         <div className="planetRandomized">
@@ -118,9 +186,11 @@ function Game() {
           <img alt="generated planets" src={planet.url} />
         </div>
       </div>
-      {/* (??????) ? <Victoire /> : <Defaite /> */}
+      {victory === true ? <Victory /> : <Loose victory={victory} />}
     </div>
   );
 }
 
 export default Game;
+
+// {victory === '' ? <div>rr</div> : victory ? <Victory /> : <Loose />}
