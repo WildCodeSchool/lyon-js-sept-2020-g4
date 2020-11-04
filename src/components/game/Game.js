@@ -1,9 +1,11 @@
 import React from 'react';
 
+import GameDisplay from './GameDisplay';
+
 function Game() {
   return (
     <div>
-      <h1>Game</h1>
+      <GameDisplay />
     </div>
   );
 }
