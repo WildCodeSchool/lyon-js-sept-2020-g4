@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import './iss.css';
-import Button from '@material-ui/core/Button';
 
 class IssStatus extends React.Component {
   constructor(props) {
@@ -64,14 +63,14 @@ class IssStatus extends React.Component {
       <div className="issContainer">
         <h1>Ou se trouve l'ISS ?</h1>
         <canvas id="map" width="640" height="360" />
-        <Button
+        <button
           onClick={this.getLocationIss}
           type="submit"
           variant="contained"
           color="primary"
         >
           ACTUALISATION
-        </Button>
+        </button>
         <p className="longitude">
           Longitude:
           {locationLong}

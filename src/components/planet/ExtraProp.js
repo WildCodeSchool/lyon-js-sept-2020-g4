@@ -1,3 +1,5 @@
+// Creation d'un tableau en dur car manque d'infos sur l'API.
+
 export const ExtraProps = {
   mars: {
     tempMin: -133,

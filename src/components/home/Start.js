@@ -1,6 +1,5 @@
 import React from 'react';
 import './start.css';
-import Button from '@material-ui/core/Button';
 
 class Start extends React.Component {
   constructor(props) {
