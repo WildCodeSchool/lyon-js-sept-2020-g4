@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { ExtraProps } from './ExtraProp';
+import './boxPlanets.css';
 
 class PlanetDetails extends React.Component {
   constructor(props) {
