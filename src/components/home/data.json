@@ -2,51 +2,51 @@
   {
     "id": "mercure",
     "name": "Mercury",
-    "url": "http://space-facts.com/wp-content/uploads/mercury-transparent.png"
+    "url": "./mercureTest.png"
   },
   {
     "id": "venus",
     "name": "Venus",
-    "url": "http://space-facts.com/wp-content/uploads/venus-transparent.png"
+    "url": "./venus.png"
   },
   {
     "id": "terre",
     "name": "Earth",
-    "url": "http://space-facts.com/wp-content/uploads/earth-transparent.png"
+    "url": "./terreTest.png"
   },
   {
     "id": "mars",
     "name": "Mars",
-    "url": "http://space-facts.com/wp-content/uploads/mars-transparent.png"
+    "url": "./marsTest.png"
   },
   {
     "id": "jupiter",
     "name": "Jupiter",
-    "url": "http://space-facts.com/wp-content/uploads/jupiter-transparent.png"
+    "url": "./jupiterTest.png"
   },
   {
     "id": "saturne",
     "name": "Saturn",
-    "url": "http://space-facts.com/wp-content/uploads/saturn-transparent.png"
+    "url": "./saturneTest.png"
   },
   {
     "id": "uranus",
     "name": "Uranus",
-    "url": "http://space-facts.com/wp-content/uploads/uranus-transparent.png"
+    "url": "./uranusTest.png"
   },
   {
     "id": "pluton",
     "name": "Neptune",
-    "url": "http://space-facts.com/wp-content/uploads/neptune-transparent.png"
+    "url": "./pluton.png"
   },
   {
     "id": "soleil",
     "name": "Sun",
-    "url": "http://pngimg.com/uploads/sun/sun_PNG13424.png"
+    "url": "./sun.png"
   },
   {
     "id": "lune",
     "name": "Moon",
-    "url": "http://pngimg.com/uploads/moon/moon_PNG52.png"
+    "url": "./moon.png"
   }
 ]

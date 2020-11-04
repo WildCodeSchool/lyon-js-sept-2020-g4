@@ -2,7 +2,7 @@ export const ExtraProps = {
   mars: {
     tempMin: -133,
     tempMax: 27,
-    url: './pictures/earth.png',
+    url: './marsTest.png',
     composition: 'Gaz carbonique',
     rotation: 868,
     periodeRotation: 24.6,
@@ -14,7 +14,7 @@ export const ExtraProps = {
   neptune: {
     tempMin: -220,
     tempMax: -210,
-    url: './pictures/earth.png',
+    url: './neptuneTest.png',
     composition: 'Hydrogène, Hélium et méthane',
     rotation: 9660,
     periodeRotation: 16.6,
@@ -26,7 +26,7 @@ export const ExtraProps = {
   uranus: {
     tempMin: -224,
     tempMax: -216,
-    url: './pictures/earth.png',
+    url: './uranusTest.png',
     composition: 'Hydrogène, Hélium et méthane',
     rotation: 9320,
     periodeRotation: 17,
@@ -38,7 +38,7 @@ export const ExtraProps = {
   pluton: {
     tempMin: -184,
     tempMax: -173,
-    url: './pictures/plutonTest.png',
+    url: './pluton.png',
     composition: 'Azote, Monoxyde de carbone',
     rotation: 3700,
     periodeRotation: 6.387,
@@ -50,7 +50,7 @@ export const ExtraProps = {
   jupiter: {
     tempMin: -129,
     tempMax: -118,
-    url: './pictures/earth.png',
+    url: './jupiterTest.png',
     composition: 'Hydrogène, Hélium',
     rotation: 47051,
     periodeRotation: 9.55,
@@ -62,7 +62,7 @@ export const ExtraProps = {
   mercure: {
     tempMin: -183,
     tempMax: 427,
-    url: './pictures/earth.png',
+    url: './mercureTest.png',
     composition: 'Hydrogène, Hélium',
     rotation: 1000,
     periodeRotation: 1392,
@@ -74,7 +74,7 @@ export const ExtraProps = {
   saturne: {
     tempMin: -184,
     tempMax: -173,
-    url: './pictures/earth.png',
+    url: './saturneTest.png',
     composition: 'Hydrogène, Hélium, eau, méthane, ammoniac',
     rotation: 34000,
     periodeRotation: 10.33,
@@ -86,7 +86,7 @@ export const ExtraProps = {
   terre: {
     tempMin: -184,
     tempMax: -173,
-    url: './pictures/earth.png',
+    url: './terreTest.png',
     composition: 'Azote, Oxygène, gaz carbonique',
     rotation: 1700,
     periodeRotation: 24,
@@ -98,7 +98,7 @@ export const ExtraProps = {
   venus: {
     tempMin: -482,
     tempMax: -446,
-    url: './earth.png',
+    url: './venus.png',
     composition: 'Dioxyde de carbone, diazote',
     rotation: 6.52,
     periodeRotation: -5832,
@@ -110,7 +110,7 @@ export const ExtraProps = {
   soleil: {
     tempMin: 4200,
     tempMax: 8500,
-    url: './earth.png',
+    url: './sun.png',
     composition: 'Hydrogene, Hélium',
     rotation: 7200,
     periodeRotation: 648,
@@ -122,7 +122,7 @@ export const ExtraProps = {
   lune: {
     tempMin: -223,
     tempMax: 123,
-    url: './earth.png',
+    url: './moon.png',
     composition: 'Hélium, Néon',
     rotation: 3683,
     periodeRotation: 168,

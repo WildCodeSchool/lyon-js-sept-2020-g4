@@ -22,20 +22,15 @@ class Start extends React.Component {
     return (
       showInfo && (
         <div className="accessApp">
-          <h1>Bienvenu(e)</h1>
+          <h1>Welcome</h1>
           <p>
-            Savez-vous vraiment de quoi est composé le système solaire ? Vous
-            trouverez sur cette page une présentation détaillée de ce qui
-            compose le système solaire : Notre étoile le Soleil et ses planètes
+            How much do you know about our solar system? Let's dive into a
+            detailed presentation of our Star the Sun and its planets!
           </p>
-          <Button
-            type="submit"
-            onClick={this.onClick}
-            variant="contained"
-            color="primary"
-          >
-            Commencer le voyage
-          </Button>
+
+          <button type="submit" onClick={this.onClick}>
+            START YOUR JOURNEY
+          </button>
         </div>
       )
     );
