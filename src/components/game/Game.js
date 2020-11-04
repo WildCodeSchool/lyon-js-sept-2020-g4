@@ -1,6 +1,7 @@
 import React from 'react';
 import Rules from './Rules';
 import Characters from './Characters';
+import Test from './Test';
 
 class Game extends React.Component {
   constructor(props) {
@@ -8,8 +9,6 @@ class Game extends React.Component {
     this.state = {
       showRules: true,
       showCharacter: false,
-      male: false,
-      female: false,
     };
   }
 
@@ -17,21 +16,21 @@ class Game extends React.Component {
     this.setState({
       showRules: false,
       showCharacter: true,
-      male: true,
-      female: true,
     });
   };
 
   render() {
     const { showRules } = this.state;
-    const { male } = this.state;
-    const { female } = this.state;
     const { showCharacter } = this.state;
     return (
       <div>
         <h1>Game</h1>
         <Rules showRules={showRules} handleClick={this.handleClick} />
-        <Characters showCharacter={showCharacter} male={male} female={female} />
+        <Characters
+          showCharacter={showCharacter}
+          handleClick={this.handleClick}
+        />
+        <Test />
       </div>
     );
   }
