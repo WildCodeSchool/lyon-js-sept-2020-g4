@@ -48,7 +48,7 @@ class Carousel extends Component {
     if (window.innerWidth <= 900) {
       numberOfSlidesToScroll = 1;
     } else {
-      numberOfSlidesToScroll = 1;
+      numberOfSlidesToScroll = 4;
     }
     // eslint-disable-next-line react/destructuring-assignment
     if (this.state.numberOfSlidesToScroll !== numberOfSlidesToScroll) {

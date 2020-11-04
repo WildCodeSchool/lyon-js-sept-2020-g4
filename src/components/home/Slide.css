@@ -1,15 +1,18 @@
 .slide {
   display: inline-block;
-  vertical-align: top;
-  height: 500px;
-  width: 500px;
+  vertical-align: middle;
+  width: 300px;
   padding: 5px;
+  margin: 25px;
   white-space: normal;
 }
 .slide:last-child {
   border-right: none;
 }
 
-.slide:hover {
-  transform: scale(1.5);
+@media screen and (max-width: 600px) {
+  .slide {
+    width: 30%;
+    align-self: center;
+  }
 }
