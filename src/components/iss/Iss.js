@@ -63,7 +63,12 @@ class IssStatus extends React.Component {
       <div className="issContainer">
         <h1>Ou se trouve l'ISS ?</h1>
         <canvas id="map" width="640" height="360" />
-        <button onClick={this.getLocationIss} type="submit">
+        <button
+          onClick={this.getLocationIss}
+          type="submit"
+          variant="contained"
+          color="primary"
+        >
           ACTUALISATION
         </button>
         <p className="longitude">
