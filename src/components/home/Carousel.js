@@ -43,15 +43,15 @@ class Carousel extends Component {
   };
 
   checkNumberOfSlidesToScroll() {
-    let numberOfSlidesToScroll;
+    const { numberOfSlidesToScroll } = this.state;
+    let newNumberOfSlidesToScroll;
     if (window.innerWidth <= 900) {
-      numberOfSlidesToScroll = 1;
+      newNumberOfSlidesToScroll = 1;
     } else {
-      numberOfSlidesToScroll = 4;
+      newNumberOfSlidesToScroll = 4;
     }
-    // eslint-disable-next-line react/destructuring-assignment
-    if (this.state.numberOfSlidesToScroll !== numberOfSlidesToScroll) {
-      this.setState({ numberOfSlidesToScroll });
+    if (numberOfSlidesToScroll !== newNumberOfSlidesToScroll) {
+      this.setState({ numberOfSlidesToScroll: newNumberOfSlidesToScroll });
     }
   }
 
