@@ -16,12 +16,12 @@
   justify-content: center;
 }
 
-img {
+.Characters img {
   width: 200px;
   height: 200px;
   margin: 20px;
 }
 
-button {
+.Characters button {
   width: 20%;
 }

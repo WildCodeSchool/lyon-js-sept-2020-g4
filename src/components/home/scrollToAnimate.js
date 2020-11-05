@@ -1,5 +1,13 @@
-/* eslint-disable no-use-before-define */
-/* eslint-disable no-param-reassign */
+// interpilation function: movement and speed of scroll
+function easeInOut(currentTime, start, change, duration) {
+  let time = currentTime / (duration / 2);
+  if (time < 1) {
+    return (change / 2) * time * time + start;
+  }
+  time -= 1;
+  return (-change / 2) * (time * (time - 2) - 1) + start;
+}
+
 // function taking viewport element, the position we want to scroll to and how long the scroll lasts
 function scrollToAnimate(params) {
   const { element, to, duration, scrollDirection } = params;
@@ -10,24 +18,15 @@ function scrollToAnimate(params) {
 
   // recursive set time out function slowly increasing the time until it is more than the time we want to scroll
   function animateScroll(elapsedTime) {
-    elapsedTime += increment;
-    const position = easeInOut(elapsedTime, start, change, duration);
+    const time = elapsedTime + increment;
+    const position = easeInOut(time, start, change, duration);
     element[scrollDirection] = position;
-    if (elapsedTime < duration) {
-      window.requestAnimationFrame(animateScroll.bind(null, elapsedTime));
+    if (time < duration) {
+      window.requestAnimationFrame(animateScroll.bind(null, time));
     }
   }
   // animateScroll(0);
   window.requestAnimationFrame(animateScroll.bind(null, 0));
-}
-// interpilation function: movement and speed of scroll
-function easeInOut(currentTime, start, change, duration) {
-  currentTime /= duration / 2;
-  if (currentTime < 1) {
-    return (change / 2) * currentTime * currentTime + start;
-  }
-  currentTime -= 1;
-  return (-change / 2) * (currentTime * (currentTime - 2) - 1) + start;
 }
 
 export default scrollToAnimate;
