@@ -134,7 +134,7 @@ function Game() {
             <fieldset>
               <legend>Choose your Ammo:</legend>
               {planets[1].map((item) => (
-                <div>
+                <div key={item.munition}>
                   <img alt="choose a weapon" src={item.url} />
                   <input
                     onClick={selectedAmmo}
@@ -151,7 +151,7 @@ function Game() {
             <fieldset>
               <legend>Adapt your range:</legend>
               {planets[2].map((item) => (
-                <div>
+                <div key={item.canon}>
                   <img alt="choose a Canon" src={item.url} />
                   <input
                     onClick={selectedCanon}
