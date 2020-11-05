@@ -1,0 +1,26 @@
+.gameBackgroundOn {
+  background-image: url('./spacebackground3.png');
+  background-size: cover;
+  height: 500px;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.gameBackgroundOff {
+  display: none;
+}
+
+img {
+  width: 90px;
+}
+
+.chooseWeapon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.descriptions {
+  width: 300px;
+}

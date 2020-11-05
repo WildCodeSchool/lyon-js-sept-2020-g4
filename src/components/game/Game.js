@@ -2,6 +2,7 @@ import React from 'react';
 import Rules from './Rules';
 import Characters from './Characters';
 import Test from './Test';
+import GameDisplay from './GameDisplay';
 
 class Game extends React.Component {
   constructor(props) {
@@ -31,6 +32,7 @@ class Game extends React.Component {
           handleClick={this.handleClick}
         />
         <Test />
+        <GameDisplay />
       </div>
     );
   }
