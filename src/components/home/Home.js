@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Carousel from './Carousel';
 import './Carousel.css';
 import Start from './Start';
@@ -9,6 +10,11 @@ const Home = () => {
     <div className="renderingPlanets">
       <Start />
       <Carousel />
+      <div className="PlayingButton">
+        <Link to="/game">
+          <button type="submit">Test tes connaissances !</button>
+        </Link>
+      </div>
       <IssStatus />
     </div>
   );

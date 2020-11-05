@@ -26,6 +26,7 @@ class Start extends React.Component {
             How much do you know about our solar system? Let's dive into a
             detailed presentation of our Star the Sun and its planets!
           </p>
+
           <button type="submit" onClick={this.onClick}>
             START YOUR JOURNEY
           </button>

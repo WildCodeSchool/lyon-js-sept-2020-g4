@@ -11,6 +11,8 @@ class PlanetDetails extends React.Component {
     };
   }
 
+  // On lance la requete API en fonction de la planete demandée dans l'url
+  // Puis on fusionne les deux tableaux (celui en dur et celui renvoyer par l'API)
   componentDidMount() {
     const {
       match: {
@@ -32,13 +34,12 @@ class PlanetDetails extends React.Component {
         });
       })
       .catch((error) => {
-        console.log(error);
+        console.error(error);
       });
   }
 
   render() {
     const { carac } = this.state;
-
     return (
       <div className="caracsContainer">
         {carac.map((e) => (
