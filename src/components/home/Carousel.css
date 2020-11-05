@@ -5,6 +5,9 @@
 
   display: flex;
   margin: 10px;
+  margin-top: 200px;
+  width: 100%;
+  /*Set the width to 100% to don't have a very long carousel*/
 }
 
 .carousel-viewport {
@@ -43,4 +46,10 @@
   .carousel-nav {
     width: 100%;
   }
+}
+/*Flex for rendering planets to align all the items on column in the main page*/
+.renderingPlanets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
