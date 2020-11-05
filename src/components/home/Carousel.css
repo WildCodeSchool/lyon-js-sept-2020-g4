@@ -1,0 +1,61 @@
+.carousel-container {
+  text-align: center;
+  /* background-image: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/cartoon-space-background-with-colorful-elena-eskevich.jpg'); */
+  /* background-image: url('https://img.freepik.com/free-vector/background-with-spaceship-many-planets-space_1639-13829.jpg?size=626&ext=jpg'); */
+
+  display: flex;
+  margin: 10px;
+  margin-top: 100px;
+  width: 100%;
+  /*Set the width to 100% to don't have a very long carousel*/
+}
+
+.carousel-viewport {
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+  flex-grow: 1;
+  color: white;
+}
+
+.carousel-nav {
+  flex-basis: 35px;
+  flex-shrink: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border-color: rgb(31, 83, 115);
+  outline: none;
+  height: 30px;
+  align-self: center;
+}
+.carousel-nav:hover {
+  border: 1px solid rgb(31, 83, 115);
+}
+
+.carousel-title {
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.renderingPlanets {
+  display: flex;
+  flex-direction: column;
+}
+
+.PlayingButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .carousel-container {
+    width: 100%;
+    align-self: center;
+  }
+  .carousel-nav {
+    width: 100%;
+  }
+}
+/*Flex for rendering planets to align all the items on column in the main page*/

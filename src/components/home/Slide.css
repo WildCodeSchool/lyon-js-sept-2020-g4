@@ -1,0 +1,20 @@
+.slide {
+  display: inline-block;
+  vertical-align: middle;
+  width: 300px;
+  padding: 5px;
+  margin: 25px;
+  white-space: normal;
+  color: white;
+}
+
+.slide:last-child {
+  border-right: none;
+}
+
+@media screen and (max-width: 600px) {
+  .slide {
+    width: 30%;
+    align-self: center;
+  }
+}

@@ -1,11 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Carousel from './Carousel';
+import './Carousel.css';
+import Start from './Start';
+import IssStatus from '../iss/Iss';
 
-function Home() {
+const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
+    <div className="renderingPlanets">
+      <Start />
+      <Carousel />
+      <div className="PlayingButton">
+        <Link to="/game">
+          <button type="submit">Test tes connaissances !</button>
+        </Link>
+      </div>
+      <IssStatus />
     </div>
   );
-}
+};
 
 export default Home;

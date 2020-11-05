@@ -1,0 +1,12 @@
+.all-cards {
+  display: inline-block;
+}
+
+.card-about {
+  margin-top: 100px;
+  margin-left: 120px;
+}
+
+.all-cards img {
+  width: 100%;
+}
