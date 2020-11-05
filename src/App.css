@@ -9,11 +9,15 @@ body {
 ');
   background-image: url('https://images6.alphacoders.com/912/thumb-1920-912042.jpg');
     background-image: url('https://cdn.dribbble.com/users/1620156/screenshots/5552872/rocket.gif');
+        background-image: url('https://i.pinimg.com/originals/29/3a/62/293a6294ff35f6d8bf14f7b53789406e.jpg
+');
 
+https://i.pinimg.com/originals/29/3a/62/293a6294ff35f6d8bf14f7b53789406e.jpg
   */
 
   background-image: url('https://img4.goodfon.com/wallpaper/nbig/8/23/raketa-nebo-kosmos-zvezdy-luna-oblaka-risunok.jpg');
-  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 h1 {
@@ -26,6 +30,7 @@ nav ul {
   justify-content: flex-end;
   list-style: none;
   font-family: 'Comic Neue', cursive;
+
   background-color: rgb(31, 83, 115);
   padding: 30px;
 
@@ -44,6 +49,7 @@ nav a {
 a:hover {
   font-size: 33px;
 }
+
 @media screen and (max-width: 600px) {
   .toggle {
     display: block;

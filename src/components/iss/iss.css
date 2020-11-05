@@ -15,7 +15,7 @@
   margin-bottom: 50px;
 }
 
-button {
+.issContainer button {
   align-self: center;
   padding: 20px;
   margin-top: 20px;
@@ -47,6 +47,6 @@ button {
     transform: translateY(-10px);
   }
 }
-button:hover {
+.issContainer button:hover {
   animation: bounce 1s;
 }

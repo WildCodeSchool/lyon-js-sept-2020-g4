@@ -88,8 +88,8 @@ class Carousel extends Component {
   renderSlides() {
     return this.obj.map((item) => {
       return (
-        <Link to={{ pathname: `/${item.id}` }}>
-          <Slide url={item.url} key={item.id} />
+        <Link key={item.name} to={{ pathname: `/${item.id}` }}>
+          <Slide url={item.url} />
         </Link>
       );
     });
@@ -97,24 +97,28 @@ class Carousel extends Component {
 
   render() {
     return (
-      <div className="carousel-container">
-        <button
-          className="carousel-nav carousel-left-navigation-button"
-          onClick={this.handleLeftNavigation}
-          type="button"
-        >
-          &#60;
-        </button>
-        <div className="carousel-viewport" ref={this.carouselViewport}>
-          {this.renderSlides()}
+      <div>
+        <h1 className="carousel-title">Chose your planet</h1>
+        <div className="carousel-container">
+          <button
+            className="carousel-nav carousel-left-navigation-button"
+            onClick={this.handleLeftNavigation}
+            type="button"
+          >
+            &#60;
+          </button>
+
+          <div className="carousel-viewport" ref={this.carouselViewport}>
+            {this.renderSlides()}
+          </div>
+          <button
+            className="carousel-nav carousel-right-navigation-button"
+            onClick={this.handleRightNavigation}
+            type="button"
+          >
+            &#62;
+          </button>
         </div>
-        <button
-          className="carousel-nav carousel-right-navigation-button"
-          onClick={this.handleRightNavigation}
-          type="button"
-        >
-          &#62;
-        </button>
       </div>
     );
   }

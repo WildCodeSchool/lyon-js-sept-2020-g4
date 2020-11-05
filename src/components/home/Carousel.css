@@ -5,7 +5,6 @@
 
   display: flex;
   margin: 10px;
-  margin-top: 200px;
 }
 
 .carousel-viewport {
@@ -13,6 +12,7 @@
   overflow-y: hidden;
   overflow-x: auto;
   flex-grow: 1;
+  color: white;
 }
 
 .carousel-nav {
@@ -29,8 +29,10 @@
   border: 1px solid rgb(31, 83, 115);
 }
 
-h1 {
+.carousel-title {
+  color: white;
   text-align: center;
+  margin-top: 100px;
 }
 
 @media screen and (max-width: 600px) {

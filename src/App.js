@@ -23,9 +23,7 @@ export default function App() {
                 <li>
                   <Link to="/">Home</Link>
                 </li>
-                <li>
-                  <Link to="/start">Start</Link>
-                </li>
+
                 <li>
                   <Link to="/game">Game</Link>
                 </li>
@@ -49,7 +47,7 @@ export default function App() {
               <About
                 name="Laurence"
                 description="je suis un membre de la Wild Code School"
-                avatar="https://randomuser.me/api/portraits/women/22.jpg"
+                avatar="astro.jpg"
               />
               <About
                 name="Antoine"
