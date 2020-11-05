@@ -10,11 +10,11 @@ const Home = () => {
     <div className="renderingPlanets">
       <Start />
       <Carousel />
-      <Link to="/game">
-        <button className="PlayingButton" type="submit">
-          Test tes connaissances !
-        </button>
-      </Link>
+      <div className="PlayingButton">
+        <Link to="/game">
+          <button type="submit">Test tes connaissances !</button>
+        </Link>
+      </div>
       <IssStatus />
     </div>
   );
