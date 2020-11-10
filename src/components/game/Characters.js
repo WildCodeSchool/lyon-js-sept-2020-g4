@@ -3,6 +3,7 @@ import './Character.css';
 
 function Characters(props) {
   const { showCharacter } = props;
+  const { handleClickPlay } = props;
   return (
     <div className="container">
       <div className={showCharacter ? 'Characters' : 'Characters-off'}>
@@ -21,7 +22,9 @@ function Characters(props) {
             />
           </div>
         </div>
-        <button type="submit">Play</button>
+        <button type="submit" onClick={handleClickPlay}>
+          Play
+        </button>
       </div>
     </div>
   );

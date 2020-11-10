@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
+
 import planets from './Ressources';
 import './gameDisplay.css';
 import Victory from './Victory';
 import Loose from './Loose';
 
-function Game() {
+function Game(props) {
   /* DECLARATION DES HOOKS STATE AVEC USESTATE, UNE POUR CHAQUE VARIABLE: */
+  const { showGame } = props;
   const [ammo, setAmmo] = useState('Choose a kind of ammo');
 
   const [ammoDescription, setAmmoDescription] = useState('');
@@ -21,7 +23,11 @@ function Game() {
   // USE EFFECT LIE AU SETPLANET DU DESSUS POUR EVITER QU'UNE NOUVELLE PLANETE SOIT GENEREE A CHAQUE MODIFICATION DU STATE
   useEffect(() => {
     setPlanet(planets[0][Math.floor(Math.random() * planets[0].length)]);
+    return function cleanup() {
+      setVictory('');
+    };
   }, []);
+
   //-----------------------------------------
   // LA FONCTION ON CLICK QUI VA CHANGER LA VALEUR DE AMMODESCRIPTION POUR POUVOIR AFFICHER LE DETAIL DE CE QUE FAIT UNE MUNITATION DANS LA DIV QUI CORRESPOND
   const selectedAmmo = (e) => {
@@ -64,7 +70,7 @@ function Game() {
 
   const matchGame = () => {
     if (
-      planet.planet === 'mars' &&
+      planet.planet === 'Mars' &&
       ammo === 'Algues' &&
       cannon === 'Canon Court'
     ) {
@@ -123,7 +129,7 @@ function Game() {
     setPlanet(planets[0][Math.floor(Math.random() * planets[0].length)]);
   };
   return (
-    <div>
+    <div className={showGame ? 'gamedisplay' : 'gamedisplay-off'}>
       <div className="gameBackgroundOn">
         <div className="chooseWeapon">
           <div className="characterSelected">
@@ -186,7 +192,7 @@ function Game() {
           <img alt="generated planets" src={planet.url} />
         </div>
       </div>
-      {victory === true ? <Victory /> : <Loose victory={victory} />}
+      {victory ? <Victory /> : <Loose />}
     </div>
   );
 }

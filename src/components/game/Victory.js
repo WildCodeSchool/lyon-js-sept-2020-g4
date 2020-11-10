@@ -1,7 +1,12 @@
 import React from 'react';
+import './victory.css';
 
-function Vicotory() {
-  return <div>LA PLANETE EST DERUITE ! PREPARE TA PROCHAINE ATTAQUE</div>;
+function Victory() {
+  return (
+    <div>
+      <img alt="victory img" src="./victory.png" />
+    </div>
+  );
 }
 
-export default Vicotory;
+export default Victory;

@@ -3,13 +3,13 @@
 const planets = [
   [
     {
-      planet: 'terre',
+      planet: 'Terre',
       url: './terreTest.png',
       distance: 150,
       composition: 'funFact',
     },
     {
-      planet: 'mars',
+      planet: 'Mars',
       url: './marsTest.png',
       distance: 220,
       composition: 'CO2',

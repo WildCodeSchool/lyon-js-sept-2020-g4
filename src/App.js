@@ -7,6 +7,8 @@ import Home from './components/home/Home';
 import Start from './components/home/Start';
 import Game from './components/game/Game';
 import FormValidation from './components/about/Form';
+import Victory from './components/game/Victory';
+import Loose from './components/game/Loose';
 
 export default function App() {
   return (
@@ -36,6 +38,9 @@ export default function App() {
             <Route exact path="/" component={Home} />
             <Route path="/start" component={Start} />
             <Route path="/game" component={Game} />
+            <Route path="/victory" component={Victory} />
+            <Route path="/loose" component={Loose} />
+
             <Route path="/about">
               <FormValidation />
               <About
