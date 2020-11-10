@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { GameContext } from './GameContext';
 import './Rules.css';
 
-function Rules(props) {
-  const { showRules } = props;
-  const { handleClick } = props;
+function Rules() {
+  const { showRules, handleClick } = useContext(GameContext);
   return (
     <div className="container">
       <div className={showRules ? 'Rules' : 'Rules-off'}>

@@ -7,6 +7,7 @@ import Home from './components/home/Home';
 import Start from './components/home/Start';
 import Game from './components/game/Game';
 import FormValidation from './components/about/Form';
+import { GameProvider } from './components/game/GameContext';
 
 export default function App() {
   return (
@@ -33,9 +34,12 @@ export default function App() {
             </div>
           </nav>
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/start" component={Start} />
-            <Route path="/game" component={Game} />
+            <GameProvider>
+              <Route exact path="/" component={Home} />
+              <Route path="/start" component={Start} />
+              <Route path="/game" component={Game} />
+            </GameProvider>
+
             <Route path="/about">
               <FormValidation />
               <About

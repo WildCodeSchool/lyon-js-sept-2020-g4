@@ -64,7 +64,7 @@ function Game() {
 
   const matchGame = () => {
     if (
-      planet.planet === 'mars' &&
+      planet.planet === 'Mars' &&
       ammo === 'Algues' &&
       cannon === 'Canon Court'
     ) {
@@ -186,7 +186,7 @@ function Game() {
           <img alt="generated planets" src={planet.url} />
         </div>
       </div>
-      {victory === true ? <Victory /> : <Loose victory={victory} />}
+      {victory ? <Victory /> : <Loose victory={victory} />}
     </div>
   );
 }

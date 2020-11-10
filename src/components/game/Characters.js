@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { GameContext } from './GameContext';
+
 import './Character.css';
 
-function Characters(props) {
-  const { showCharacter } = props;
+function Characters() {
+  const { showCharacter } = useContext(GameContext);
   return (
     <div className="container">
       <div className={showCharacter ? 'Characters' : 'Characters-off'}>
