@@ -34,9 +34,9 @@ export default function App() {
             </div>
           </nav>
           <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/start" component={Start} />
             <GameProvider>
-              <Route exact path="/" component={Home} />
-              <Route path="/start" component={Start} />
               <Route path="/game" component={Game} />
             </GameProvider>
 
