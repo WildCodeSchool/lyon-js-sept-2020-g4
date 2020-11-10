@@ -38,8 +38,6 @@ export default function App() {
             <Route exact path="/" component={Home} />
             <Route path="/start" component={Start} />
             <Route path="/game" component={Game} />
-            <Route path="/victory" component={Victory} />
-            <Route path="/loose" component={Loose} />
 
             <Route path="/about">
               <FormValidation />

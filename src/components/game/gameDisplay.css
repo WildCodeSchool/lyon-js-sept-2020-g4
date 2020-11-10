@@ -31,3 +31,19 @@ img {
 .gamedisplay {
   display: block;
 }
+
+#looseImg {
+  width: 60%;
+  position: absolute;
+  left: 500px;
+}
+
+#victoryImg {
+  width: 60%;
+  position: absolute;
+  left: 500px;
+}
+
+.descriptions {
+  z-index: 2;
+}

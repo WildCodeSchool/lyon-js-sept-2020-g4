@@ -131,6 +131,7 @@ function Game(props) {
   return (
     <div className={showGame ? 'gamedisplay' : 'gamedisplay-off'}>
       <div className="gameBackgroundOn">
+        {victory ? <Victory /> : <Loose />}
         <div className="chooseWeapon">
           <div className="characterSelected">
             RETOUR DU PERSONNAGE PRECEDEMENT SELECTIONNE
@@ -192,7 +193,6 @@ function Game(props) {
           <img alt="generated planets" src={planet.url} />
         </div>
       </div>
-      {victory ? <Victory /> : <Loose />}
     </div>
   );
 }

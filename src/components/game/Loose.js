@@ -6,7 +6,7 @@ const Loose = (props) => {
     <div />
   ) : (
     <div>
-      <img alt="defeate img" src="./defeat.png" />
+      <img id="looseImg" alt="defeate img" src="./defeat.png" />
     </div>
   );
 };

@@ -4,7 +4,7 @@ import './victory.css';
 function Victory() {
   return (
     <div>
-      <img alt="victory img" src="./victory.png" />
+      <img id="victoryImg" alt="victory img" src="./victory.png" />
     </div>
   );
 }
