@@ -23,3 +23,10 @@ img {
 .descriptions {
   width: 300px;
 }
+.gamedisplay {
+  display: block;
+}
+
+.gamedisplay-off {
+  display: none;
+}

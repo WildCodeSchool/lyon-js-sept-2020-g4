@@ -4,7 +4,7 @@ import { GameContext } from './GameContext';
 import './Character.css';
 
 function Characters() {
-  const { showCharacter } = useContext(GameContext);
+  const { showCharacter, handleClickPlay } = useContext(GameContext);
   return (
     <div className="container">
       <div className={showCharacter ? 'Characters' : 'Characters-off'}>
@@ -23,7 +23,9 @@ function Characters() {
             />
           </div>
         </div>
-        <button type="submit">Play</button>
+        <button onClick={handleClickPlay} type="submit">
+          Play
+        </button>
       </div>
     </div>
   );

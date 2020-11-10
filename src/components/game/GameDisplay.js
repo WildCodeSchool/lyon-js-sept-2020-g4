@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import planets from './Ressources';
 import './gameDisplay.css';
-import Victory from './Victory';
-import Loose from './Loose';
+import { GameContext } from './GameContext';
 
 function Game() {
   /* DECLARATION DES HOOKS STATE AVEC USESTATE, UNE POUR CHAQUE VARIABLE: */
@@ -16,7 +15,9 @@ function Game() {
 
   const [canonDescription, setCanonDescription] = useState('');
 
-  const [victory, setVictory] = useState('');
+  const { setVictory } = useContext(GameContext);
+  const { showGame } = useContext(GameContext);
+
   //-----------------------------------------
   // USE EFFECT LIE AU SETPLANET DU DESSUS POUR EVITER QU'UNE NOUVELLE PLANETE SOIT GENEREE A CHAQUE MODIFICATION DU STATE
   useEffect(() => {
@@ -123,7 +124,7 @@ function Game() {
     setPlanet(planets[0][Math.floor(Math.random() * planets[0].length)]);
   };
   return (
-    <div>
+    <div className={showGame ? 'gamedisplay' : 'gamedisplay-off'}>
       <div className="gameBackgroundOn">
         <div className="chooseWeapon">
           <div className="characterSelected">
@@ -186,7 +187,6 @@ function Game() {
           <img alt="generated planets" src={planet.url} />
         </div>
       </div>
-      {victory ? <Victory /> : <Loose victory={victory} />}
     </div>
   );
 }

@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { GameContext } from './GameContext';
 
-function Vicotory() {
-  return <div>LA PLANETE EST DERUITE ! PREPARE TA PROCHAINE ATTAQUE</div>;
+function Victory() {
+  const { handleClickReplay } = useContext(GameContext);
+  return (
+    <div>
+      <img src="./victory.png" alt="T'as gagné" />
+      <button onClick={handleClickReplay} type="submit">
+        Replay
+      </button>
+    </div>
+  );
 }
 
-export default Vicotory;
+export default Victory;
