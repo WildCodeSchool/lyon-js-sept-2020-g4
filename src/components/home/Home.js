@@ -4,6 +4,7 @@ import Carousel from './Carousel';
 import './Carousel.css';
 import Start from './Start';
 import IssStatus from '../iss/Iss';
+import SmallRocket from './SmallRocket';
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
         </Link>
       </div>
       <IssStatus />
+      <SmallRocket />
     </div>
   );
 };
