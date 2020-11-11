@@ -133,14 +133,14 @@ function Game() {
             {characterChoice === 'First' ? (
               <img src="Alien1.png" alt="First Alien" />
             ) : (
-              <img src="AlienGroot.png" alt="Je s'appel Groot" />
+              <img src="Alien3.png" alt="Je s'appel Groot" />
             )}
           </div>
           <div className="planetRandomized">
             <img alt="generated planets" src={planet.url} />
           </div>
         </div>
-        <div className="chooseWeapon">
+        <div className="chooseAmo">
           CUSTOM YOUR WEAPON
           <form>
             <fieldset>
@@ -159,6 +159,14 @@ function Game() {
               ))}
             </fieldset>
           </form>
+        </div>
+        <div className="descriptionAmo">
+          <p id="selectedwpn"> </p>
+          <p>DESCRIPTION :</p>
+          <p>{ammo}</p>
+          <p>{ammoDescription}</p>
+        </div>
+        <div className="chooseRange">
           <form>
             <fieldset>
               <legend>Adapt your range:</legend>
@@ -177,21 +185,16 @@ function Game() {
             </fieldset>
           </form>
         </div>
-        <div className="descriptions">
-          <p id="selectedwpn"> </p>
-          <p>DESCRIPTION :</p>
-          <p>{ammo}</p>
-          <p>{ammoDescription}</p>
-          <div>
-            <p>Description du canon</p>
-            <p>{cannon}</p>
-            <p>{canonDescription}</p>
-          </div>
 
-          <Button variant="contained" onClick={matchGame} type="submit">
-            TIRER !!
-          </Button>
+        <div className="descriptionRange">
+          <p>Description du canon</p>
+          <p>{cannon}</p>
+          <p>{canonDescription}</p>
         </div>
+
+        <Button variant="contained" onClick={matchGame} type="submit">
+          TIRER !!
+        </Button>
       </div>
     </div>
   );

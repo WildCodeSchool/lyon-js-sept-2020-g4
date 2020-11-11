@@ -34,7 +34,7 @@ function Characters() {
             role="button"
             tabIndex={0}
           >
-            <img src="AlienGroot.png" alt="female character" />
+            <img src="Alien3.png" alt="female character" />
           </div>
         </div>
         <Button variant="contained" onClick={handleClickPlay} type="submit">
