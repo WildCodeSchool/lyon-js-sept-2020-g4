@@ -40,26 +40,7 @@ export default function App() {
               <Route path="/game" component={Game} />
               <Route path="/about">
                 <FormValidation />
-                <About
-                  name="Romain"
-                  description="je suis un membre de la Wild Code School"
-                  avatar="https://randomuser.me/api/portraits/men/40.jpg"
-                />
-                <About
-                  name="Laurence"
-                  description="je suis un membre de la Wild Code School"
-                  avatar="astro.jpg"
-                />
-                <About
-                  name="Antoine"
-                  description="je suis un membre de la Wild Code School"
-                  avatar="https://randomuser.me/api/portraits/men/22.jpg"
-                />
-                <About
-                  name="Aymeric"
-                  description="je suis un membre de la Wild Code School"
-                  avatar="https://randomuser.me/api/portraits/men/61.jpg"
-                />
+                <About />
               </Route>
               <Route exact path="/:id" component={PlanetsDetails} />
             </Switch>
