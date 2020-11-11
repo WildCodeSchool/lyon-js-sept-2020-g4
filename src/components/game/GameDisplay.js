@@ -16,8 +16,7 @@ function Game() {
 
   const [canonDescription, setCanonDescription] = useState('');
 
-  const { setVictory } = useContext(GameContext);
-  const { showGame } = useContext(GameContext);
+  const { setVictory, showGame, characterChoice } = useContext(GameContext);
 
   //-----------------------------------------
   // USE EFFECT LIE AU SETPLANET DU DESSUS POUR EVITER QU'UNE NOUVELLE PLANETE SOIT GENEREE A CHAQUE MODIFICATION DU STATE
@@ -129,7 +128,11 @@ function Game() {
       <div className="gameBackgroundOn">
         <div className="chooseWeapon">
           <div className="characterSelected">
-            RETOUR DU PERSONNAGE PRECEDEMENT SELECTIONNE
+            {characterChoice === 'First' ? (
+              <img src="Alien1.png" alt="First Alien" />
+            ) : (
+              <img src="AlienGroot.png" alt="Je s'appel Groot" />
+            )}
           </div>
           CUSTOM YOUR WEAPON
           <form>

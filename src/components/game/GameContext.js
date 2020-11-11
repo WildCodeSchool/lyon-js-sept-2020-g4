@@ -7,6 +7,7 @@ export const GameProvider = (props) => {
   const [showCharacter, setShowCharacter] = useState(false);
   const [victory, setVictory] = useState('pending');
   const [showGame, setShowGame] = useState(false);
+  const [characterChoice, setCharacterChoice] = useState('test');
   const { children } = props;
   const handleClick = () => {
     setShowRules(false);
@@ -18,6 +19,12 @@ export const GameProvider = (props) => {
   };
   const handleClickReplay = () => {
     setVictory('pending');
+  };
+  const handleClickFirstCharacter = () => {
+    setCharacterChoice('First');
+  };
+  const handleClickSecondCharacter = () => {
+    setCharacterChoice('Second');
   };
 
   return (
@@ -34,6 +41,10 @@ export const GameProvider = (props) => {
         showGame,
         setShowGame,
         handleClickReplay,
+        characterChoice,
+        setCharacterChoice,
+        handleClickFirstCharacter,
+        handleClickSecondCharacter,
       }}
     >
       {children}

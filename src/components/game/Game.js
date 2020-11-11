@@ -19,7 +19,6 @@ const Game = () => {
     }
     return <Loose />;
   };
-  console.log(victory);
   return (
     <div>
       <h1>Game</h1>
