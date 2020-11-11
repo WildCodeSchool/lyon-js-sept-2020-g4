@@ -10,8 +10,8 @@ function Rules() {
       <div className={showRules ? 'Rules' : 'Rules-off'}>
         <h2>Rules</h2>
         <p>
-          Tu es un extra-terrestre qui vient de poser sur le soleil (oklm), et
-          tu remarque plein de petite balles marrantes qui tournent dans le
+          Tu es un extra-terrestre qui vient de se poser sur le soleil (oklm),
+          et tu remarque plein de petite balles marrantes qui tournent dans le
           vide, tu comprend très vite que chaque balle possède des
           caractéristiques bien distinctes. <br />
           <br />

@@ -37,7 +37,7 @@ function About() {
     <div>
       {teamMember.map((user) => {
         return (
-          <div className="all-cards">
+          <div key={user.name} className="all-cards">
             <Card className="card-about">
               <CardActionArea>
                 <CardMedia>

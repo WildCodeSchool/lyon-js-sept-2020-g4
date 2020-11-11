@@ -126,7 +126,9 @@ function Game() {
   return (
     <div className={showGame ? 'gamedisplay' : 'gamedisplay-off'}>
       <div className="gameBackgroundOn">
-        <div className="chooseWeapon">
+        <p>YOUR TARGET IS : {planet.planet}</p>
+
+        <div className="characterPlanets">
           <div className="characterSelected">
             {characterChoice === 'First' ? (
               <img src="Alien1.png" alt="First Alien" />
@@ -134,6 +136,11 @@ function Game() {
               <img src="AlienGroot.png" alt="Je s'appel Groot" />
             )}
           </div>
+          <div className="planetRandomized">
+            <img alt="generated planets" src={planet.url} />
+          </div>
+        </div>
+        <div className="chooseWeapon">
           CUSTOM YOUR WEAPON
           <form>
             <fieldset>
@@ -185,16 +192,9 @@ function Game() {
             TIRER !!
           </Button>
         </div>
-
-        <div className="planetRandomized">
-          <p>YOUR TARGET IS : {planet.planet}</p>
-          <img alt="generated planets" src={planet.url} />
-        </div>
       </div>
     </div>
   );
 }
 
 export default Game;
-
-// {victory === '' ? <div>rr</div> : victory ? <Victory /> : <Loose />}
