@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const SmallRocket = () => {
-  const [nextLaunch, setNextLaunch] = useState([]);
+  const [nextLaunch, setNextLaunch] = useState(null);
 
   useEffect(() => {
     axios
@@ -11,9 +11,13 @@ const SmallRocket = () => {
         setNextLaunch(response.data.launch_date_utc);
         // console.log(response.data.launch_date_utc);
       });
-  }, [nextLaunch]);
+  }, []);
 
-  const launchDate = '2020-11-15T00:49:00.000Z';
+  if (nextLaunch == null) {
+    return <div>Loading...</div>;
+  }
+
+  const launchDate = nextLaunch; // '2020-11-15T00:49:00.000Z';
   const calculateTimeLeft = () => {
     const difference = Date.parse(launchDate) - Date.parse(new Date());
     const seconds = Math.floor((difference / 1000) % 60);
