@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { GameContext } from './GameContext';
+import Button from '@material-ui/core/Button';
 
 import './Character.css';
 
@@ -23,9 +24,9 @@ function Characters() {
             />
           </div>
         </div>
-        <button onClick={handleClickPlay} type="submit">
+        <Button variant="contained" onClick={handleClickPlay} type="submit">
           Play
-        </button>
+        </Button>
       </div>
     </div>
   );

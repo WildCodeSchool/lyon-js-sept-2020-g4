@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
+import Button from '@material-ui/core/Button';
 import planets from './Ressources';
 import './gameDisplay.css';
 import { GameContext } from './GameContext';
@@ -177,9 +178,9 @@ function Game() {
             <p>{canonDescription}</p>
           </div>
 
-          <button onClick={matchGame} type="submit">
+          <Button variant="contained" onClick={matchGame} type="submit">
             TIRER !!
-          </button>
+          </Button>
         </div>
 
         <div className="planetRandomized">

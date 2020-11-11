@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Button from '@material-ui/core/Button';
 import { GameContext } from './GameContext';
 
 function Victory() {
@@ -6,9 +7,9 @@ function Victory() {
   return (
     <div>
       <img src="./victory.png" alt="T'as gagné" />
-      <button onClick={handleClickReplay} type="submit">
+      <Button variant="contained" onClick={handleClickReplay} type="submit">
         Replay
-      </button>
+      </Button>
     </div>
   );
 }

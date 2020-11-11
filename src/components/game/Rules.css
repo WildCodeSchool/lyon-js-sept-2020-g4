@@ -4,13 +4,13 @@
 }
 
 .Rules {
-  width: 30%;
-  height: 400px;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  background-color: rgba(46, 64, 83, 0.6);
+  padding: 10px;
 }
 
 .Rules-off {
@@ -19,4 +19,14 @@
 
 p {
   text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin-top: 100px;
+    padding: 0 20px;
+  }
+  .container button {
+    margin: 20px;
+  }
 }

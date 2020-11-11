@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Button from '@material-ui/core/Button';
 import { GameContext } from './GameContext';
 
 const Loose = () => {
@@ -8,9 +9,9 @@ const Loose = () => {
   ) : (
     <div>
       <img src="./defeate.png" alt="T'as perdu" />
-      <button onClick={handleClickReplay} type="submit">
+      <Button variant="contained" onClick={handleClickReplay} type="submit">
         Replay
-      </button>
+      </Button>
     </div>
   );
 };

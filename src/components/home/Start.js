@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 import './start.css';
 
 class Start extends React.Component {
@@ -27,9 +28,9 @@ class Start extends React.Component {
             detailed presentation of our Star the Sun and its planets!
           </p>
 
-          <button type="submit" onClick={this.onClick}>
+          <Button variant="contained" type="submit" onClick={this.onClick}>
             START YOUR JOURNEY
-          </button>
+          </Button>
         </div>
       )
     );
