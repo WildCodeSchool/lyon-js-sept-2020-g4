@@ -1,23 +1,30 @@
 .box {
   border: solid;
-  margin: 10px;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  width: 600px;
+  width: 100%;
   display: flex;
-  padding: 50px;
+
+  background-color: rgba(46, 64, 83, 0.6);
+}
+.box,
+ul,
+li {
+  list-style-type: none;
 }
 
 .caracsContainer {
   margin-top: 100px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .planetsImg {
   align-self: center;
 }
 
-#caracList h3 {
+#caracList h2 {
   color: white;
   font-size: 30px;
   font-family: 'Comic Neue', cursive;
@@ -66,5 +73,38 @@ html {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(46, 64, 83, 0.6);
+  }
+  .box,
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .box,
+  ul,
+  li {
+    list-style-type: none;
+  }
+  .box,
+  ul {
+    padding-inline-start: 0;
+  }
+
+  #caracList {
+    margin-top: 50px;
+  }
+  .caracsContainer {
+    padding: 0 20px;
+  }
+  .caracsContainer button {
+    margin-bottom: 20px;
   }
 }

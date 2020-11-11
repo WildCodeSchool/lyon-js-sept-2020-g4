@@ -62,7 +62,8 @@ class IssStatus extends React.Component {
     return (
       <div className="issContainer">
         <h1>Ou se trouve l'ISS ?</h1>
-        <canvas id="map" width="640" height="360" />
+        {/* J'ai retiré ici la wisdth et height qui nous obligeait à scroller en largeur */}
+        <canvas id="map" />
         <button
           onClick={this.getLocationIss}
           type="submit"

@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-image: url('https://img4.goodfon.com/wallpaper/nbig/8/23/raketa-nebo-kosmos-zvezdy-luna-oblaka-risunok.jpg');
   background-attachment: fixed;
@@ -5,7 +11,7 @@ body {
   background-size: 100%;
 }
 
-h1 {
+#root h1 {
   color: white;
   font-family: 'Comic Neue', cursive;
 }
@@ -48,12 +54,11 @@ a:hover {
   }
   .toggle {
     display: block;
-    position: relative;
+    position: absolute;
     top: 50px;
     left: 50px;
-
     z-index: 1;
-
+    width: 300px;
     user-select: none;
   }
 
@@ -144,7 +149,7 @@ a:hover {
     align-items: center;
     width: 100%;
     margin: -100px 0 0 -50px;
-    padding: 50px;
+
     box-shadow: none;
 
     list-style-type: none;

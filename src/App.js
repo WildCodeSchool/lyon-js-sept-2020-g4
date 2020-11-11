@@ -14,7 +14,7 @@ export default function App() {
     <GameProvider>
       <div className="App">
         <Router>
-          <div>
+          <div className="mainContainer">
             <nav>
               <div className="toggle">
                 <input type="checkbox" />
