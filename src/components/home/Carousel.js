@@ -101,6 +101,7 @@ class Carousel extends Component {
         <h1 className="carousel-title">Choose your planet</h1>
         <div className="carousel-container">
           <Button
+            style={{ minWidth: '50px' }}
             variant="contained"
             className="carousel-nav carousel-left-navigation-button"
             onClick={this.handleLeftNavigation}
@@ -113,6 +114,7 @@ class Carousel extends Component {
             {this.renderSlides()}
           </div>
           <Button
+            style={{ minWidth: '50px' }}
             variant="contained"
             className="carousel-nav carousel-right-navigation-button"
             onClick={this.handleRightNavigation}

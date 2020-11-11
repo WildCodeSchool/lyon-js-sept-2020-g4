@@ -48,6 +48,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.PlayingButton a {
   text-decoration: none;
 }
 
