@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import Carousel from './Carousel';
 import './Carousel.css';
 import Start from './Start';
-import IssStatus from '../iss/Iss';
-import SmallRocket from './SmallRocket';
+import CountDownInterval from './CountDownInterval';
 
 const Home = () => {
   return (
@@ -16,8 +15,7 @@ const Home = () => {
           <button type="submit">Test tes connaissances !</button>
         </Link>
       </div>
-      <IssStatus />
-      <SmallRocket />
+      <CountDownInterval />
     </div>
   );
 };

@@ -60,25 +60,27 @@ class IssStatus extends React.Component {
   render() {
     const { locationLong, locationLat } = this.state;
     return (
-      <div className="issContainer">
-        <h1>Ou se trouve l'ISS ?</h1>
-        <canvas id="map" width="640" height="360" />
-        <button
-          onClick={this.getLocationIss}
-          type="submit"
-          variant="contained"
-          color="primary"
-        >
-          ACTUALISATION
-        </button>
-        <p className="longitude">
-          Longitude:
-          {locationLong}
-        </p>
-        <p className="latitude">
-          Latitude:
-          {locationLat}
-        </p>
+      <div>
+        <div className="issContainer">
+          <h1>Ou se trouve l'ISS ?</h1>
+          <canvas id="map" width="640" height="360" />
+          <button
+            onClick={this.getLocationIss}
+            type="submit"
+            variant="contained"
+            color="primary"
+          >
+            ACTUALISATION
+          </button>
+          <p className="longitude">
+            Longitude:
+            {locationLong}
+          </p>
+          <p className="latitude">
+            Latitude:
+            {locationLat}
+          </p>
+        </div>
       </div>
     );
   }
