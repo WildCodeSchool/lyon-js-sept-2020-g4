@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 import './Carousel.css';
 import data from './data.json';
 import Slide from './Slide';
@@ -97,26 +98,28 @@ class Carousel extends Component {
   render() {
     return (
       <div>
-        <h1 className="carousel-title">Chose your planet</h1>
+        <h1 className="carousel-title">Choose your planet</h1>
         <div className="carousel-container">
-          <button
+          <Button
+            variant="contained"
             className="carousel-nav carousel-left-navigation-button"
             onClick={this.handleLeftNavigation}
             type="button"
           >
             &#60;
-          </button>
+          </Button>
 
           <div className="carousel-viewport" ref={this.carouselViewport}>
             {this.renderSlides()}
           </div>
-          <button
+          <Button
+            variant="contained"
             className="carousel-nav carousel-right-navigation-button"
             onClick={this.handleRightNavigation}
             type="button"
           >
             &#62;
-          </button>
+          </Button>
         </div>
       </div>
     );
