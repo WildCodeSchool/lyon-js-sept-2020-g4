@@ -1,0 +1,23 @@
+.loose {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  margin: auto;
+}
+
+.loose img {
+  width: 100%;
+}
+
+.victory {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  align-items: center;
+  margin: auto;
+}
+
+.victory img {
+  width: 100%;
+}

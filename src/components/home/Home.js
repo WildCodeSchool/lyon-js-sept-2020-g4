@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Carousel from './Carousel';
 import './Carousel.css';
 import Start from './Start';
-import IssStatus from '../iss/Iss';
+import CountDownInterval from './CountDownInterval';
 
 const Home = () => {
   return (
@@ -18,7 +18,7 @@ const Home = () => {
           </Button>
         </Link>
       </div>
-      <IssStatus />
+      <CountDownInterval />
     </div>
   );
 };

@@ -60,19 +60,19 @@ const planets = [
   [
     {
       munition: 'Napalm',
-      url: './MissileTest.png',
+      url: './redRocket.png',
       description:
         "L'arme de Type <FEU> est efficasse contre les planètes qui ont une atmosphère chargée en méthane ou autre gaz inflamable",
     },
     {
       munition: 'Algues',
-      url: './Missile3Test.png',
+      url: './greenRocket.png',
       description:
         "L'arme de Type <Plante> est efficasse contre les planètes qui ont une atmosphère chargée en CO2",
     },
     {
       munition: 'Foreuse',
-      url: './Missile2Test.png',
+      url: './brownRocket.png',
       description:
         "L'arme de Type <Foreuse> est efficasse contre les planètes qui ont une composition chargée en glaces et roches",
     },
@@ -86,7 +86,7 @@ const planets = [
     },
     {
       canon: 'Canon Court',
-      url: './shortrange.png',
+      url: './shortRange.png',
       range: 0,
       description: 'La canon court est plus précis pour les planètes proches',
     },

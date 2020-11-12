@@ -5,7 +5,7 @@ import { GameContext } from './GameContext';
 function Victory() {
   const { handleClickReplay } = useContext(GameContext);
   return (
-    <div>
+    <div className="victory">
       <img src="./victory.png" alt="T'as gagné" />
       <Button variant="contained" onClick={handleClickReplay} type="submit">
         Replay
