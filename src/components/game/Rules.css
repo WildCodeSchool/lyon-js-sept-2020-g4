@@ -1,6 +1,8 @@
 .container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  font-family: 'Comic Neue', cursive;
 }
 
 .Rules {
@@ -10,23 +12,58 @@
   justify-content: space-around;
   align-items: center;
   background-color: rgba(46, 64, 83, 0.6);
-  padding: 10px;
 }
 
 .Rules-off {
   display: none;
 }
 
-p {
+.paragraph-game{
   text-align: center;
+  font-size: 20px;
+  
 }
+
+.paragraph-rules{
+  text-align: justify;
+  
+}
+
+
 
 @media screen and (max-width: 600px) {
   .container {
     margin-top: 100px;
     padding: 0 20px;
+    font-family: 'Comic Neue', cursive;
   }
   .container button {
     margin: 20px;
   }
+  .paragraph-rules{
+    text-align: center;
+    padding: 10px;
+  }
+  .title-rules{
+    margin-top: 20px;
+  }
 }
+
+@media screen and (min-width: 1200px){
+  .container{
+    width: 50%;
+    height: 800px;
+  }
+  .container-game{
+    display: flex;
+    justify-content: center;
+  }
+  .Rules{
+    padding: 30px;
+    height: 500px;
+  }
+}
+
+
+
+

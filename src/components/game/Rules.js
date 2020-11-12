@@ -8,8 +8,8 @@ function Rules() {
   return (
     <div className="container">
       <div className={showRules ? 'Rules' : 'Rules-off'}>
-        <h2>Rules</h2>
-        <p>
+        <h1 className="title-rules">Rules</h1>
+        <p className="paragraph-rules">
           Tu es un extra-terrestre qui vient de se poser sur le soleil (oklm),
           et tu remarque plein de petite balles marrantes qui tournent dans le
           vide, tu comprend très vite que chaque balle possède des
@@ -21,7 +21,7 @@ function Rules() {
           arme pour réussir à les désintégrer, en vu de rammenner un joli
           displome du SuperDestructeur de l'univers à tes camarades.
           <br />
-          <br />A toi de jouer !!
+          <br /> <p className="paragraph-game">A toi de jouer !!</p>
         </p>
         <Button variant="contained" type="submit" onClick={handleClick}>
           Choose a Character

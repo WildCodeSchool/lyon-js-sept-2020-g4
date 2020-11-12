@@ -20,7 +20,7 @@ const Game = () => {
     return <Loose />;
   };
   return (
-    <div>
+    <div className="container-game">
       <Rules />
       <Characters />
       {avoid(victory)}
