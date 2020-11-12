@@ -67,4 +67,13 @@
     align-items: center;
     margin-bottom: 20px;
   }
+  .countdown {
+    display: flex;
+    text-align: center;
+    font-size: 15px;
+  }
+  .rocket-title {
+    display: flex;
+    text-align: center;
+  }
 }
