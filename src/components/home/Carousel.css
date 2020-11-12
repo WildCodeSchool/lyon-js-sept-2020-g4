@@ -27,6 +27,7 @@
   outline: none;
   height: 30px;
   align-self: center;
+  border: solid;
 }
 .carousel-nav:hover {
   border: 1px solid rgb(31, 83, 115);
@@ -48,11 +49,15 @@
   flex-direction: column;
   align-items: center;
 }
+.PlayingButton a {
+  text-decoration: none;
+}
 
 @media screen and (max-width: 600px) {
   .carousel-container {
     width: 100%;
     align-self: center;
+    margin: 0;
   }
   .carousel-nav {
     width: 100%;

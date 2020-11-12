@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Button from '@material-ui/core/Button';
 import './iss.css';
 
 class IssStatus extends React.Component {
@@ -62,15 +63,11 @@ class IssStatus extends React.Component {
     return (
       <div className="issContainer">
         <h1>Ou se trouve l'ISS ?</h1>
-        <canvas id="map" width="640" height="360" />
-        <button
-          onClick={this.getLocationIss}
-          type="submit"
-          variant="contained"
-          color="primary"
-        >
+        {/* J'ai retiré ici la wisdth et height qui nous obligeait à scroller en largeur */}
+        <canvas id="map" />
+        <Button variant="contained" onClick={this.getLocationIss} type="submit">
           ACTUALISATION
-        </button>
+        </Button>
         <p className="longitude">
           Longitude:
           {locationLong}
