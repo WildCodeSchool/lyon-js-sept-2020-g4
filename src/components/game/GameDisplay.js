@@ -7,12 +7,16 @@ import { GameContext } from './GameContext';
 function Game() {
   /* DECLARATION DES HOOKS STATE AVEC USESTATE, UNE POUR CHAQUE VARIABLE: */
   const [ammo, setAmmo] = useState('Choose a kind of ammo');
+  const [ammoImg, setAmmoImg] = useState('./rocketProjet/emptyHeadRocket.png');
 
   const [ammoDescription, setAmmoDescription] = useState('');
 
   const [planet, setPlanet] = useState('Votre Cible arrive !');
 
   const [cannon, setCannon] = useState('Choose a Range Canon');
+  const [cannonImg, setCannonImg] = useState(
+    './rocketProjet/emptyRangeRocket.png'
+  );
 
   const [canonDescription, setCanonDescription] = useState('');
 
@@ -31,12 +35,15 @@ function Game() {
     switch (e.target.id) {
       case 'Napalm':
         setAmmoDescription(planets[1][0].description);
+        setAmmoImg('./rocketProjet/redHeadRocket-test.png');
         break;
       case 'Foreuse':
         setAmmoDescription(planets[1][2].description);
+        setAmmoImg('./rocketProjet/brownHeadRocket-test.png');
         break;
       case 'Algues':
         setAmmoDescription(planets[1][1].description);
+        setAmmoImg('./rocketProjet/greenHeadRocket-test.png');
         break;
       default:
         console.log('Error');
@@ -50,9 +57,11 @@ function Game() {
     switch (e.target.id) {
       case 'Canon Long':
         setCanonDescription(planets[2][0].description);
+        setCannonImg('./rocketProjet/longRangeRocket-test.png');
         break;
       case 'Canon Court':
         setCanonDescription(planets[2][1].description);
+        setCannonImg('./rocketProjet/shortRangeRocket-test.png');
         break;
 
       default:
@@ -126,8 +135,7 @@ function Game() {
   return (
     <div className={showGame ? 'gamedisplay' : 'gamedisplay-off'}>
       <div className="gameBackgroundOn">
-        <p>YOUR TARGET IS : {planet.planet}</p>
-
+        <p className="customYourWpn">YOUR TARGET IS : {planet.planet}</p>
         <div className="characterPlanets">
           <div className="characterSelected">
             {characterChoice === 'First' ? (
@@ -140,58 +148,61 @@ function Game() {
             <img alt="generated planets" src={planet.url} />
           </div>
         </div>
-        <div className="chooseAmo">
-          CUSTOM YOUR WEAPON
-          <form>
-            <fieldset>
-              <legend>Choose your Ammo:</legend>
-              {planets[1].map((item) => (
-                <div key={item.munition}>
-                  <img alt="choose a weapon" src={item.url} />
-                  <input
-                    onClick={selectedAmmo}
-                    type="radio"
-                    id={item.munition}
-                    name="wpn"
-                  />
-                  {item.munition}
-                </div>
-              ))}
-            </fieldset>
-          </form>
+        {/* MISE EN PLACE DU CUSTOM ROCKET, IL CONTIENT 2 IMAGES GEREES PAR DES
+        USESTATES POUR FAIRE VARIER LA PROPULSION ET LA TËTE ET 1 IMAGE FIXE POUR LE BODY DE LA ROCKET */}
+        <p className="customYourWpn">Custom your Weapon : </p>
+        <div className="customRocketContainer">
+          <img id="botRocket" alt="test1" src={cannonImg} />
+          <img
+            id="bodyRocketalt"
+            alt="test1"
+            src="./rocketProjet/bodyRocket-test.png"
+          />
+          <img id="headRocketalt" alt="test1" src={ammoImg} />
+        </div>
+        <div className="containerWpns">
+          <div className="chooseAmo">
+            <h2>Ammo:</h2>
+            {planets[1].map((item) => (
+              <div
+                key={item.munition}
+                id={item.munition}
+                onClick={selectedAmmo}
+                onKeyPress={selectedAmmo}
+                role="button"
+                tabIndex={0}
+              >
+                <img id={item.munition} alt="choose a weapon" src={item.url} />
+              </div>
+            ))}
+          </div>
+          <div className="chooseRange">
+            <h2>Range:</h2>
+
+            {planets[2].map((item) => (
+              <div
+                key={item.canon}
+                id={item.canon}
+                onClick={selectedCanon}
+                onKeyPress={selectedCanon}
+                role="button"
+                tabIndex={0}
+              >
+                <img id={item.canon} alt="choose a Canon" src={item.url} />
+              </div>
+            ))}
+          </div>
         </div>
         <div className="descriptionAmo">
           <p id="selectedwpn"> </p>
-          <p>DESCRIPTION :</p>
-          <p>{ammo}</p>
+
+          <p className="selectedWpns">{ammo}</p>
           <p>{ammoDescription}</p>
         </div>
-        <div className="chooseRange">
-          <form>
-            <fieldset>
-              <legend>Adapt your range:</legend>
-              {planets[2].map((item) => (
-                <div key={item.canon}>
-                  <img alt="choose a Canon" src={item.url} />
-                  <input
-                    onClick={selectedCanon}
-                    type="radio"
-                    id={item.canon}
-                    name="wpn"
-                  />
-                  {item.canon}
-                </div>
-              ))}
-            </fieldset>
-          </form>
-        </div>
-
         <div className="descriptionRange">
-          <p>Description du canon</p>
-          <p>{cannon}</p>
+          <p className="selectedWpns">{cannon}</p>
           <p>{canonDescription}</p>
         </div>
-
         <Button variant="contained" onClick={matchGame} type="submit">
           TIRER !!
         </Button>
