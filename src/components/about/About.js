@@ -12,13 +12,13 @@ function About() {
       name: 'Romain',
       description: 'Wild Member',
       avatar:
-        'https://avatars2.githubusercontent.com/u/60798921?s=460&u=48f1b5e57ddbad2fa33a2de0c9039b390865d3c3&v=4',
+        'https://avatars1.githubusercontent.com/u/60798921?s=460&u=c18c20b2a9dc4b176baf1a6cddb4fa80f6cb89ab&v=4',
     },
     {
       name: 'Antoine',
       description: 'Wild Member',
       avatar:
-        'https://avatars0.githubusercontent.com/u/22123286?s=460&u=6ab7ebfd9efe10808d347b4212da8991f5cac4da&v=4',
+        'https://avatars2.githubusercontent.com/u/22123286?s=460&u=50fe9581384c7582db2dfc1f1d7ca54925bf3c3b&v=4',
     },
     {
       name: 'Laurence',
@@ -34,7 +34,8 @@ function About() {
   ]);
 
   return (
-    <div>
+    <div className="devCards">
+      <h2>Dev Team</h2>
       {teamMember.map((user) => {
         return (
           <div key={user.name} className="all-cards">
