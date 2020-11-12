@@ -18,7 +18,10 @@
   font-family: 'Comic Neue', cursive;
 }
 
-.issContainer button {
+/*J'ai désactiver le code ci-dessous car button
+ styliser par Material UI*/
+
+/* .issContainer button {
   align-self: center;
   padding: 20px;
   margin-top: 20px;
@@ -30,6 +33,9 @@
   color: white;
   font-size: 20px;
   font-family: 'Comic Neue', cursive;
+} */
+.issContainer button {
+  margin: 20px;
 }
 
 @keyframes bounce {

@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import Button from '@material-ui/core/Button';
+import { GameContext } from './GameContext';
 
-function Vicotory() {
-  return <div>LA PLANETE EST DERUITE ! PREPARE TA PROCHAINE ATTAQUE</div>;
+function Victory() {
+  const { handleClickReplay } = useContext(GameContext);
+  return (
+    <div>
+      <img src="./victory.png" alt="T'as gagné" />
+      <Button variant="contained" onClick={handleClickReplay} type="submit">
+        Replay
+      </Button>
+    </div>
+  );
 }
 
-export default Vicotory;
+export default Victory;

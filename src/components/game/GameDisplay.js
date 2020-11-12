@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
+import Button from '@material-ui/core/Button';
 import planets from './Ressources';
 import './gameDisplay.css';
-import Victory from './Victory';
-import Loose from './Loose';
+import { GameContext } from './GameContext';
 
 function Game() {
   /* DECLARATION DES HOOKS STATE AVEC USESTATE, UNE POUR CHAQUE VARIABLE: */
@@ -16,7 +16,8 @@ function Game() {
 
   const [canonDescription, setCanonDescription] = useState('');
 
-  const [victory, setVictory] = useState('');
+  const { setVictory, showGame, characterChoice } = useContext(GameContext);
+
   //-----------------------------------------
   // USE EFFECT LIE AU SETPLANET DU DESSUS POUR EVITER QU'UNE NOUVELLE PLANETE SOIT GENEREE A CHAQUE MODIFICATION DU STATE
   useEffect(() => {
@@ -64,7 +65,7 @@ function Game() {
 
   const matchGame = () => {
     if (
-      planet.planet === 'mars' &&
+      planet.planet === 'Mars' &&
       ammo === 'Algues' &&
       cannon === 'Canon Court'
     ) {
@@ -123,12 +124,23 @@ function Game() {
     setPlanet(planets[0][Math.floor(Math.random() * planets[0].length)]);
   };
   return (
-    <div>
+    <div className={showGame ? 'gamedisplay' : 'gamedisplay-off'}>
       <div className="gameBackgroundOn">
-        <div className="chooseWeapon">
+        <p>YOUR TARGET IS : {planet.planet}</p>
+
+        <div className="characterPlanets">
           <div className="characterSelected">
-            RETOUR DU PERSONNAGE PRECEDEMENT SELECTIONNE
+            {characterChoice === 'First' ? (
+              <img src="Alien1.png" alt="First Alien" />
+            ) : (
+              <img src="Alien3.png" alt="Je s'appel Groot" />
+            )}
           </div>
+          <div className="planetRandomized">
+            <img alt="generated planets" src={planet.url} />
+          </div>
+        </div>
+        <div className="chooseAmo">
           CUSTOM YOUR WEAPON
           <form>
             <fieldset>
@@ -147,6 +159,14 @@ function Game() {
               ))}
             </fieldset>
           </form>
+        </div>
+        <div className="descriptionAmo">
+          <p id="selectedwpn"> </p>
+          <p>DESCRIPTION :</p>
+          <p>{ammo}</p>
+          <p>{ammoDescription}</p>
+        </div>
+        <div className="chooseRange">
           <form>
             <fieldset>
               <legend>Adapt your range:</legend>
@@ -165,32 +185,19 @@ function Game() {
             </fieldset>
           </form>
         </div>
-        <div className="descriptions">
-          <p id="selectedwpn"> </p>
-          <p>DESCRIPTION :</p>
-          <p>{ammo}</p>
-          <p>{ammoDescription}</p>
-          <div>
-            <p>Description du canon</p>
-            <p>{cannon}</p>
-            <p>{canonDescription}</p>
-          </div>
 
-          <button onClick={matchGame} type="submit">
-            TIRER !!
-          </button>
+        <div className="descriptionRange">
+          <p>Description du canon</p>
+          <p>{cannon}</p>
+          <p>{canonDescription}</p>
         </div>
 
-        <div className="planetRandomized">
-          <p>YOUR TARGET IS : {planet.planet}</p>
-          <img alt="generated planets" src={planet.url} />
-        </div>
+        <Button variant="contained" onClick={matchGame} type="submit">
+          TIRER !!
+        </Button>
       </div>
-      {victory === true ? <Victory /> : <Loose victory={victory} />}
     </div>
   );
 }
 
 export default Game;
-
-// {victory === '' ? <div>rr</div> : victory ? <Victory /> : <Loose />}

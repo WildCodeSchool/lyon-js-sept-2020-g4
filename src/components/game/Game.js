@@ -1,41 +1,31 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Rules from './Rules';
 import Characters from './Characters';
-import Test from './Test';
 import GameDisplay from './GameDisplay';
+import { GameContext } from './GameContext';
+import Victory from './Victory';
+import Loose from './Loose';
 
-class Game extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showRules: true,
-      showCharacter: false,
-    };
-  }
+const Game = () => {
+  const { victory } = useContext(GameContext);
 
-  handleClick = () => {
-    this.setState({
-      showRules: false,
-      showCharacter: true,
-    });
+  // Tricky thing : create a function to avoid ESlint nested ternary pb in render //
+  const avoid = (status) => {
+    if (status === 'pending') {
+      return <GameDisplay />;
+    }
+    if (status === true) {
+      return <Victory />;
+    }
+    return <Loose />;
   };
-
-  render() {
-    const { showRules } = this.state;
-    const { showCharacter } = this.state;
-    return (
-      <div>
-        <h1>Game</h1>
-        <Rules showRules={showRules} handleClick={this.handleClick} />
-        <Characters
-          showCharacter={showCharacter}
-          handleClick={this.handleClick}
-        />
-        <Test />
-        <GameDisplay />
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <Rules />
+      <Characters />
+      {avoid(victory)}
+    </div>
+  );
+};
 
 export default Game;
