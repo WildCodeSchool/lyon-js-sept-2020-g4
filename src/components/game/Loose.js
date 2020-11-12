@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { GameContext } from './GameContext';
 
-const Loose = (props) => {
-  const { victory } = props;
+const Loose = () => {
+  const { victory, handleClickReplay } = useContext(GameContext);
   return victory === '' ? (
     <div />
   ) : (
     <div>
-      <img id="looseImg" alt="defeate img" src="./defeat.png" />
+      <img src="./defeate.png" alt="T'as perdu" />
+      <button onClick={handleClickReplay} type="submit">
+        Replay
+      </button>
     </div>
   );
 };

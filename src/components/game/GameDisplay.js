@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from 'react';
-
+import React, { useEffect, useState, useContext } from 'react';
 import planets from './Ressources';
 import './gameDisplay.css';
-import Victory from './Victory';
-import Loose from './Loose';
+import { GameContext } from './GameContext';
 
-function Game(props) {
+function Game() {
   /* DECLARATION DES HOOKS STATE AVEC USESTATE, UNE POUR CHAQUE VARIABLE: */
-  const { showGame } = props;
+
   const [ammo, setAmmo] = useState('Choose a kind of ammo');
 
   const [ammoDescription, setAmmoDescription] = useState('');
@@ -18,7 +16,9 @@ function Game(props) {
 
   const [canonDescription, setCanonDescription] = useState('');
 
-  const [victory, setVictory] = useState('');
+  const { setVictory } = useContext(GameContext);
+  const { showGame } = useContext(GameContext);
+
   //-----------------------------------------
   // USE EFFECT LIE AU SETPLANET DU DESSUS POUR EVITER QU'UNE NOUVELLE PLANETE SOIT GENEREE A CHAQUE MODIFICATION DU STATE
   useEffect(() => {
@@ -131,7 +131,6 @@ function Game(props) {
   return (
     <div className={showGame ? 'gamedisplay' : 'gamedisplay-off'}>
       <div className="gameBackgroundOn">
-        {victory ? <Victory /> : <Loose />}
         <div className="chooseWeapon">
           <div className="characterSelected">
             RETOUR DU PERSONNAGE PRECEDEMENT SELECTIONNE

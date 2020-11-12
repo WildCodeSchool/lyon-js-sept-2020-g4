@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { GameContext } from './GameContext';
+
 import './Character.css';
 
-function Characters(props) {
-  const { showCharacter } = props;
-  const { handleClickPlay } = props;
+function Characters() {
+  const { showCharacter, handleClickPlay } = useContext(GameContext);
   return (
     <div className="container">
       <div className={showCharacter ? 'Characters' : 'Characters-off'}>
@@ -22,7 +23,7 @@ function Characters(props) {
             />
           </div>
         </div>
-        <button type="submit" onClick={handleClickPlay}>
+        <button onClick={handleClickPlay} type="submit">
           Play
         </button>
       </div>

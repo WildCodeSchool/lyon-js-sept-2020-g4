@@ -7,6 +7,7 @@ import Home from './components/home/Home';
 import Start from './components/home/Start';
 import Game from './components/game/Game';
 import FormValidation from './components/about/Form';
+import { GameProvider } from './components/game/GameContext';
 
 export default function App() {
   return (
@@ -33,34 +34,37 @@ export default function App() {
             </div>
           </nav>
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/start" component={Start} />
-            <Route path="/game" component={Game} />
+            <GameProvider>
+              <Route exact path="/" component={Home} />
+              <Route path="/start" component={Start} />
 
-            <Route path="/about">
-              <FormValidation />
-              <About
-                name="Romain"
-                description="je suis un membre de la Wild Code School"
-                avatar="https://randomuser.me/api/portraits/men/40.jpg"
-              />
-              <About
-                name="Laurence"
-                description="je suis un membre de la Wild Code School"
-                avatar="astro.jpg"
-              />
-              <About
-                name="Antoine"
-                description="je suis un membre de la Wild Code School"
-                avatar="https://randomuser.me/api/portraits/men/22.jpg"
-              />
-              <About
-                name="Aymeric"
-                description="je suis un membre de la Wild Code School"
-                avatar="https://randomuser.me/api/portraits/men/61.jpg"
-              />
-            </Route>
-            <Route exact path="/:id" component={PlanetsDetails} />
+              <Route path="/game" component={Game} />
+
+              <Route path="/about">
+                <FormValidation />
+                <About
+                  name="Romain"
+                  description="je suis un membre de la Wild Code School"
+                  avatar="https://randomuser.me/api/portraits/men/40.jpg"
+                />
+                <About
+                  name="Laurence"
+                  description="je suis un membre de la Wild Code School"
+                  avatar="astro.jpg"
+                />
+                <About
+                  name="Antoine"
+                  description="je suis un membre de la Wild Code School"
+                  avatar="https://randomuser.me/api/portraits/men/22.jpg"
+                />
+                <About
+                  name="Aymeric"
+                  description="je suis un membre de la Wild Code School"
+                  avatar="https://randomuser.me/api/portraits/men/61.jpg"
+                />
+              </Route>
+              <Route exact path="/:id" component={PlanetsDetails} />
+            </GameProvider>
           </Switch>
         </div>
       </Router>
