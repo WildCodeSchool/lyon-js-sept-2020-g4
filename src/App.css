@@ -37,9 +37,6 @@ nav a {
   margin: 50px;
 }
 
-a:hover {
-  font-size: 33px;
-}
 .toggle input {
   display: none;
 }
