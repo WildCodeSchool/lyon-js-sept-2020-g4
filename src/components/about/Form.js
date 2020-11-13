@@ -1,174 +1,183 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Form.css';
 import TextField from '@material-ui/core/TextField';
-import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
 
-class Form extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      lastname: '',
-      firstname: '',
-      email: '',
-      message: '',
-      lastnameIsError: false,
-      firstnameIsError: false,
-      emailIsError: false,
-      messageIsError: false,
-      messageErrorEmail: '',
-    };
-  }
+const useStyles = makeStyles(() => ({
+  root: {
+    /* Cadre TextField */
+    '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
+      borderColor: 'white',
+    },
+    '&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
+      borderColor: 'red',
+    },
+    '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
+      borderColor: 'purple',
+    },
+    '& .MuiOutlinedInput-input': {
+      color: 'green',
+    },
+    '&:hover .MuiOutlinedInput-input': {
+      color: 'white',
+    },
+    '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-input': {
+      color: 'pink',
+    },
+    /* label de l'input */
+    '& .MuiInputLabel-outlined': {
+      color: 'white',
+    },
+    '&:hover .MuiInputLabel-outlined': {
+      color: 'red',
+    },
+    '& .MuiInputLabel-outlined.Mui-focused': {
+      color: 'purple',
+    },
+  },
+}));
 
-  handleChange = (e) => {
-    const { name } = e.target;
-    this.setState({ [name]: e.target.value });
-  };
+const Form = () => {
+  const [lastName, setLastName] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [lastNameIsError, setLastNameIsError] = useState(false);
+  const [firstNameIsError, setFirstNameIsError] = useState(false);
+  const [emailIsError, setEmailIsError] = useState(false);
+  const [messageIsError, setMessageIsError] = useState(false);
+  const [messageErrorEmail, setMessageErrorEmail] = useState('');
+  const classes = useStyles();
 
-  HandleBlurLastName = () => {
-    const { lastname } = this.state;
-    if (lastname.length <= 0) {
-      this.setState({ lastnameIsError: true });
+  const HandleBlurLastName = () => {
+    if (lastName.length <= 0) {
+      setLastNameIsError(true);
     } else {
-      this.setState({ lastnameIsError: false });
+      setLastNameIsError(false);
     }
   };
 
-  HandleBlurFirstName = () => {
-    const { firstname } = this.state;
-    if (firstname.length <= 0) {
-      this.setState({ firstnameIsError: true });
+  const HandleBlurFirstName = () => {
+    if (firstName.length <= 0) {
+      setFirstNameIsError(true);
     } else {
-      this.setState({ firstnameIsError: false });
+      setFirstNameIsError(false);
     }
   };
 
-  HandleBlurEmail = () => {
+  const HandleBlurEmail = () => {
     const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    const { email } = this.state;
     if (email.length <= 0) {
-      this.setState({
-        emailIsError: true,
-        messageErrorEmail: 'email is required',
-      });
+      setEmailIsError(true);
+      setMessageErrorEmail('email is required');
     } else if (!regex.test(email)) {
-      this.setState({ emailIsError: true, messageErrorEmail: 'invalid Email' });
+      setEmailIsError(true);
+      setMessageErrorEmail('invalid email');
     } else {
-      this.setState({ emailIsError: false });
+      setEmailIsError(false);
     }
   };
 
-  HandleBlurMessage = () => {
-    const { message } = this.state;
+  const HandleBlurMessage = () => {
     if (message.length <= 0) {
-      this.setState({ messageIsError: true });
+      setMessageIsError(true);
     } else {
-      this.setState({ messageIsError: false });
+      setMessageIsError(false);
     }
   };
 
-  handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    this.HandleBlurLastName();
-    this.HandleBlurFirstName();
-    this.HandleBlurEmail();
-    this.HandleBlurMessage();
+    HandleBlurLastName();
+    HandleBlurFirstName();
+    HandleBlurEmail();
+    HandleBlurMessage();
     e.preventDefault();
 
-    const { lastname } = this.state;
-    const { firstname } = this.state;
-    const { email } = this.state;
-    const { message } = this.state;
     if (
-      !(lastname.length <= 0) &&
-      !(firstname.length <= 0) &&
+      !(lastName.length <= 0) &&
+      !(firstName.length <= 0) &&
       !(email.length <= 0) &&
       regex.test(email) &&
       !(message.length <= 0)
     ) {
       alert('Form send');
-      this.setState({ lastname: '', firstname: '', email: '', message: '' });
+      setLastName('');
+      setFirstName('');
+      setEmail('');
+      setMessage('');
     }
   };
 
-  render() {
-    const { lastnameIsError } = this.state;
-    const { firstnameIsError } = this.state;
-    const { emailIsError } = this.state;
-    const { messageIsError } = this.state;
-    const { messageErrorEmail } = this.state;
-    const { lastname } = this.state;
-    const { firstname } = this.state;
-    const { email } = this.state;
-    const { message } = this.state;
-    return (
-      <div className="form-contact">
-        <h1>Contact Us</h1>
-        <div className="contact-name">
-          <TextField
-            className="contact-lastname"
-            id="outlined-basic"
-            label="Lastname"
-            variant="outlined"
-            name="lastname"
-            onChange={this.handleChange}
-            onBlur={this.HandleBlurLastName}
-            error={!!lastnameIsError}
-            helperText={lastnameIsError ? 'lastname is required' : ''}
-            value={lastname}
-          />
-          <TextField
-            className="contact-firstname"
-            id="outlined-basic"
-            label="Firstname"
-            variant="outlined"
-            name="firstname"
-            onChange={this.handleChange}
-            onBlur={this.HandleBlurFirstName}
-            error={!!firstnameIsError}
-            helperText={firstnameIsError ? 'firstname is required' : ''}
-            value={firstname}
-          />
-        </div>
+  return (
+    <div className="form-contact">
+      <h1>Contact Us</h1>
+      <div className="contact-lastname">
         <TextField
-          className="contact-email"
+          className={classes.root}
+          id="outlined-basic"
+          label="Lastname"
+          variant="outlined"
+          name="lastname"
+          onChange={(e) => setLastName(e.target.value)}
+          onBlur={HandleBlurLastName}
+          error={!!lastNameIsError}
+          helperText={lastNameIsError ? 'lastname is required' : ''}
+          value={lastName}
+        />
+      </div>
+      <div className="contact-firstname">
+        <TextField
+          className={classes.root}
+          id="outlined-basic"
+          label="Firstname"
+          variant="outlined"
+          name="firstname"
+          onChange={(e) => setFirstName(e.target.value)}
+          onBlur={HandleBlurFirstName}
+          error={!!firstNameIsError}
+          helperText={firstNameIsError ? 'firstname is required' : ''}
+          value={firstName}
+        />
+      </div>
+      <div className="contact-email">
+        <TextField
+          className={classes.root}
           id="outlined-basic"
           label="Email"
           variant="outlined"
           name="email"
-          onChange={this.handleChange}
-          onBlur={this.HandleBlurEmail}
+          onChange={(e) => setEmail(e.target.value)}
+          onBlur={HandleBlurEmail}
           error={!!emailIsError}
           helperText={emailIsError ? messageErrorEmail : ''}
           value={email}
         />
-        <Select native defaultValue="" id="grouped-native-select">
-          <option aria-label="None" value="" />
-          <option value={1}>Option 1</option>
-          <option value={2}>Option 2</option>
-          <option value={3}>Option 3</option>
-          <option value={4}>Option 4</option>
-        </Select>
+      </div>
+      <div className="contact-message">
         <TextField
-          className="contact-message"
+          className={classes.root}
           id="outlined-multiline-static"
           label="Message"
           multiline
           rows={4}
           variant="outlined"
           name="message"
-          onChange={this.handleChange}
-          onBlur={this.HandleBlurMessage}
+          onChange={(e) => setMessage(e.target.value)}
+          onBlur={HandleBlurMessage}
           error={!!messageIsError}
           helperText={messageIsError ? 'message is required' : ''}
           value={message}
         />
-        <Button variant="contained" onClick={this.handleSubmit}>
+      </div>
+      <div className="muiButton">
+        <Button variant="contained" onClick={handleSubmit}>
           Send
         </Button>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Form;

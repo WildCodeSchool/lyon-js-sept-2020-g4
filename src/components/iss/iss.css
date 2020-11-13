@@ -1,24 +1,31 @@
 #map {
-  background-image: url('https://images.assetsdelivery.com/compings_v2/s4svisuals/s4svisuals1502/s4svisuals150200073.jpg');
+  background-image: url('map3.png');
   background-size: contain;
   background-repeat: no-repeat;
+  width: 80%;
 }
 
 .issContainer {
-  margin-top: 100px;
   margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
 }
 .issContainer h1 {
   margin-bottom: 50px;
+  text-align: center;
+  font-family: 'Comic Neue', cursive;
 }
 
-.issContainer button {
+/*J'ai désactiver le code ci-dessous car button
+ styliser par Material UI*/
+
+/* .issContainer button {
   align-self: center;
   padding: 20px;
   margin-top: 20px;
+  margin-bottom: 20px;
   border-radius: 30px;
   background-color: rgb(31, 83, 115);
   box-shadow: 10px 10px 5px 0px rgba(70, 45, 45, 0.75);
@@ -26,6 +33,9 @@
   color: white;
   font-size: 20px;
   font-family: 'Comic Neue', cursive;
+} */
+.issContainer button {
+  margin: 20px;
 }
 
 @keyframes bounce {
@@ -49,4 +59,14 @@
 }
 .issContainer button:hover {
   animation: bounce 1s;
+}
+
+.longitude {
+  font-family: 'Comic Neue', cursive;
+  font-size: 20px;
+  margin: 0;
+}
+.latitude {
+  font-family: 'Comic Neue', cursive;
+  font-size: 20px;
 }

@@ -1,12 +1,13 @@
-.all-cards {
-  display: inline-block;
-}
-
-.card-about {
-  margin-top: 100px;
-  margin-left: 120px;
-}
-
 .all-cards img {
   width: 100%;
+}
+.devCards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+.all-cards {
+  margin: 20px;
 }

@@ -1,27 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  /* 
-  background-image: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/cartoon-space-background-with-colorful-elena-eskevich.jpg');
-  background-image: url('https://img.freepik.com/free-vector/background-with-spaceship-many-planets-space_1639-13829.jpg?size=626&ext=jpg');
-
-  background-image: url('https://cdn5.vectorstock.com/i/1000x1000/93/84/space-cartoon-background-for-a-game-vector-21429384.jpg');
-  
-  background-image: url('  https://i.pinimg.com/originals/5d/11/35/5d1135b8f44dd9e92fb86fbf3730e973.jpg
-');
-  background-image: url('https://images6.alphacoders.com/912/thumb-1920-912042.jpg');
-    background-image: url('https://cdn.dribbble.com/users/1620156/screenshots/5552872/rocket.gif');
-        background-image: url('https://i.pinimg.com/originals/29/3a/62/293a6294ff35f6d8bf14f7b53789406e.jpg
-');
-
-https://i.pinimg.com/originals/29/3a/62/293a6294ff35f6d8bf14f7b53789406e.jpg
-  */
-
   background-image: url('https://img4.goodfon.com/wallpaper/nbig/8/23/raketa-nebo-kosmos-zvezdy-luna-oblaka-risunok.jpg');
   background-attachment: fixed;
   background-position: center;
   background-size: 100%;
 }
 
-h1 {
+#root h1 {
   color: white;
   font-family: 'Comic Neue', cursive;
 }
@@ -47,22 +37,26 @@ nav a {
   margin: 50px;
 }
 
-a:hover {
-  font-size: 33px;
-}
 .toggle input {
   display: none;
 }
 
 @media screen and (max-width: 600px) {
+  body {
+    background-image: url('https://img4.goodfon.com/wallpaper/nbig/8/23/raketa-nebo-kosmos-zvezdy-luna-oblaka-risunok.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   .toggle {
     display: block;
-    position: relative;
-    top: 50px;
-    left: 50px;
+    position: absolute;
+    top: 30px;
 
     z-index: 1;
-
+    width: 100%;
     user-select: none;
   }
 
@@ -79,13 +73,10 @@ a:hover {
     height: 32px;
     position: absolute;
     top: -7px;
-    left: -5px;
-
+    left: 20px;
     cursor: pointer;
-
     opacity: 0; /* hide this */
     z-index: 2; /* and place it over the hamburger */
-
     -webkit-touch-callout: none;
   }
 
@@ -98,14 +89,11 @@ a:hover {
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-
+    margin-left: 30px;
     background: white;
     border-radius: 3px;
-
     z-index: 1;
-
     transform-origin: 4px 0px;
-
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
 
@@ -152,15 +140,11 @@ a:hover {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin: -100px 0 0 -50px;
-    padding: 50px;
+    margin-top: -80px;
     box-shadow: none;
-
     list-style-type: none;
-
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
-
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
 

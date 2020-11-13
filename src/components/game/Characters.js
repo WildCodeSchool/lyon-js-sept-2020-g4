@@ -1,27 +1,45 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import Button from '@material-ui/core/Button';
+import { GameContext } from './GameContext';
 import './Character.css';
-
-function Characters(props) {
-  const { showCharacter } = props;
+// L'utilisation du onKeyPress sur les div, le role et le tabindex
+// a été obligatoire pour faire passer le clic sur une div dans ESLINT
+function Characters() {
+  const {
+    showCharacter,
+    handleClickPlay,
+    characterChoice,
+    handleClickFirstCharacter,
+    handleClickSecondCharacter,
+  } = useContext(GameContext);
+  console.log(characterChoice);
   return (
-    <div className="container">
+    <div className="containerCharacters">
       <div className={showCharacter ? 'Characters' : 'Characters-off'}>
-        <h2>Choose a Character</h2>
+        <h2>Choose your Character</h2>
         <div className="img-characters">
-          <div>
-            <img
-              src="https://images-ext-2.discordapp.net/external/-5VmwTB7rQHOgLx4Bj-8EDOFiE7rkecf--9rm9iatzk/https/banner2.cleanpng.com/20180324/ehe/kisspng-extraterrestrial-life-extraterrestrials-in-fiction-cartoon-aliens-for-kids-5ab66263e09e19.5823849815219021799201.jpg?width=743&height=660"
-              alt="male character"
-            />
+          <div
+            className="firstCharacter"
+            onClick={handleClickFirstCharacter}
+            onKeyPress={handleClickFirstCharacter}
+            role="button"
+            tabIndex={0}
+          >
+            <img src="./Alien1.png" alt="male character" />
           </div>
-          <div>
-            <img
-              src="https://img.favpng.com/20/9/11/aliens-cartoon-png-favpng-CjxfD8Veyn6iX58rPCuGUxq37.jpg"
-              alt="female character"
-            />
+          <div
+            onClick={handleClickSecondCharacter}
+            onKeyPress={handleClickSecondCharacter}
+            className="secondcharacter"
+            role="button"
+            tabIndex={0}
+          >
+            <img src="Alien3.png" alt="female character" />
           </div>
         </div>
-        <button type="submit">Play</button>
+        <Button variant="contained" onClick={handleClickPlay} type="submit">
+          Play
+        </Button>
       </div>
     </div>
   );

@@ -5,11 +5,13 @@
 }*/
 
 .form-contact {
-  height: 600px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  border: solid white;
+  margin: 100px 20px 0 20px;
+  padding: 20px 0;
+  background-color: rgba(46, 64, 83, 0.6);
+  text-align: center;
 }
 
 .contact-name {
@@ -34,4 +36,43 @@
 
 .contact-message {
   width: 40%;
+}
+
+@media screen and (max-width: 600px) {
+  .contact-name {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-name Button {
+    margin: 0 20px;
+  }
+  .contact-lastname {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  .contact-firstname {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  .contact-email {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  .contact-message {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px 0;
+  }
+
+  .form-contact {
+    justify-content: center;
+  }
 }

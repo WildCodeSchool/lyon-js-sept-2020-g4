@@ -1,26 +1,90 @@
 .gameBackgroundOn {
-  background-image: url('./spacebackground3.png');
   background-size: cover;
-  height: 500px;
   color: white;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  background-color: rgba(46, 64, 83, 0.6);
+  border: solid white;
+  margin: 20px 20px;
 }
 
 .gameBackgroundOff {
   display: none;
+}
+.characterPlanets {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 img {
   width: 90px;
 }
 
-.chooseWeapon {
+.chooseAmo {
+  display: flex;
+  flex-direction: column;
+}
+
+.gamedisplay {
+  display: block;
+}
+
+.gamedisplay-off {
+  display: none;
+}
+.gameBackgroundOn button {
+  margin: 20px;
+}
+
+/* AJUSTEMENT DE LA TAILLE DES AMMO */
+.chooseAmo img {
+  width: 80%;
+}
+
+.containerWpns {
+  display: flex;
+  border: solid;
+  margin-bottom: 20px;
+}
+
+.chooseRange {
+  border-left: solid grey;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.descriptions {
-  width: 300px;
+#customRocket {
+}
+
+/* REGLAGE DU CUSTOM DE LA ROCKET ET DES TITRES DE CEUX CI*/
+.customRocketContainer {
+  display: flex;
+  height: 200px;
+}
+
+.selectedWpns {
+  font-size: 25px;
+  background-color: rgb(31, 83, 115);
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.customYourWpn {
+  font-size: 25px;
+  background-color: rgb(31, 83, 115);
+}
+
+.planetRandomized img {
+  width: 80%;
+  margin-top: 15px;
+}
+
+.descriptionRange {
+  margin-top: 15px;
 }
