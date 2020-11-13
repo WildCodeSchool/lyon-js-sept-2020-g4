@@ -150,7 +150,7 @@ function Game() {
         </div>
         {/* MISE EN PLACE DU CUSTOM ROCKET, IL CONTIENT 2 IMAGES GEREES PAR DES
         USESTATES POUR FAIRE VARIER LA PROPULSION ET LA TËTE ET 1 IMAGE FIXE POUR LE BODY DE LA ROCKET */}
-        <p className="customYourWpn">Custom your Weapon : </p>
+        <p className="customYourWpn">Customize your rocket : </p>
         <div className="customRocketContainer">
           <img id="botRocket" alt="test1" src={cannonImg} />
           <img
