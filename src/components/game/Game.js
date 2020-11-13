@@ -10,7 +10,7 @@ const Game = () => {
   const { victory } = useContext(GameContext);
 
   // Tricky thing : create a function to avoid ESlint nested ternary pb in render //
-  const avoid = (status) => {
+  const avoidNestedRenderProblem = (status) => {
     if (status === 'pending') {
       return <GameDisplay />;
     }
@@ -23,7 +23,7 @@ const Game = () => {
     <div>
       <Rules />
       <Characters />
-      {avoid(victory)}
+      {avoidNestedRenderProblem(victory)}
     </div>
   );
 };
