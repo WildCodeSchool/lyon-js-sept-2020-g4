@@ -28,7 +28,7 @@ export const ExtraProps = {
   uranus: {
     tempMin: -224,
     tempMax: -216,
-    url: './uranusTest.png',
+    url: './uranus.png',
     composition: 'Hydrogène, Hélium et méthane',
     rotation: 9320,
     periodeRotation: 17,
@@ -76,7 +76,7 @@ export const ExtraProps = {
   saturne: {
     tempMin: -184,
     tempMax: -173,
-    url: './saturneTest.png',
+    url: './satur.png',
     composition: 'Hydrogène, Hélium, eau, méthane, ammoniac',
     rotation: 34000,
     periodeRotation: 10.33,
