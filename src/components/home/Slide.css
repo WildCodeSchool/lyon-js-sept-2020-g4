@@ -11,6 +11,13 @@
 .slide:last-child {
   border-right: none;
 }
+.hori {
+  display: inline-block;
+  vertical-align: middle;
+}
+a {
+  color: white;
+}
 
 @media screen and (max-width: 600px) {
   .slide {

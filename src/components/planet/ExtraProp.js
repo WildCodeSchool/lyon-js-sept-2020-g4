@@ -28,7 +28,7 @@ export const ExtraProps = {
   uranus: {
     tempMin: -224,
     tempMax: -216,
-    url: './uranusTest.png',
+    url: './uranus.png',
     composition: 'Hydrogène, Hélium et méthane',
     rotation: 9320,
     periodeRotation: 17,
@@ -76,7 +76,7 @@ export const ExtraProps = {
   saturne: {
     tempMin: -184,
     tempMax: -173,
-    url: './saturneTest.png',
+    url: './satur.png',
     composition: 'Hydrogène, Hélium, eau, méthane, ammoniac',
     rotation: 34000,
     periodeRotation: 10.33,
@@ -86,8 +86,8 @@ export const ExtraProps = {
       'Saturne est la sixième planète du Système solaire par éloignement au Soleil et la deuxième plus grande par la taille et la masse après Jupiter, qui est comme elle une planète géante gazeuse.',
   },
   terre: {
-    tempMin: -184,
-    tempMax: -173,
+    tempMin: -98,
+    tempMax: 56.7,
     url: './terreTest.png',
     composition: 'Azote, Oxygène, gaz carbonique',
     rotation: 1700,

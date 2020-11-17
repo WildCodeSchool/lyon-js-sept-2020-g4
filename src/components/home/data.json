@@ -27,12 +27,12 @@
   {
     "id": "saturne",
     "name": "Saturn",
-    "url": "./saturneTest.png"
+    "url": "./satur.png"
   },
   {
     "id": "uranus",
     "name": "Uranus",
-    "url": "./uranusTest.png"
+    "url": "./uranus.png"
   },
   {
     "id": "pluton",

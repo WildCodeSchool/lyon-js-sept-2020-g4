@@ -13,7 +13,7 @@ class Carousel extends Component {
     this.onResize = this.onResize.bind(this);
     this.obj = data;
     this.state = {
-      numberOfSlidesToScroll: 2,
+      numberOfSlidesToScroll: 1,
     };
     this.carouselViewport = React.createRef();
   }
@@ -89,7 +89,7 @@ class Carousel extends Component {
     return this.obj.map((item) => {
       return (
         <Link key={item.name} to={{ pathname: `/${item.id}` }}>
-          <Slide url={item.url} />
+          <Slide url={item.url} name={item.name} />
         </Link>
       );
     });
