@@ -3,7 +3,12 @@ import Button from '@material-ui/core/Button';
 import { GameContext } from './GameContext';
 
 function Victory() {
-  const { handleClickReplay } = useContext(GameContext);
+  const { counterVictories, handleClickReplay } = useContext(GameContext);
+
+  if (counterVictories === 3) {
+    return <div>Super win!</div>;
+  }
+
   return (
     <div className="victory">
       <img src="./victory.png" alt="T'as gagné" />

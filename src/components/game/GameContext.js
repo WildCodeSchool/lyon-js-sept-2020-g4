@@ -5,6 +5,7 @@ export const GameContext = createContext();
 export const GameProvider = (props) => {
   const [showRules, setShowRules] = useState(true);
   const [showCharacter, setShowCharacter] = useState(false);
+  const [counterVictories, setCounterVictories] = useState(0);
   const [victory, setVictory] = useState('pending');
   const [showGame, setShowGame] = useState(false);
   const [characterChoice, setCharacterChoice] = useState('test');
@@ -19,12 +20,24 @@ export const GameProvider = (props) => {
   };
   const handleClickReplay = () => {
     setVictory('pending');
+    if (counterVictories === 3) {
+      setCounterVictories(0);
+    }
   };
   const handleClickFirstCharacter = () => {
     setCharacterChoice('First');
   };
   const handleClickSecondCharacter = () => {
     setCharacterChoice('Second');
+  };
+
+  const setVictoryAndSuperWin = (newVictory) => {
+    if (newVictory === true) {
+      setCounterVictories((prevCounter) => prevCounter + 1);
+    } else {
+      setCounterVictories((prevCounter) => prevCounter - 1);
+    }
+    setVictory(newVictory);
   };
 
   return (
@@ -36,7 +49,8 @@ export const GameProvider = (props) => {
         setShowCharacter,
         handleClick,
         victory,
-        setVictory,
+        counterVictories,
+        setVictory: setVictoryAndSuperWin,
         handleClickPlay,
         showGame,
         setShowGame,
