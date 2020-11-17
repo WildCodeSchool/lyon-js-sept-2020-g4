@@ -13,7 +13,7 @@ class Carousel extends Component {
     this.onResize = this.onResize.bind(this);
     this.obj = data;
     this.state = {
-      numberOfSlidesToScroll: 2,
+      numberOfSlidesToScroll: 1,
     };
     this.carouselViewport = React.createRef();
   }

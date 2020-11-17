@@ -86,8 +86,8 @@ export const ExtraProps = {
       'Saturne est la sixième planète du Système solaire par éloignement au Soleil et la deuxième plus grande par la taille et la masse après Jupiter, qui est comme elle une planète géante gazeuse.',
   },
   terre: {
-    tempMin: -184,
-    tempMax: -173,
+    tempMin: -98,
+    tempMax: 56.7,
     url: './terreTest.png',
     composition: 'Azote, Oxygène, gaz carbonique',
     rotation: 1700,

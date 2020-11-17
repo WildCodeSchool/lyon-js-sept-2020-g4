@@ -40,7 +40,12 @@ const CountDownInterval = () => {
             <br /> {minutes} minutes {seconds} secondes
           </p>
         </div>
-        <img className="smallrocket" src="rocketcountdown.png" alt="spaceX" />
+        <img
+          className="smallrocket"
+          src="rocketcountdown.png"
+          alt="spaceX"
+          height="250px"
+        />
         <p className="rocket-title">Prochain décollage de SpaceX </p>
       </div>
     </div>
