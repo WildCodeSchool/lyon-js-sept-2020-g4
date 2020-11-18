@@ -3,7 +3,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+
   padding: 30px;
   background-color: rgba(46, 64, 83, 0.6);
 }
@@ -21,27 +22,26 @@ li {
   padding: 50px;
 }
 
-#caracList h2 {
-  color: white;
-  font-size: 30px;
-  font-family: 'Comic Neue', cursive;
-}
 #caracList ul {
   font-family: 'Comic Neue', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-#caracList {
-  border: solid;
-}
+
 #caracList ul li {
   display: flex;
   align-items: center;
   font-size: 2rem;
 }
+.textDetails {
+  padding-left: 20px;
+}
 
-h2 {
+.planetsTitle {
   text-align: center;
-  color: white;
   font-family: 'Comic Neue', cursive;
+  margin-bottom: 20px;
 }
 
 html {
@@ -116,5 +116,9 @@ html {
   .caracsContainer {
     padding: 0;
     margin: 100px 10px 30px 10px;
+  }
+  #caracList ul li {
+    font-size: 1.4rem;
+    display: flex;
   }
 }
