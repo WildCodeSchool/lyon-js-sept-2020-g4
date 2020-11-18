@@ -1,12 +1,29 @@
 import React, { useContext } from 'react';
 import Button from '@material-ui/core/Button';
 import { GameContext } from './GameContext';
+import './Victory.css';
 
 function Victory() {
   const { counterVictories, handleClickReplay } = useContext(GameContext);
 
-  if (counterVictories === 3) {
-    return <div>Super win!</div>;
+  if (counterVictories === 2) {
+    return (
+      <div className="trophy-div">
+        <img className="trophy" src="./pngegg.png" alt="trophy" />
+        <div className="confetti-container">
+          <div className="confetti" />
+          <div className="confetti" />
+          <div className="confetti" />
+          <div className="confetti" />
+          <div className="confetti" />
+          <div className="confetti" />
+          <div className="confetti" />
+          <div className="confetti" />
+          <div className="confetti" />
+          <div className="confetti" />
+        </div>
+      </div>
+    );
   }
 
   return (
