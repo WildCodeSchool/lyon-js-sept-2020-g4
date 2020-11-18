@@ -10,6 +10,7 @@ import NavBar from './components/home/NavBar';
 import FormValidation from './components/about/Form';
 import { GameProvider } from './components/game/GameContext';
 import { StartProvider } from './components/home/StartContext';
+import NotFoundPage from './components/home/NotFoundPage';
 
 export default function App() {
   return (
@@ -21,13 +22,15 @@ export default function App() {
               <NavBar />
               <Switch>
                 <Route exact path="/" component={Home} />
-                <Route path="/start" component={Start} />
-                <Route path="/game" component={Game} />
-                <Route path="/about">
+                <Route exact path="/start" component={Start} />
+                <Route exact path="/game" component={Game} />
+
+                <Route exact path="/about">
                   <FormValidation />
                   <About />
                 </Route>
                 <Route exact path="/:id" component={PlanetsDetails} />
+                <Route component={NotFoundPage} />
               </Switch>
             </div>
           </Router>
