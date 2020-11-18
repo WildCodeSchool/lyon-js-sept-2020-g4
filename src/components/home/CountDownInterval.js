@@ -34,6 +34,7 @@ const CountDownInterval = () => {
     <div className="iss-rocket">
       <Iss />
       <div className="rocket-container">
+        <h1 className="rocket-title">Prochain décollage de SpaceX </h1>
         <div className="countdown">
           <p>
             {days} jours {hours} heures
@@ -46,7 +47,6 @@ const CountDownInterval = () => {
           alt="spaceX"
           height="250px"
         />
-        <p className="rocket-title">Prochain décollage de SpaceX </p>
       </div>
     </div>
   );

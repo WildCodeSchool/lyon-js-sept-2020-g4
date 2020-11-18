@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
+
 import { ExtraProps } from './ExtraProp';
 import './boxPlanets.css';
 
@@ -76,13 +75,6 @@ class PlanetDetails extends React.Component {
               </div>
             </div>
           ))}
-        </div>
-        <div>
-          <Link to="/">
-            <Button variant="contained" type="submit">
-              Back
-            </Button>
-          </Link>
         </div>
       </div>
     );

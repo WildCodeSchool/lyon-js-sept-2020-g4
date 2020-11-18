@@ -5,8 +5,6 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import './About.css';
-import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom';
 
 // Création d'un hooks avec la data de la team dev pour "libérer" app.js //
 function About() {
@@ -42,7 +40,7 @@ function About() {
 
   return (
     <div className="mainAbout">
-      <h2>Dev Team</h2>
+      <h1>Dev Team</h1>
       <div className="devCards">
         {teamMember.map((user) => {
           return (
@@ -76,11 +74,6 @@ function About() {
           );
         })}
       </div>
-      <Link to="/">
-        <Button variant="contained" type="button">
-          Back
-        </Button>
-      </Link>
     </div>
   );
 }

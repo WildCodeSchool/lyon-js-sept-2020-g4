@@ -98,10 +98,14 @@ class Carousel extends Component {
   render() {
     return (
       <div>
-        <h1 className="carousel-title">Choose your planet</h1>
+        <h1 className="carousel-title">Choose a star</h1>
         <div className="carousel-container">
           <Button
-            style={{ minWidth: '50px' }}
+            style={{
+              minWidth: '50px',
+              backgroundColor: '#e0e0e000',
+              color: 'white',
+            }}
             variant="contained"
             className="carousel-nav carousel-left-navigation-button"
             onClick={this.handleLeftNavigation}
@@ -114,7 +118,11 @@ class Carousel extends Component {
             {this.renderSlides()}
           </div>
           <Button
-            style={{ minWidth: '50px' }}
+            style={{
+              minWidth: '50px',
+              backgroundColor: '#e0e0e000',
+              color: 'white',
+            }}
             variant="contained"
             className="carousel-nav carousel-right-navigation-button"
             onClick={this.handleRightNavigation}
