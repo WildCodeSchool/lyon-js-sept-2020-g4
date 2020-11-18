@@ -141,20 +141,35 @@ function Game() {
         <div className="characterPlanetsDesktop">
           <div className="characterSelected">
             {characterChoice === 'First' ? (
-              <img src="monster1.png" alt="First Alien" />
+              <img className="smallImg" src="monster1.png" alt="First Alien" />
             ) : (
-              <img src="Alien3.png" alt="Je s'appel Groot" />
+              <img
+                className="smallImg"
+                src="Alien3.png"
+                alt="Je s'appel Groot"
+              />
             )}
           </div>
           <div className="rocketBuild">
             <div className="customRocketContainer">
-              <img id="botRocket" alt="test1" src={cannonImg} />
               <img
+                className="smallImg"
+                id="botRocket"
+                alt="test1"
+                src={cannonImg}
+              />
+              <img
+                className="smallImg"
                 id="bodyRocketalt"
                 alt="test1"
                 src="./rocketProjet/bodyRocket-test.png"
               />
-              <img id="headRocketalt" alt="test1" src={ammoImg} />
+              <img
+                className="smallImg"
+                id="headRocketalt"
+                alt="test1"
+                src={ammoImg}
+              />
             </div>
           </div>
           <div className="planetRandomized">
@@ -164,24 +179,43 @@ function Game() {
         <div className="characterPlanetsMobile">
           <div className="characterSelected">
             {characterChoice === 'First' ? (
-              <img src="monster1.png" alt="First Alien" />
+              <img className="smallImg" src="monster1.png" alt="First Alien" />
             ) : (
-              <img src="Alien3.png" alt="Je s'appel Groot" />
+              <img
+                className="smallImg"
+                src="Alien3.png"
+                alt="Je s'appel Groot"
+              />
             )}
           </div>
           <div className="planetRandomized">
-            <img alt="generated planets" src={planet.url} />
+            <img
+              className="smallImg"
+              alt="generated planets"
+              src={planet.url}
+            />
           </div>
         </div>
         <div className="rocketBuildMobile">
           <div className="customRocketContainer">
-            <img id="botRocket" alt="test1" src={cannonImg} />
             <img
+              className="smallImg"
+              id="botRocket"
+              alt="test1"
+              src={cannonImg}
+            />
+            <img
+              className="smallImg"
               id="bodyRocketalt"
               alt="test1"
               src="./rocketProjet/bodyRocket-test.png"
             />
-            <img id="headRocketalt" alt="test1" src={ammoImg} />
+            <img
+              className="smallImg"
+              id="headRocketalt"
+              alt="test1"
+              src={ammoImg}
+            />
           </div>
         </div>
         {/* MISE EN PLACE DU CUSTOM ROCKET, IL CONTIENT 2 IMAGES GEREES PAR DES
@@ -199,7 +233,12 @@ function Game() {
                 role="button"
                 tabIndex={0}
               >
-                <img id={item.munition} alt="choose a weapon" src={item.url} />
+                <img
+                  className="smallImg"
+                  id={item.munition}
+                  alt="choose a weapon"
+                  src={item.url}
+                />
               </div>
             ))}
           </div>
@@ -215,7 +254,12 @@ function Game() {
                 role="button"
                 tabIndex={0}
               >
-                <img id={item.canon} alt="choose a Canon" src={item.url} />
+                <img
+                  className="smallImg"
+                  id={item.canon}
+                  alt="choose a Canon"
+                  src={item.url}
+                />
               </div>
             ))}
           </div>

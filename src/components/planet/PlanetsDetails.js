@@ -1,5 +1,15 @@
 import React from 'react';
 import axios from 'axios';
+import { GiPathDistance, GiPlanetCore } from 'react-icons/gi';
+import {
+  FaTemperatureLow,
+  FaTemperatureHigh,
+  FaGrav,
+  FaWeightHanging,
+} from 'react-icons/fa';
+import { RiSunLine, RiSpeedLine } from 'react-icons/ri';
+
+import { FiRotateCcw } from 'react-icons/fi';
 
 import { ExtraProps } from './ExtraProp';
 import './boxPlanets.css';
@@ -52,23 +62,49 @@ class PlanetDetails extends React.Component {
               </div>
               <div id="caracList">
                 <ul>
-                  <li>Distance du soleil: {e.fromSun} Millions de km</li>
+                  <li>
+                    <GiPathDistance size={70} /> : {e.fromSun} Millions km from
+                    sun
+                  </li>
                   <br />
-                  <li>Composition: {e.composition}</li>
+                  <li>
+                    {' '}
+                    <GiPlanetCore size={70} />
+                    Composition: {e.composition}
+                  </li>
                   <br />
-                  <li>Temperature Min: {e.tempMin}°</li>
+                  <li>
+                    <FaTemperatureLow size={70} /> Min: {e.tempMin}°
+                  </li>
                   <br />
-                  <li>Temperature Max: {e.tempMax}°</li>
+                  <li>
+                    <FaTemperatureHigh size={70} /> Max: {e.tempMax}°
+                  </li>
                   <br />
-                  <li>Vitesse de rotation: {e.rotation} km/h</li>
+                  <li>
+                    <RiSpeedLine size={70} />
+                    Vitesse de rotation: {e.rotation} km/h
+                  </li>
                   <br />
-                  <li>Période de roration: {e.periodeRotation}h</li>
+                  <li>
+                    <FiRotateCcw size={70} />
+                    Période de roration: {e.periodeRotation}h
+                  </li>
                   <br />
-                  <li>Révolution Solaire: {e.revolutionSolaire} jours</li>
+                  <li>
+                    <RiSunLine size={70} />
+                    Révolution Solaire: {e.revolutionSolaire} jours
+                  </li>
                   <br />
-                  <li>Gravity: {e.gravity} m/s²</li>
+                  <li>
+                    <FaGrav size={70} />
+                    Gravity: {e.gravity} m/s²
+                  </li>
                   <br />
-                  <li>Density: {e.density} g/cm3</li>
+                  <li>
+                    <FaWeightHanging size={70} />
+                    Density: {e.density} g/cm3
+                  </li>
                   <br />
                   <li>{e.description}</li>
                 </ul>

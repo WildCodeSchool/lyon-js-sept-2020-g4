@@ -8,11 +8,9 @@ function Characters() {
   const {
     showCharacter,
     handleClickPlay,
-    characterChoice,
     handleClickFirstCharacter,
     handleClickSecondCharacter,
   } = useContext(GameContext);
-  console.log(characterChoice);
   return (
     <div className="containerCharacters">
       <div className={showCharacter ? 'Characters' : 'Characters-off'}>

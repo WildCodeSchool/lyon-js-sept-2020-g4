@@ -21,7 +21,7 @@
   margin-bottom: 20px;
 }
 
-img {
+.smallImg {
   width: 90px;
 }
 
@@ -48,7 +48,7 @@ img {
 
 .containerWpns {
   display: flex;
-  border: solid;
+  border: solid 1px;
   margin-bottom: 20px;
 }
 

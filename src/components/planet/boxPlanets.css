@@ -21,10 +21,6 @@ li {
   padding: 50px;
 }
 
-.planetsImg {
-  align-self: center;
-}
-
 #caracList h2 {
   color: white;
   font-size: 30px;
@@ -32,6 +28,14 @@ li {
 }
 #caracList ul {
   font-family: 'Comic Neue', cursive;
+}
+#caracList {
+  border: solid;
+}
+#caracList ul li {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
 }
 
 h2 {
