@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+}
 
 body {
   background-image: url('https://img4.goodfon.com/wallpaper/nbig/8/23/raketa-nebo-kosmos-zvezdy-luna-oblaka-risunok.jpg');
@@ -40,6 +43,16 @@ nav a {
 
 .toggle input {
   display: none;
+}
+.notFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px;
+}
+.notFound h1 {
+  margin-bottom: 50px;
 }
 
 @media screen and (max-width: 600px) {

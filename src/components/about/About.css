@@ -1,13 +1,36 @@
+.devCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 50px 0;
+}
+.all-cards {
+  width: 300px;
+  display: flex;
+  margin: 30px;
+}
 .all-cards img {
   width: 100%;
 }
-.devCards {
+.mainAbout {
+  margin: 100px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-top: 100px;
 }
-.all-cards {
-  margin: 20px;
+
+@media screen and (max-width: 600px) {
+  .devCards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  .all-cards {
+    margin: 20px;
+  }
+  .mainAbout {
+    padding-bottom: 20px;
+  }
 }

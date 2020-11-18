@@ -136,7 +136,32 @@ function Game() {
     <div className={showGame ? 'gamedisplay' : 'gamedisplay-off'}>
       <div className="gameBackgroundOn">
         <p className="customYourWpn">YOUR TARGET IS : {planet.planet}</p>
-        <div className="characterPlanets">
+        <p className="customYourWpn">Customize your rocket : </p>
+
+        <div className="characterPlanetsDesktop">
+          <div className="characterSelected">
+            {characterChoice === 'First' ? (
+              <img src="Alien1.png" alt="First Alien" />
+            ) : (
+              <img src="Alien3.png" alt="Je s'appel Groot" />
+            )}
+          </div>
+          <div className="rocketBuild">
+            <div className="customRocketContainer">
+              <img id="botRocket" alt="test1" src={cannonImg} />
+              <img
+                id="bodyRocketalt"
+                alt="test1"
+                src="./rocketProjet/bodyRocket-test.png"
+              />
+              <img id="headRocketalt" alt="test1" src={ammoImg} />
+            </div>
+          </div>
+          <div className="planetRandomized">
+            <img alt="generated planets" src={planet.url} />
+          </div>
+        </div>
+        <div className="characterPlanetsMobile">
           <div className="characterSelected">
             {characterChoice === 'First' ? (
               <img src="Alien1.png" alt="First Alien" />
@@ -148,18 +173,20 @@ function Game() {
             <img alt="generated planets" src={planet.url} />
           </div>
         </div>
+        <div className="rocketBuildMobile">
+          <div className="customRocketContainer">
+            <img id="botRocket" alt="test1" src={cannonImg} />
+            <img
+              id="bodyRocketalt"
+              alt="test1"
+              src="./rocketProjet/bodyRocket-test.png"
+            />
+            <img id="headRocketalt" alt="test1" src={ammoImg} />
+          </div>
+        </div>
         {/* MISE EN PLACE DU CUSTOM ROCKET, IL CONTIENT 2 IMAGES GEREES PAR DES
         USESTATES POUR FAIRE VARIER LA PROPULSION ET LA TËTE ET 1 IMAGE FIXE POUR LE BODY DE LA ROCKET */}
-        <p className="customYourWpn">Customize your rocket : </p>
-        <div className="customRocketContainer">
-          <img id="botRocket" alt="test1" src={cannonImg} />
-          <img
-            id="bodyRocketalt"
-            alt="test1"
-            src="./rocketProjet/bodyRocket-test.png"
-          />
-          <img id="headRocketalt" alt="test1" src={ammoImg} />
-        </div>
+
         <div className="containerWpns">
           <div className="chooseAmo">
             <h2>Ammo:</h2>

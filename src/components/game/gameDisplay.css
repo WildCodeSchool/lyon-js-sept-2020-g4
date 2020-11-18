@@ -13,10 +13,10 @@
 .gameBackgroundOff {
   display: none;
 }
-.characterPlanets {
+.characterPlanetsDesktop {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   margin-bottom: 20px;
 }
@@ -59,9 +59,6 @@ img {
   align-items: center;
 }
 
-#customRocket {
-}
-
 /* REGLAGE DU CUSTOM DE LA ROCKET ET DES TITRES DE CEUX CI*/
 .customRocketContainer {
   display: flex;
@@ -79,12 +76,34 @@ img {
   font-size: 25px;
   background-color: rgb(31, 83, 115);
 }
-
+.planetRandomized {
+  width: 150px;
+}
 .planetRandomized img {
-  width: 80%;
+  width: 100%;
   margin-top: 15px;
 }
 
 .descriptionRange {
   margin-top: 15px;
+}
+.characterPlanetsMobile {
+  display: none;
+}
+.rocketBuildMobile {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .characterPlanetsMobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .characterPlanetsDesktop {
+    display: none;
+  }
+  .rocketBuildMobile {
+    display: block;
+  }
 }

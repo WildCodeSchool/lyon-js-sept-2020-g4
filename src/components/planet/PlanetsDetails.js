@@ -43,39 +43,41 @@ class PlanetDetails extends React.Component {
   render() {
     const { carac } = this.state;
     return (
-      <div className="caracsContainer">
-        {carac.map((e) => (
-          <div key={e.id} className="box">
-            <h2>{e.name}</h2>
-            <div className="planetsImg">
-              <img className="planetImg" src={e.url} alt={e.name} />
+      <div className="planetsDetails">
+        <div className="caracsContainer">
+          {carac.map((e) => (
+            <div key={e.id} className="box">
+              <h2>{e.name}</h2>
+              <div className="planetsImg">
+                <img className="planetImg" src={e.url} alt={e.name} />
+              </div>
+              <div id="caracList">
+                <ul>
+                  <li>Distance du soleil: {e.fromSun} Millions de km</li>
+                  <br />
+                  <li>Composition: {e.composition}</li>
+                  <br />
+                  <li>Temperature Min: {e.tempMin}°</li>
+                  <br />
+                  <li>Temperature Max: {e.tempMax}°</li>
+                  <br />
+                  <li>Vitesse de rotation: {e.rotation} km/h</li>
+                  <br />
+                  <li>Période de roration: {e.periodeRotation}h</li>
+                  <br />
+                  <li>Révolution Solaire: {e.revolutionSolaire} jours</li>
+                  <br />
+                  <li>Gravity: {e.gravity} m/s²</li>
+                  <br />
+                  <li>Density: {e.density} g/cm3</li>
+                  <br />
+                  <li>{e.description}</li>
+                </ul>
+              </div>
             </div>
-            <div id="caracList">
-              <ul>
-                <li>Distance du soleil: {e.fromSun} Millions de km</li>
-                <br />
-                <li>Composition: {e.composition}</li>
-                <br />
-                <li>Temperature Min: {e.tempMin}°</li>
-                <br />
-                <li>Temperature Max: {e.tempMax}°</li>
-                <br />
-                <li>Vitesse de rotation: {e.rotation} km/h</li>
-                <br />
-                <li>Période de roration: {e.periodeRotation}h</li>
-                <br />
-                <li>Révolution Solaire: {e.revolutionSolaire} jours</li>
-                <br />
-                <li>Gravity: {e.gravity} m/s²</li>
-                <br />
-                <li>Density: {e.density} g/cm3</li>
-                <br />
-                <li>{e.description}</li>
-              </ul>
-            </div>
-          </div>
-        ))}
-        <div className="planetButtonBack">
+          ))}
+        </div>
+        <div>
           <Link to="/">
             <Button variant="contained" type="submit">
               Back
