@@ -25,7 +25,7 @@ function Characters() {
             role="button"
             tabIndex={0}
           >
-            <img src="./Alien1.png" alt="male character" />
+            <img src="./monster1.png" alt="male character" />
           </div>
           <div
             onClick={handleClickSecondCharacter}
