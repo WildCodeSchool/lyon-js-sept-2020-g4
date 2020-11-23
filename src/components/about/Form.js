@@ -3,7 +3,7 @@ import './Form.css';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
-/* import axios from 'axios'; */
+import axios from 'axios';
 
 require('dotenv').config();
 
@@ -105,7 +105,7 @@ const Form = () => {
       regex.test(email) &&
       !(message.length <= 0)
     ) {
-      /*       axios
+      axios
         .post(`http://localhost:50100/contact?apiKey=cnoenclkdsq`, {
           name: `${lastName} ${firstName}`,
           email,
@@ -113,7 +113,7 @@ const Form = () => {
         })
         .then(() => {
           console.log('ok');
-        }); */
+        });
       alert('Form send');
       setLastName('');
       setFirstName('');
