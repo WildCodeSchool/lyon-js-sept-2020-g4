@@ -1,14 +1,16 @@
 import React from 'react';
+
 import axios from 'axios';
 import Button from '@material-ui/core/Button';
 import './iss.css';
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 
 class IssStatus extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      locationLong: '',
-      locationLat: '',
+      locationLong: 0,
+      locationLat: 0,
     };
     this.getLocationIss = this.getLocationIss.bind(this);
   }
@@ -31,40 +33,33 @@ class IssStatus extends React.Component {
 
     /// /////////////////////////////////
     const { locationLong, locationLat } = this.state;
-    const canvas = document.getElementById('map');
-    const ctx = canvas.getContext('2d');
+
     const locationArray = [];
     locationArray.push({ locationLat });
     locationArray.push({ locationLong });
-    ctx.strokeStyle = 'green';
-    // MISE EN PLACE DU RENDU D'UN POINT SUR LA MAP
-    // locationArray.forEach(function (place) {
-    //   ctx.rect(
-    //     // turn a longitude value into a screen
-    //     // pixel: the left side of the page is 0, not
-    //     // 180, so add 180 to the value and then
-    //     // scale up by 2 to make the drawing 640px
-    //     // wide
-    //     (place[0] + 180) * 2,
-    //     // turn a latitude value into a screen
-    //     // pixel. unlike pixels, latitude ranges
-    //     // from high values on the top to low on the bottom
-    //     // doing 90 - lat flips them.
-    //     (90 - place[1]) * 2,
-    //     10,
-    //     10
-    //   );
-    // });
-    ctx.fill();
   }
 
   render() {
     const { locationLong, locationLat } = this.state;
+    const marker = [locationLat, locationLong];
+
     return (
       <div className="issContainer">
         <h1>Ou se trouve l'ISS ?</h1>
-        {/* J'ai retiré ici la wisdth et height qui nous obligeait à scroller en largeur */}
-        <canvas id="map" />
+
+        <MapContainer center={marker} zoom={1} scrollWheelZoom={false}>
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={marker}>
+            <Popup>
+              {`Longitude: ${locationLong} `}
+              <br /> {`Latitude: ${locationLat} `}
+            </Popup>
+          </Marker>
+        </MapContainer>
+
         <Button variant="contained" onClick={this.getLocationIss} type="submit">
           ACTUALISATION
         </Button>

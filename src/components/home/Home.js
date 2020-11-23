@@ -13,7 +13,7 @@ const Home = () => {
       <Carousel />
       <div className="PlayingButton">
         <Link to="/game">
-          <Button variant="contained" type="submit">
+          <Button size="large" variant="contained" type="submit">
             Test tes connaissances !
           </Button>
         </Link>

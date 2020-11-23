@@ -8,11 +8,9 @@ function Characters() {
   const {
     showCharacter,
     handleClickPlay,
-    characterChoice,
     handleClickFirstCharacter,
     handleClickSecondCharacter,
   } = useContext(GameContext);
-  console.log(characterChoice);
   return (
     <div className="containerCharacters">
       <div className={showCharacter ? 'Characters' : 'Characters-off'}>
@@ -25,7 +23,7 @@ function Characters() {
             role="button"
             tabIndex={0}
           >
-            <img src="./Alien1.png" alt="male character" />
+            <img src="./monster1.png" alt="male character" />
           </div>
           <div
             onClick={handleClickSecondCharacter}
