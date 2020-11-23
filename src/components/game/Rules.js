@@ -18,8 +18,8 @@ function Rules() {
           Tu te dis que ce serait vachement fun de faire le ménage par ici, tu
           vas donc, en fonction de la planète qui apparrait et de ses
           caractéristiques, choisir le bon type de munition et la portée de ton
-          arme pour réussir à les désintégrer, en vu de rammenner un joli
-          displome du SuperDestructeur de l'univers à tes camarades.
+          arme pour réussir à les désintégrer, en vu de ramenner un joli diplôme
+          du SuperDestructeur de l'univers à tes camarades.
           <br />
           <br />A toi de jouer !!
         </p>
