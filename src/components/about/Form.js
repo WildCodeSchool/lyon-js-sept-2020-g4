@@ -3,6 +3,9 @@ import './Form.css';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
+/* import axios from 'axios'; */
+
+require('dotenv').config();
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -94,7 +97,7 @@ const Form = () => {
     HandleBlurEmail();
     HandleBlurMessage();
     e.preventDefault();
-
+    console.log(process.env.APIKEY);
     if (
       !(lastName.length <= 0) &&
       !(firstName.length <= 0) &&
@@ -102,6 +105,15 @@ const Form = () => {
       regex.test(email) &&
       !(message.length <= 0)
     ) {
+      /*       axios
+        .post(`http://localhost:50100/contact?apiKey=cnoenclkdsq`, {
+          name: `${lastName} ${firstName}`,
+          email,
+          message,
+        })
+        .then(() => {
+          console.log('ok');
+        }); */
       alert('Form send');
       setLastName('');
       setFirstName('');

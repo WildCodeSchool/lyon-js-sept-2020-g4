@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import Button from '@material-ui/core/Button';
 import { GameContext } from './GameContext';
 import './winLoose.css';
-import LooseAnimation from './LooseAnimation'
+import LooseAnimation from './LooseAnimation';
 
 const Loose = () => {
   const { victory, handleClickReplay } = useContext(GameContext);
