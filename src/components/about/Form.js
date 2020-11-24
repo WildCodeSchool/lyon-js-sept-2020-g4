@@ -7,6 +7,8 @@ import axios from 'axios';
 
 require('dotenv').config();
 
+const API = process.env.API_KEY;
+
 const useStyles = makeStyles((theme) => ({
   root: {
     // Utilisation des breakpoint avec materialUI
@@ -105,7 +107,7 @@ const Form = () => {
     HandleBlurEmail();
     HandleBlurMessage();
     e.preventDefault();
-    console.log(process.env.APIKEY);
+    console.log(process.env.API_KEY);
     if (
       !(lastName.length <= 0) &&
       !(firstName.length <= 0) &&
@@ -114,7 +116,7 @@ const Form = () => {
       !(message.length <= 0)
     ) {
       axios
-        .post(`http://localhost:50100/contact?apiKey=cnoenclkdsq`, {
+        .post(`https://contact-form-p2.herokuapp.com/contact?apiKey=${API}`, {
           name: `${lastName} ${firstName}`,
           email,
           message,
