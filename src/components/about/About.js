@@ -11,28 +11,32 @@ function About() {
   const [teamMember] = useState([
     {
       name: 'Romain',
-      description: 'Wild Member',
+      description:
+        'A l’échelle cosmique, l’eau liquide est plus rare que l’or. Hubert Reeves...',
       avatar:
         'https://avatars1.githubusercontent.com/u/60798921?s=460&u=c18c20b2a9dc4b176baf1a6cddb4fa80f6cb89ab&v=4',
       github: 'https://github.com/Rom-mtl',
     },
     {
       name: 'Antoine',
-      description: 'Wild Member',
+      description:
+        "Ca va pas me prendre longtemps, c'est juste une histoire de margin... Laurence Portron Hackaton 2020",
       avatar:
         'https://avatars2.githubusercontent.com/u/22123286?s=460&u=50fe9581384c7582db2dfc1f1d7ca54925bf3c3b&v=4',
       github: 'https://github.com/AntoineGGG',
     },
     {
       name: 'Laurence',
-      description: 'Wild Member',
+      description:
+        "Cet univers ne serait pas grand chose s'il n'abritait pas les gens qu'on aime. Stephen Hawking",
       avatar:
         'https://avatars3.githubusercontent.com/u/45975914?s=460&u=851118e8619e6645c64ece96dc4c39e39bf6bdb0&v=4',
       github: 'https://github.com/LaurencePortron',
     },
     {
       name: 'Aymeric',
-      description: 'Wild Member',
+      description:
+        'Les performances individuelles, ce n’est pas le plus important. On gagne et on perd en équipe. Zizou',
       avatar: 'https://avatars1.githubusercontent.com/u/65455508?s=460&v=4',
       github: 'https://github.com/Abouault',
     },
