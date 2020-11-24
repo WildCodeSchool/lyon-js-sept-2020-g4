@@ -1,9 +1,11 @@
 import React from 'react';
 
 import axios from 'axios';
+import L from 'leaflet';
 
 import './iss.css';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
+import iconIss from './issIcon.png';
 
 class IssStatus extends React.Component {
   constructor(props) {
@@ -47,6 +49,18 @@ class IssStatus extends React.Component {
   // CREATION DES ICONS PERSOS POUR LE MAP
 
   render() {
+    const iconPerson = new L.Icon({
+      iconUrl: iconIss,
+      iconRetinaUrl: iconIss,
+      iconAnchor: null,
+      popupAnchor: null,
+      shadowUrl: null,
+      shadowSize: null,
+      shadowAnchor: null,
+      iconSize: [55, 35],
+      className: 'leaflet-div-icon',
+    });
+
     const { locationLong, locationLat } = this.state;
     const marker = [locationLat, locationLong];
 
@@ -59,11 +73,11 @@ class IssStatus extends React.Component {
               attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={marker}>
-              <Popup>
+            <Marker position={marker} icon={iconPerson}>
+              {/* <Popup>
                 {`Longitude: ${locationLong} `}
                 <br /> {`Latitude: ${locationLat} `}
-              </Popup>
+              </Popup> */}
             </Marker>
           </MapContainer>
           <p className="longitude">
