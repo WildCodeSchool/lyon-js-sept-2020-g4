@@ -10,7 +10,7 @@ const Loose = () => {
     <div />
   ) : (
     <div className="loose">
-      <img src="./defeate.png" alt="T'as perdu" />
+      <img src="./loose.png" alt="T'as perdu" />
       <LooseAnimation />
       <Button variant="contained" onClick={handleClickReplay} type="submit">
         Replay

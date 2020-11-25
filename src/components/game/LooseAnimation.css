@@ -22,9 +22,10 @@
 
 .rocket-miss {
   animation-duration: 3s;
-  animation-name: taxiDriving;
+  animation-name: rocketmiss;
   animation-timing-function: ease-in;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
   transform: rotate(45deg);
 }
 
@@ -32,13 +33,14 @@
   animation: rotatePlanet 10s infinite linear;
 }
 
-@keyframes taxiDriving {
-  from {
+@keyframes rocketmiss {
+  0% {
     margin-right: 0%;
   }
 
-  to {
+  100% {
     margin-left: 80%;
+    visibility: hidden;
   }
 }
 
@@ -48,5 +50,16 @@
   }
   100% {
     transform: rotateZ(-360deg);
+  }
+}
+
+@media screen and (min-widht:1024px){
+  .rocket-miss{
+    width: 200px;
+    height: 200px;
+  }
+  .planet-loose{
+    width: 200px;
+    height: 200px;
   }
 }
