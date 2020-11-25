@@ -141,10 +141,14 @@ function Game() {
         <div className="characterPlanetsDesktop">
           <div className="characterSelected">
             {characterChoice === 'First' ? (
-              <img className="smallImg" src="monster1.png" alt="First Alien" />
+              <img
+                className="characterImg"
+                src="monster1.png"
+                alt="First Alien"
+              />
             ) : (
               <img
-                className="smallImg"
+                className="characterImg"
                 src="Alien3.png"
                 alt="Je s'appel Groot"
               />

@@ -45,7 +45,7 @@ function About() {
 
   return (
     <div className="mainAbout">
-      <h1>Dev Team</h1>
+      <h1 className="devTitle">Dev Team</h1>
       <div className="devCards">
         {teamMember.map((user) => {
           return (

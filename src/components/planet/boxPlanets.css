@@ -41,6 +41,7 @@ li {
   text-align: center;
   font-family: 'Comic Neue', cursive;
   margin-bottom: 20px;
+  font-size: 50px;
 }
 
 html {
@@ -134,5 +135,8 @@ html {
     animation-timing-function: linear;
     margin-right: 0;
     margin-bottom: 0;
+  }
+  .planetsTitle {
+    margin-bottom: 50px;
   }
 }
