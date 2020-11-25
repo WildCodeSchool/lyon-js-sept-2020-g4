@@ -9,12 +9,11 @@ const CountDownInterval = () => {
     const difference = Date.parse(launchDate) - Date.parse(new Date());
     return difference / 1000;
   }
-
   useEffect(() => {
     axios
-      .get(`https://api.spacexdata.com/v3/launches/next`)
+      .get(`https://api.spacexdata.com/v4/launches/next`)
       .then((response) => {
-        setCountDownSeconds(calculateTimeLeft(response.data.launch_date_utc));
+        setCountDownSeconds(calculateTimeLeft(response.data.date_utc));
       });
   }, []);
 
@@ -24,7 +23,6 @@ const CountDownInterval = () => {
     }, 1000);
     return () => clearInterval(interval);
   }, []);
-
   const seconds = Math.floor(countDownSeconds % 60);
   const minutes = Math.floor((countDownSeconds / 60) % 60);
   const hours = Math.floor((countDownSeconds / (60 * 60)) % 24);
