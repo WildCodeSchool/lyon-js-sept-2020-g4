@@ -7,17 +7,17 @@ const CountDownInterval = () => {
   const [countDownSeconds, setCountDownSeconds] = useState(0);
   function calculateTimeLeft(launchDate) {
     const difference = Date.parse(launchDate) - Date.parse(new Date());
+
     return difference / 1000;
   }
 
   useEffect(() => {
     axios
-      .get(`https://api.spacexdata.com/v3/launches/next`)
+      .get(`https://api.spacexdata.com/v4/launches/next`)
       .then((response) => {
-        setCountDownSeconds(calculateTimeLeft(response.data.launch_date_utc));
+        setCountDownSeconds(calculateTimeLeft(response.data.date_utc));
       });
   }, []);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCountDownSeconds((prevCountDownSeconds) => prevCountDownSeconds - 1);
