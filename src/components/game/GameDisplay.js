@@ -117,7 +117,7 @@ function Game() {
       setVictory(true);
     } else if (
       planet.planet === 'Neptune' &&
-      ammo === 'foreuse' &&
+      ammo === 'Foreuse' &&
       cannon === 'Canon Long'
     ) {
       setVictory(true);
@@ -132,6 +132,7 @@ function Game() {
     }
     setPlanet(planets[0][Math.floor(Math.random() * planets[0].length)]);
   };
+
   return (
     <div className={showGame ? 'gamedisplay' : 'gamedisplay-off'}>
       <div className="gameBackgroundOn">
@@ -141,10 +142,14 @@ function Game() {
         <div className="characterPlanetsDesktop">
           <div className="characterSelected">
             {characterChoice === 'First' ? (
-              <img className="smallImg" src="monster1.png" alt="First Alien" />
+              <img
+                className="characterImg"
+                src="monster1.png"
+                alt="First Alien"
+              />
             ) : (
               <img
-                className="smallImg"
+                className="characterImg"
                 src="Alien3.png"
                 alt="Je s'appel Groot"
               />

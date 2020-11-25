@@ -16,7 +16,7 @@
   width: 100%;
 }
 .mainAbout {
-  margin: 100px 0;
+  margin: 100px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +28,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
   }
   .all-cards {
     margin: 20px;

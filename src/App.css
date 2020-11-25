@@ -27,9 +27,12 @@ nav ul {
   justify-content: flex-end;
   list-style: none;
   font-family: 'Comic Neue', cursive;
-
+  align-items: center;
   background-color: rgb(31, 83, 115);
-  padding: 30px;
+}
+.ourSupaLogo {
+  width: 100%;
+  margin-left: 30px;
 }
 
 nav a {
