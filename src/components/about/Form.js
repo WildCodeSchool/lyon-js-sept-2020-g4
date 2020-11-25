@@ -7,7 +7,6 @@ import axios from 'axios';
 
 require('dotenv').config();
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     // Utilisation des breakpoint avec materialUI
@@ -115,11 +114,14 @@ const Form = () => {
       !(message.length <= 0)
     ) {
       axios
-        .post(`https://contact-form-p2.herokuapp.com/contact?apiKey=${window.API_KEY}`, {
-          name: `${lastName} ${firstName}`,
-          email,
-          message,
-        })
+        .post(
+          `https://contact-form-p2.herokuapp.com/contact?apiKey=${window.API_KEY}`,
+          {
+            name: `${lastName} ${firstName}`,
+            email,
+            message,
+          }
+        )
         .then(() => {
           console.log('ok');
         });
