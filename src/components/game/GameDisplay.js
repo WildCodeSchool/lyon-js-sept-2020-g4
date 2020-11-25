@@ -117,7 +117,7 @@ function Game() {
       setVictory(true);
     } else if (
       planet.planet === 'Neptune' &&
-      ammo === 'foreuse' &&
+      ammo === 'Foreuse' &&
       cannon === 'Longue Portée'
     ) {
       setVictory(true);
@@ -132,6 +132,7 @@ function Game() {
     }
     setPlanet(planets[0][Math.floor(Math.random() * planets[0].length)]);
   };
+
   return (
     <div className={showGame ? 'gamedisplay' : 'gamedisplay-off'}>
       <div className="gameBackgroundOn">
