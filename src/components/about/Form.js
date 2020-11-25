@@ -4,20 +4,26 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
+    // Utilisation des breakpoint avec materialUI
+
+    [theme.breakpoints.up('sm')]: {
+      width: '600px',
+    },
     /* Cadre TextField */
     '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
       borderColor: 'white',
     },
     '&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
       borderColor: 'red',
+      fontWeight: 'bold',
     },
     '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
-      borderColor: 'purple',
+      borderColor: 'orange',
     },
     '& .MuiOutlinedInput-input': {
-      color: 'green',
+      color: 'orange',
     },
     '&:hover .MuiOutlinedInput-input': {
       color: 'white',
@@ -31,9 +37,11 @@ const useStyles = makeStyles(() => ({
     },
     '&:hover .MuiInputLabel-outlined': {
       color: 'red',
+      fontWeight: 'bold',
     },
+    // Label qui va sur la bordure
     '& .MuiInputLabel-outlined.Mui-focused': {
-      color: 'purple',
+      color: 'orange',
     },
   },
 }));
