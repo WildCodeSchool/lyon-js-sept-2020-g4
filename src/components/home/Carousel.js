@@ -98,7 +98,7 @@ class Carousel extends Component {
   render() {
     return (
       <div>
-        <h1 className="carousel-title">Choose a star</h1>
+        <h1 className="carousel-title">Choisis un astre</h1>
         <div className="carousel-container">
           <Button
             style={{

@@ -96,6 +96,9 @@ nav a {
     z-index: 2; /* and place it over the hamburger */
     -webkit-touch-callout: none;
   }
+  .ourSupaLogo {
+    display: none;
+  }
 
   /*
    * Just a quick hamburger
@@ -157,12 +160,13 @@ nav a {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-top: -80px;
+    margin-top: -60px;
     box-shadow: none;
     list-style-type: none;
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    padding-bottom: 20px;
   }
 
   nav li {

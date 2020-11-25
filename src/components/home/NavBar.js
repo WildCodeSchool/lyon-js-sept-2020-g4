@@ -20,13 +20,13 @@ const NavBar = () => {
               />
             </div>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">Accueil</Link>
             </li>
             <li>
-              <Link to="/game">Game</Link>
+              <Link to="/game">Jeux</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about">Infos</Link>
             </li>
           </ul>
         </div>

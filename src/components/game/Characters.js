@@ -14,7 +14,7 @@ function Characters() {
   return (
     <div className="containerCharacters">
       <div className={showCharacter ? 'Characters' : 'Characters-off'}>
-        <h2>Choose your Character</h2>
+        <h2>Choisis ton personnage</h2>
         <div className="img-characters">
           <div
             className="firstCharacter"
@@ -36,7 +36,7 @@ function Characters() {
           </div>
         </div>
         <Button variant="contained" onClick={handleClickPlay} type="submit">
-          Play
+          Jouer
         </Button>
       </div>
     </div>
