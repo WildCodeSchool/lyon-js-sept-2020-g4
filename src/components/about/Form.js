@@ -7,7 +7,6 @@ import axios from 'axios';
 
 require('dotenv').config();
 
-const API = process.env.API_KEY;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -116,7 +115,7 @@ const Form = () => {
       !(message.length <= 0)
     ) {
       axios
-        .post(`https://contact-form-p2.herokuapp.com/contact?apiKey=${API}`, {
+        .post(`https://contact-form-p2.herokuapp.com/contact?apiKey=${window.API_KEY}`, {
           name: `${lastName} ${firstName}`,
           email,
           message,
