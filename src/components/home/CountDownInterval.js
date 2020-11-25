@@ -34,10 +34,30 @@ const CountDownInterval = () => {
       <div className="rocket-container">
         <h1 className="rocket-title">Prochain décollage de SpaceX </h1>
         <div className="countdown">
-          <p>
-            {days} jours {hours} heures
-            <br /> {minutes} minutes {seconds} secondes
-          </p>
+          <div className="count">
+            <div className="countText">
+              <p>Jours</p>
+            </div>
+            <div className="countNumber">{days}</div>
+          </div>{' '}
+          <div className="count">
+            <div className="countText">
+              <p>Heures</p>
+            </div>
+            <div className="countNumber">{hours}</div>
+          </div>
+          <div className="count">
+            <div className="countText">
+              <p>Min</p>
+            </div>
+            <div className="countNumber">{minutes}</div>{' '}
+          </div>
+          <div className="count">
+            <div className="countText">
+              <p>Sec</p>
+            </div>
+            <div className="countNumber">{seconds}</div>
+          </div>
         </div>
         <img
           className="smallrocket"
