@@ -11,13 +11,18 @@ const Start = () => {
   return (
     showInfo && (
       <div className="accessApp">
-        <h1>Welcome</h1>
+        <h1>Bienvenue</h1>
         <p>
-          How much do you know about our solar system? Let's dive into a
-          detailed presentation of our Star the Sun and its planets!
+          A quel point connais-tu notre système solaire ? Explorons notre
+          univers, son soleil et ses planètes!
         </p>
 
-        <Button variant="contained" type="submit" onClick={onClick}>
+        <Button
+          variant="contained"
+          type="submit"
+          onClick={onClick}
+          style={{ width: '200px' }}
+        >
           START YOUR JOURNEY
         </Button>
       </div>

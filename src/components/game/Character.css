@@ -1,9 +1,9 @@
 .Characters {
-  border: 1px solid white;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: rgba(46, 64, 83, 0.6);
+  margin-top: 50px;
   padding: 30px;
 }
 .containerCharacters {

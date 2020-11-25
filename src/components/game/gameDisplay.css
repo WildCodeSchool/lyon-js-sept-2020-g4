@@ -6,7 +6,6 @@
   align-items: center;
   padding: 20px 0;
   background-color: rgba(46, 64, 83, 0.6);
-  border: solid white;
   margin: 20px 20px;
 }
 
@@ -93,17 +92,24 @@
 .rocketBuildMobile {
   display: none;
 }
+.characterImg {
+  width: 150px;
+}
 
 @media screen and (max-width: 600px) {
   .characterPlanetsMobile {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
   .characterPlanetsDesktop {
     display: none;
   }
   .rocketBuildMobile {
     display: block;
+  }
+  .gameBackgroundOn {
+    margin-top: 100px;
   }
 }
