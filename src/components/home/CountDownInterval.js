@@ -7,6 +7,7 @@ const CountDownInterval = () => {
   const [countDownSeconds, setCountDownSeconds] = useState(0);
   function calculateTimeLeft(launchDate) {
     const difference = Date.parse(launchDate) - Date.parse(new Date());
+
     return difference / 1000;
   }
   useEffect(() => {
@@ -16,7 +17,6 @@ const CountDownInterval = () => {
         setCountDownSeconds(calculateTimeLeft(response.data.date_utc));
       });
   }, []);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCountDownSeconds((prevCountDownSeconds) => prevCountDownSeconds - 1);

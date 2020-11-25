@@ -9,7 +9,7 @@
 .carousel-viewport {
   white-space: nowrap;
   overflow-y: hidden;
-  overflow-x: auto;
+  overflow-x: hidden;
   flex-grow: 1;
   color: white;
 }
