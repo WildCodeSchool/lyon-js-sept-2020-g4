@@ -6,14 +6,14 @@ import { GameContext } from './GameContext';
 
 function Game() {
   /* DECLARATION DES HOOKS STATE AVEC USESTATE, UNE POUR CHAQUE VARIABLE: */
-  const [ammo, setAmmo] = useState('Choose a kind of ammo');
+  const [ammo, setAmmo] = useState('Choisis ta munition');
   const [ammoImg, setAmmoImg] = useState('./rocketProjet/emptyHeadRocket.png');
 
   const [ammoDescription, setAmmoDescription] = useState('');
 
   const [planet, setPlanet] = useState('Votre Cible arrive !');
 
-  const [cannon, setCannon] = useState('Choose a Range Canon');
+  const [cannon, setCannon] = useState('Choisis la portée');
   const [cannonImg, setCannonImg] = useState(
     './rocketProjet/emptyRangeRocket.png'
   );
@@ -55,11 +55,11 @@ function Game() {
     setCannon(e.target.id);
 
     switch (e.target.id) {
-      case 'Canon Long':
+      case 'Longue Portée':
         setCanonDescription(planets[2][0].description);
         setCannonImg('./rocketProjet/longRangeRocket-test.png');
         break;
-      case 'Canon Court':
+      case 'Courte portée':
         setCanonDescription(planets[2][1].description);
         setCannonImg('./rocketProjet/shortRangeRocket-test.png');
         break;
@@ -76,55 +76,55 @@ function Game() {
     if (
       planet.planet === 'Mars' &&
       ammo === 'Algues' &&
-      cannon === 'Canon Court'
+      cannon === 'Courte portée'
     ) {
       setVictory(true);
     } else if (
       planet.planet === 'Jupiter' &&
       ammo === 'Napalm' &&
-      cannon === 'Canon Court'
+      cannon === 'Courte portée'
     ) {
       setVictory(true);
     } else if (
       planet.planet === 'Saturne' &&
       ammo === 'Napalm' &&
-      cannon === 'Canon Long'
+      cannon === 'Longue Portée'
     ) {
       setVictory(true);
     } else if (
       planet.planet === 'Uranus' &&
       ammo === 'Foreuse' &&
-      cannon === 'Canon Long'
+      cannon === 'Longue Portée'
     ) {
       setVictory(true);
     } else if (
       planet.planet === 'Mercure' &&
       ammo === 'Napalm' &&
-      cannon === 'Canon Court'
+      cannon === 'Courte portée'
     ) {
       setVictory(true);
     } else if (
       planet.planet === 'Venus' &&
       ammo === 'Algues' &&
-      cannon === 'Canon Court'
+      cannon === 'Courte portée'
     ) {
       setVictory(true);
     } else if (
       planet.planet === 'Pluton' &&
       ammo === 'Foreuse' &&
-      cannon === 'Canon Long'
+      cannon === 'Longue Portée'
     ) {
       setVictory(true);
     } else if (
       planet.planet === 'Neptune' &&
       ammo === 'Foreuse' &&
-      cannon === 'Canon Long'
+      cannon === 'Longue Portée'
     ) {
       setVictory(true);
     } else if (
       planet.planet === 'Terre' &&
       ammo === 'Napalm' &&
-      cannon === 'Canon Court'
+      cannon === 'Courte portée'
     ) {
       setVictory(true);
     } else {
@@ -136,8 +136,8 @@ function Game() {
   return (
     <div className={showGame ? 'gamedisplay' : 'gamedisplay-off'}>
       <div className="gameBackgroundOn">
-        <p className="customYourWpn">YOUR TARGET IS : {planet.planet}</p>
-        <p className="customYourWpn">Customize your rocket : </p>
+        <p className="customYourWpn">Ta cible est : {planet.planet}</p>
+        <p className="customYourWpn">Personnalise ton missile : </p>
 
         <div className="characterPlanetsDesktop">
           <div className="characterSelected">
@@ -228,7 +228,7 @@ function Game() {
 
         <div className="containerWpns">
           <div className="chooseAmo">
-            <h2>Ammo:</h2>
+            <h2>Munitions</h2>
             {planets[1].map((item) => (
               <div
                 key={item.munition}
@@ -248,7 +248,7 @@ function Game() {
             ))}
           </div>
           <div className="chooseRange">
-            <h2>Range:</h2>
+            <h2>Portée</h2>
 
             {planets[2].map((item) => (
               <div

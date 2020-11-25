@@ -79,16 +79,18 @@ const planets = [
   ],
   [
     {
-      canon: 'Canon Long',
+      canon: 'Longue portée',
       url: './longRange.png',
       range: 1430,
-      description: 'Le canon long est efficace contre les planètes distantes',
+      description:
+        'La longue portée est efficace contre les planètes distantes',
     },
     {
-      canon: 'Canon Court',
+      canon: 'Courte portée',
       url: './shortRange.png',
       range: 0,
-      description: 'La canon court est plus précis pour les planètes proches',
+      description:
+        'La courte portée est plus précise pour les planètes proches',
     },
   ],
 ];

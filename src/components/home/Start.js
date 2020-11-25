@@ -23,7 +23,7 @@ const Start = () => {
           onClick={onClick}
           style={{ width: '200px' }}
         >
-          START YOUR JOURNEY
+          Commence le voyage
         </Button>
       </div>
     )

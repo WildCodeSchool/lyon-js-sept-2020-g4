@@ -66,14 +66,17 @@
 
 .selectedWpns {
   font-size: 25px;
-  background-color: rgb(31, 83, 115);
+  background-color: rgba(46, 64, 83, 0.8);
   margin-left: 15px;
   margin-right: 15px;
+  padding: 5px;
 }
 
 .customYourWpn {
   font-size: 25px;
-  background-color: rgb(31, 83, 115);
+  background-color: rgba(46, 64, 83, 0.8);
+  margin: 5px;
+  padding: 5px;
 }
 .planetRandomized {
   width: 150px;

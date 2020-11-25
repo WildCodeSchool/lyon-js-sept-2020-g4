@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
       color: 'white',
     },
     '&:hover .MuiInputLabel-outlined': {
-      color: 'red',
+      color: 'white',
       fontWeight: 'bold',
     },
     // Label qui va sur la bordure
@@ -81,10 +81,10 @@ const Form = () => {
     const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     if (email.length <= 0) {
       setEmailIsError(true);
-      setMessageErrorEmail('email is required');
+      setMessageErrorEmail('email requis');
     } else if (!regex.test(email)) {
       setEmailIsError(true);
-      setMessageErrorEmail('invalid email');
+      setMessageErrorEmail('email invalide');
     } else {
       setEmailIsError(false);
     }
@@ -140,9 +140,9 @@ const Form = () => {
         <TextField
           className={classes.root}
           id="outlined-basic"
-          label="Lastname"
+          label="Nom"
           variant="outlined"
-          name="lastname"
+          name="Nom"
           onChange={(e) => setLastName(e.target.value)}
           onBlur={HandleBlurLastName}
           error={!!lastNameIsError}
@@ -154,9 +154,9 @@ const Form = () => {
         <TextField
           className={classes.root}
           id="outlined-basic"
-          label="Firstname"
+          label="Prénom"
           variant="outlined"
-          name="firstname"
+          name="Prénom"
           onChange={(e) => setFirstName(e.target.value)}
           onBlur={HandleBlurFirstName}
           error={!!firstNameIsError}
@@ -196,7 +196,7 @@ const Form = () => {
       </div>
       <div className="muiButton">
         <Button variant="contained" onClick={handleSubmit}>
-          Send
+          Envoyer
         </Button>
       </div>
     </div>

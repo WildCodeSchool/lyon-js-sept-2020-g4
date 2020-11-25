@@ -8,7 +8,7 @@ function Rules() {
   return (
     <div className="container">
       <div className={showRules ? 'Rules' : 'Rules-off'}>
-        <h2>Rules</h2>
+        <h2>Règles</h2>
         <p className="rulesText">
           Tu es un extra-terrestre qui vient de se poser sur le soleil (oklm),
           et tu remarque plein de petite balles marrantes qui tournent dans le
@@ -24,7 +24,7 @@ function Rules() {
           <br />A toi de jouer !!
         </p>
         <Button variant="contained" type="submit" onClick={handleClick}>
-          Choose a Character
+          Choisis ton personnage
         </Button>
       </div>
     </div>
