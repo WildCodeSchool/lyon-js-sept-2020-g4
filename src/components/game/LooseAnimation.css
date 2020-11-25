@@ -53,12 +53,12 @@
   }
 }
 
-@media screen and (min-widht:1024px){
-  .rocket-miss{
+@media screen and (min-widht: 1024px) {
+  .rocket-miss {
     width: 200px;
     height: 200px;
   }
-  .planet-loose{
+  .planet-loose {
     width: 200px;
     height: 200px;
   }

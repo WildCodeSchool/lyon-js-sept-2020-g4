@@ -36,7 +36,7 @@ const CountDownInterval = () => {
       <div className="rocket-container">
         <h1 className="rocket-title">Prochain décollage de SpaceX </h1>
         <div className="countdown">
-           <p>
+          <p>
             {days} jours {hours} heures
             <br /> {minutes} minutes {seconds} secondes
           </p>
