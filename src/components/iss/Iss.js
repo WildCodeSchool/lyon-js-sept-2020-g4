@@ -4,7 +4,7 @@ import axios from 'axios';
 import L from 'leaflet';
 
 import './iss.css';
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
+import { MapContainer, Marker, TileLayer } from 'react-leaflet';
 import iconIss from './issIcon.png';
 
 class IssStatus extends React.Component {

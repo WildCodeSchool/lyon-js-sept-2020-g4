@@ -24,10 +24,9 @@ export default function App() {
                 <Route exact path="/" component={Home} />
                 <Route exact path="/start" component={Start} />
                 <Route exact path="/game" component={Game} />
-
                 <Route exact path="/about">
-                  <FormValidation />
                   <About />
+                  <FormValidation />
                 </Route>
                 <Route exact path="/:id" component={PlanetsDetails} />
                 <Route component={NotFoundPage} />
