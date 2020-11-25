@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
       color: 'white',
     },
     '&:hover .MuiInputLabel-outlined': {
-      color: 'red',
+      color: 'white',
       fontWeight: 'bold',
     },
     // Label qui va sur la bordure
