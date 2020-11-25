@@ -12,7 +12,7 @@ function About() {
     {
       name: 'Romain',
       description:
-        'A l’échelle cosmique, l’eau liquide est plus rare que l’or. Hubert Reeves...',
+        'A l’échelle cosmique, l’eau liquide est plus rare que l’or. Hubert Reeves - Astrophysicien',
       avatar:
         'https://cdn.discordapp.com/attachments/768372391960117251/781089297478320138/Romain.png',
       github: 'https://github.com/Rom-mtl',
@@ -53,7 +53,9 @@ function About() {
               <a href={user.github} target="blank">
                 <Card className="card-about">
                   <CardActionArea>
-                    <CardMedia>
+                    <CardMedia
+                      style={{ backgroundColor: 'rgba(46, 64, 83, 1)' }}
+                    >
                       <img
                         src={user.avatar}
                         alt={user.name}

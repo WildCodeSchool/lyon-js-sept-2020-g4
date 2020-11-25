@@ -13,7 +13,7 @@ const NavBar = () => {
           <ul>
             <div className="ourSupaLogo">
               <img
-                src="https://cdn.discordapp.com/attachments/768372391960117251/781103080862908426/logo.png"
+                src="https://cdn.discordapp.com/attachments/768372391960117251/781113562998243378/logo.png"
                 alt="le logo"
                 width="150px"
                 height="auto"
