@@ -1,9 +1,10 @@
 .box {
-  border: solid;
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.75);
   width: 100%;
   display: flex;
-
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
   background-color: rgba(46, 64, 83, 0.6);
 }
 .box,
@@ -13,30 +14,34 @@ li {
 }
 
 .caracsContainer {
-  margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  margin: 100px 200px 30px 200px;
+  padding: 50px;
 }
 
-.planetsImg {
-  align-self: center;
-}
-
-#caracList h2 {
-  color: white;
-  font-size: 30px;
-  font-family: 'Comic Neue', cursive;
-}
 #caracList ul {
   font-family: 'Comic Neue', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
 }
 
-h2 {
+#caracList ul li {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+.textDetails {
+  padding-left: 20px;
+}
+
+.planetsTitle {
   text-align: center;
-  color: white;
   font-family: 'Comic Neue', cursive;
+  margin-bottom: 20px;
+  font-size: 50px;
 }
 
 html {
@@ -60,11 +65,18 @@ html {
   animation-duration: 10000ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  /* transform: rotate(3deg);
-  transform: rotate(0.3rad);
-  transform: rotate(3grad);
-  transform: rotate(0.03turn); 
-  */
+  margin-right: 50px;
+  margin-bottom: 100px;
+}
+.planetsImgAndplanetsText {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.planetsDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @keyframes spin {
@@ -79,8 +91,11 @@ html {
 @media screen and (max-width: 600px) {
   .box {
     display: flex;
+    padding: 15px !important;
     flex-direction: column;
+    align-items: center;
     width: 100%;
+    padding-right: 0;
     background-color: rgba(46, 64, 83, 0.6);
   }
   .box,
@@ -102,9 +117,27 @@ html {
     margin-top: 50px;
   }
   .caracsContainer {
-    padding: 0 20px;
+    padding: 0;
+    margin: 100px 10px 30px 10px;
   }
-  .caracsContainer button {
-    margin-bottom: 20px;
+  #caracList ul li {
+    font-size: 1.4rem;
+    display: flex;
+  }
+  .planetsImgAndplanetsText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .planetsImg {
+    animation-name: spin;
+    animation-duration: 10000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .planetsTitle {
+    margin-bottom: 50px;
   }
 }

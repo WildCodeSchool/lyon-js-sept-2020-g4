@@ -6,14 +6,14 @@ import { GameContext } from './GameContext';
 
 function Game() {
   /* DECLARATION DES HOOKS STATE AVEC USESTATE, UNE POUR CHAQUE VARIABLE: */
-  const [ammo, setAmmo] = useState('Choose a kind of ammo');
+  const [ammo, setAmmo] = useState('Choisis ta munition');
   const [ammoImg, setAmmoImg] = useState('./rocketProjet/emptyHeadRocket.png');
 
   const [ammoDescription, setAmmoDescription] = useState('');
 
   const [planet, setPlanet] = useState('Votre Cible arrive !');
 
-  const [cannon, setCannon] = useState('Choose a Range Canon');
+  const [cannon, setCannon] = useState('Choisis la portée');
   const [cannonImg, setCannonImg] = useState(
     './rocketProjet/emptyRangeRocket.png'
   );
@@ -55,11 +55,11 @@ function Game() {
     setCannon(e.target.id);
 
     switch (e.target.id) {
-      case 'Canon Long':
+      case 'Longue portée':
         setCanonDescription(planets[2][0].description);
         setCannonImg('./rocketProjet/longRangeRocket-test.png');
         break;
-      case 'Canon Court':
+      case 'Courte portée':
         setCanonDescription(planets[2][1].description);
         setCannonImg('./rocketProjet/shortRangeRocket-test.png');
         break;
@@ -76,55 +76,55 @@ function Game() {
     if (
       planet.planet === 'Mars' &&
       ammo === 'Algues' &&
-      cannon === 'Canon Court'
+      cannon === 'Courte portée'
     ) {
       setVictory(true);
     } else if (
       planet.planet === 'Jupiter' &&
       ammo === 'Napalm' &&
-      cannon === 'Canon Court'
+      cannon === 'Courte portée'
     ) {
       setVictory(true);
     } else if (
       planet.planet === 'Saturne' &&
       ammo === 'Napalm' &&
-      cannon === 'Canon Long'
+      cannon === 'Longue Portée'
     ) {
       setVictory(true);
     } else if (
       planet.planet === 'Uranus' &&
       ammo === 'Foreuse' &&
-      cannon === 'Canon Long'
+      cannon === 'Longue Portée'
     ) {
       setVictory(true);
     } else if (
       planet.planet === 'Mercure' &&
       ammo === 'Napalm' &&
-      cannon === 'Canon Court'
+      cannon === 'Courte portée'
     ) {
       setVictory(true);
     } else if (
       planet.planet === 'Venus' &&
       ammo === 'Algues' &&
-      cannon === 'Canon Court'
+      cannon === 'Courte portée'
     ) {
       setVictory(true);
     } else if (
       planet.planet === 'Pluton' &&
       ammo === 'Foreuse' &&
-      cannon === 'Canon Long'
+      cannon === 'Longue Portée'
     ) {
       setVictory(true);
     } else if (
       planet.planet === 'Neptune' &&
-      ammo === 'foreuse' &&
-      cannon === 'Canon Long'
+      ammo === 'Foreuse' &&
+      cannon === 'Longue Portée'
     ) {
       setVictory(true);
     } else if (
       planet.planet === 'Terre' &&
       ammo === 'Napalm' &&
-      cannon === 'Canon Court'
+      cannon === 'Courte portée'
     ) {
       setVictory(true);
     } else {
@@ -132,37 +132,103 @@ function Game() {
     }
     setPlanet(planets[0][Math.floor(Math.random() * planets[0].length)]);
   };
+
   return (
     <div className={showGame ? 'gamedisplay' : 'gamedisplay-off'}>
       <div className="gameBackgroundOn">
-        <p className="customYourWpn">YOUR TARGET IS : {planet.planet}</p>
-        <div className="characterPlanets">
+        <p className="customYourWpn">Ta cible est : {planet.planet}</p>
+        <p className="customYourWpn">Personnalise ton missile : </p>
+
+        <div className="characterPlanetsDesktop">
           <div className="characterSelected">
             {characterChoice === 'First' ? (
-              <img src="Alien1.png" alt="First Alien" />
+              <img
+                className="characterImg"
+                src="monster1.png"
+                alt="First Alien"
+              />
             ) : (
-              <img src="Alien3.png" alt="Je s'appel Groot" />
+              <img
+                className="characterImg"
+                src="Alien3.png"
+                alt="Je s'appel Groot"
+              />
             )}
+          </div>
+          <div className="rocketBuild">
+            <div className="customRocketContainer">
+              <img
+                className="smallImg"
+                id="botRocket"
+                alt="test1"
+                src={cannonImg}
+              />
+              <img
+                className="smallImg"
+                id="bodyRocketalt"
+                alt="test1"
+                src="./rocketProjet/bodyRocket-test.png"
+              />
+              <img
+                className="smallImg"
+                id="headRocketalt"
+                alt="test1"
+                src={ammoImg}
+              />
+            </div>
           </div>
           <div className="planetRandomized">
             <img alt="generated planets" src={planet.url} />
           </div>
         </div>
+        <div className="characterPlanetsMobile">
+          <div className="characterSelected">
+            {characterChoice === 'First' ? (
+              <img className="smallImg" src="monster1.png" alt="First Alien" />
+            ) : (
+              <img
+                className="smallImg"
+                src="Alien3.png"
+                alt="Je s'appel Groot"
+              />
+            )}
+          </div>
+          <div className="planetRandomized">
+            <img
+              className="smallImg"
+              alt="generated planets"
+              src={planet.url}
+            />
+          </div>
+        </div>
+        <div className="rocketBuildMobile">
+          <div className="customRocketContainer">
+            <img
+              className="smallImg"
+              id="botRocket"
+              alt="test1"
+              src={cannonImg}
+            />
+            <img
+              className="smallImg"
+              id="bodyRocketalt"
+              alt="test1"
+              src="./rocketProjet/bodyRocket-test.png"
+            />
+            <img
+              className="smallImg"
+              id="headRocketalt"
+              alt="test1"
+              src={ammoImg}
+            />
+          </div>
+        </div>
         {/* MISE EN PLACE DU CUSTOM ROCKET, IL CONTIENT 2 IMAGES GEREES PAR DES
         USESTATES POUR FAIRE VARIER LA PROPULSION ET LA TËTE ET 1 IMAGE FIXE POUR LE BODY DE LA ROCKET */}
-        <p className="customYourWpn">Customize your rocket : </p>
-        <div className="customRocketContainer">
-          <img id="botRocket" alt="test1" src={cannonImg} />
-          <img
-            id="bodyRocketalt"
-            alt="test1"
-            src="./rocketProjet/bodyRocket-test.png"
-          />
-          <img id="headRocketalt" alt="test1" src={ammoImg} />
-        </div>
+
         <div className="containerWpns">
           <div className="chooseAmo">
-            <h2>Ammo:</h2>
+            <h2>Munition</h2>
             {planets[1].map((item) => (
               <div
                 key={item.munition}
@@ -172,12 +238,17 @@ function Game() {
                 role="button"
                 tabIndex={0}
               >
-                <img id={item.munition} alt="choose a weapon" src={item.url} />
+                <img
+                  className="smallImg"
+                  id={item.munition}
+                  alt="choose a weapon"
+                  src={item.url}
+                />
               </div>
             ))}
           </div>
           <div className="chooseRange">
-            <h2>Range:</h2>
+            <h2>Portée</h2>
 
             {planets[2].map((item) => (
               <div
@@ -188,11 +259,19 @@ function Game() {
                 role="button"
                 tabIndex={0}
               >
-                <img id={item.canon} alt="choose a Canon" src={item.url} />
+                <img
+                  className="smallImg"
+                  id={item.canon}
+                  alt="choose a Canon"
+                  src={item.url}
+                />
               </div>
             ))}
           </div>
         </div>
+        <Button variant="contained" onClick={matchGame} type="submit">
+          TIRER !!
+        </Button>
         <div className="descriptionAmo">
           <p id="selectedwpn"> </p>
 
@@ -203,9 +282,6 @@ function Game() {
           <p className="selectedWpns">{cannon}</p>
           <p>{canonDescription}</p>
         </div>
-        <Button variant="contained" onClick={matchGame} type="submit">
-          TIRER !!
-        </Button>
       </div>
     </div>
   );

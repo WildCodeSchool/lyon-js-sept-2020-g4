@@ -1,3 +1,7 @@
+/* * {
+  overflow: hidden;
+} */
+
 .gameBackgroundOn {
   background-size: cover;
   color: white;
@@ -6,22 +10,21 @@
   align-items: center;
   padding: 20px 0;
   background-color: rgba(46, 64, 83, 0.6);
-  border: solid white;
   margin: 20px 20px;
 }
 
 .gameBackgroundOff {
   display: none;
 }
-.characterPlanets {
+.characterPlanetsDesktop {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   margin-bottom: 20px;
 }
 
-img {
+.smallImg {
   width: 90px;
 }
 
@@ -48,7 +51,7 @@ img {
 
 .containerWpns {
   display: flex;
-  border: solid;
+  border: solid 1px;
   margin-bottom: 20px;
 }
 
@@ -59,32 +62,98 @@ img {
   align-items: center;
 }
 
-#customRocket {
-}
-
 /* REGLAGE DU CUSTOM DE LA ROCKET ET DES TITRES DE CEUX CI*/
 .customRocketContainer {
   display: flex;
   height: 200px;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }
 
 .selectedWpns {
   font-size: 25px;
-  background-color: rgb(31, 83, 115);
+  background-color: rgba(46, 64, 83, 0.8);
   margin-left: 15px;
   margin-right: 15px;
+  padding: 5px;
 }
 
 .customYourWpn {
   font-size: 25px;
-  background-color: rgb(31, 83, 115);
+  background-color: rgba(46, 64, 83, 0.8);
+  margin: 5px;
+  padding: 5px;
 }
-
+.planetRandomized {
+  width: 150px;
+}
 .planetRandomized img {
-  width: 80%;
+  width: 100%;
   margin-top: 15px;
 }
 
 .descriptionRange {
   margin-top: 15px;
+}
+.characterPlanetsMobile {
+  display: none;
+}
+.rocketBuildMobile {
+  display: none;
+}
+.characterImg {
+  width: 150px;
+}
+
+@media screen and (max-width: 600px) {
+  .characterPlanetsMobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .characterPlanetsDesktop {
+    display: none;
+  }
+  .rocketBuildMobile {
+    display: block;
+  }
+  .gameBackgroundOn {
+    margin-top: 100px;
+  }
 }

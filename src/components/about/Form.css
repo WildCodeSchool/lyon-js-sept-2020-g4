@@ -1,15 +1,9 @@
-/*body{
-    background-image: url("https://i.ytimg.com/vi/DQJa-uy3Kq8/maxresdefault.jpg");
-    background-size: 100%;
-    background-repeat: repeat;
-}*/
-
 .form-contact {
   display: flex;
   flex-direction: column;
-  border: solid white;
-  margin: 100px 20px 0 20px;
-  padding: 20px 0;
+  align-items: center;
+  margin: 100px 30px 100px 30px;
+  padding: 50px;
   background-color: rgba(46, 64, 83, 0.6);
   text-align: center;
 }
@@ -17,25 +11,16 @@
 .contact-name {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  align-items: center;
   width: 100%;
 }
 
-.contact-lastname {
-  width: 20%;
-  color: white;
-}
-
-.contact-firstname {
-  width: 20%;
-}
-
-.contact-email {
-  width: 40%;
-}
-
+.contact-lastname,
+.contact-firstname,
+.contact-email,
 .contact-message {
-  width: 40%;
+  color: white;
+  margin: 20px;
 }
 
 @media screen and (max-width: 600px) {
@@ -74,5 +59,6 @@
 
   .form-contact {
     justify-content: center;
+    margin: 20px;
   }
 }

@@ -1,14 +1,16 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import About from './components/about/About';
 import PlanetsDetails from './components/planet/PlanetsDetails';
 import Home from './components/home/Home';
 import Start from './components/home/Start';
 import Game from './components/game/Game';
+import NavBar from './components/home/NavBar';
 import FormValidation from './components/about/Form';
 import { GameProvider } from './components/game/GameContext';
 import { StartProvider } from './components/home/StartContext';
+import NotFoundPage from './components/home/NotFoundPage';
 
 export default function App() {
   return (
@@ -17,34 +19,17 @@ export default function App() {
         <div className="App">
           <Router>
             <div className="mainContainer">
-              <nav>
-                <div className="toggle">
-                  <input type="checkbox" />
-                  <span />
-                  <span />
-                  <span />
-                  <ul>
-                    <li>
-                      <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                      <Link to="/game">Game</Link>
-                    </li>
-                    <li>
-                      <Link to="/about">About</Link>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
+              <NavBar />
               <Switch>
                 <Route exact path="/" component={Home} />
-                <Route path="/start" component={Start} />
-                <Route path="/game" component={Game} />
-                <Route path="/about">
-                  <FormValidation />
+                <Route exact path="/start" component={Start} />
+                <Route exact path="/game" component={Game} />
+                <Route exact path="/about">
                   <About />
+                  <FormValidation />
                 </Route>
                 <Route exact path="/:id" component={PlanetsDetails} />
+                <Route component={NotFoundPage} />
               </Switch>
             </div>
           </Router>

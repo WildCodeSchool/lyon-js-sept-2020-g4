@@ -3,21 +3,30 @@ import './Form.css';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
+import axios from 'axios';
 
-const useStyles = makeStyles(() => ({
+require('dotenv').config();
+
+const useStyles = makeStyles((theme) => ({
   root: {
+    // Utilisation des breakpoint avec materialUI
+
+    [theme.breakpoints.up('sm')]: {
+      width: '600px',
+    },
     /* Cadre TextField */
     '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
       borderColor: 'white',
     },
     '&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
       borderColor: 'red',
+      fontWeight: 'bold',
     },
     '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
-      borderColor: 'purple',
+      borderColor: 'orange',
     },
     '& .MuiOutlinedInput-input': {
-      color: 'green',
+      color: 'orange',
     },
     '&:hover .MuiOutlinedInput-input': {
       color: 'white',
@@ -30,10 +39,12 @@ const useStyles = makeStyles(() => ({
       color: 'white',
     },
     '&:hover .MuiInputLabel-outlined': {
-      color: 'red',
+      color: 'white',
+      fontWeight: 'bold',
     },
+    // Label qui va sur la bordure
     '& .MuiInputLabel-outlined.Mui-focused': {
-      color: 'purple',
+      color: 'orange',
     },
   },
 }));
@@ -70,10 +81,10 @@ const Form = () => {
     const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     if (email.length <= 0) {
       setEmailIsError(true);
-      setMessageErrorEmail('email is required');
+      setMessageErrorEmail('email requis');
     } else if (!regex.test(email)) {
       setEmailIsError(true);
-      setMessageErrorEmail('invalid email');
+      setMessageErrorEmail('email invalide');
     } else {
       setEmailIsError(false);
     }
@@ -94,7 +105,7 @@ const Form = () => {
     HandleBlurEmail();
     HandleBlurMessage();
     e.preventDefault();
-
+    console.log(process.env.API_KEY);
     if (
       !(lastName.length <= 0) &&
       !(firstName.length <= 0) &&
@@ -102,7 +113,19 @@ const Form = () => {
       regex.test(email) &&
       !(message.length <= 0)
     ) {
-      alert('Form send');
+      axios
+        .post(
+          `https://contact-form-p2.herokuapp.com/contact?apiKey=${window.API_KEY}`,
+          {
+            name: `${lastName} ${firstName}`,
+            email,
+            message,
+          }
+        )
+        .then(() => {
+          console.log('ok');
+        });
+      alert('Votre message a bien été envoyé. Merci !');
       setLastName('');
       setFirstName('');
       setEmail('');
@@ -112,14 +135,14 @@ const Form = () => {
 
   return (
     <div className="form-contact">
-      <h1>Contact Us</h1>
+      <h1>Nous contacter</h1>
       <div className="contact-lastname">
         <TextField
           className={classes.root}
           id="outlined-basic"
-          label="Lastname"
+          label="Nom"
           variant="outlined"
-          name="lastname"
+          name="Nom"
           onChange={(e) => setLastName(e.target.value)}
           onBlur={HandleBlurLastName}
           error={!!lastNameIsError}
@@ -131,9 +154,9 @@ const Form = () => {
         <TextField
           className={classes.root}
           id="outlined-basic"
-          label="Firstname"
+          label="Prénom"
           variant="outlined"
-          name="firstname"
+          name="Prénom"
           onChange={(e) => setFirstName(e.target.value)}
           onBlur={HandleBlurFirstName}
           error={!!firstNameIsError}
@@ -173,7 +196,7 @@ const Form = () => {
       </div>
       <div className="muiButton">
         <Button variant="contained" onClick={handleSubmit}>
-          Send
+          Envoyer
         </Button>
       </div>
     </div>

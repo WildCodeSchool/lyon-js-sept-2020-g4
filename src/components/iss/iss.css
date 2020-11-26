@@ -11,6 +11,7 @@
   flex-direction: column;
   align-items: center;
   flex: 1;
+  width: 100%;
 }
 .issContainer h1 {
   margin-bottom: 50px;
@@ -34,9 +35,6 @@
   font-size: 20px;
   font-family: 'Comic Neue', cursive;
 } */
-.issContainer button {
-  margin: 20px;
-}
 
 @keyframes bounce {
   0%,
@@ -69,4 +67,29 @@
 .latitude {
   font-family: 'Comic Neue', cursive;
   font-size: 20px;
+}
+
+.leaflet-container {
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.issMapContainer {
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  border: solid 1px black;
+  width: 80%;
+}
+
+.issMapContainer p {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.leaflet-div-icon {
+  background: none;
+  border: none;
 }

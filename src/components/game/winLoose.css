@@ -1,13 +1,13 @@
 .loose {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   align-items: center;
-  margin: auto;
+  margin-top: 100px;
 }
 
 .loose img {
-  width: 100%;
+  width: 30%;
 }
 
 .victory {
@@ -20,4 +20,16 @@
 
 .victory img {
   width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .loose img {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .loose {
+    margin-top: 0;
+  }
 }

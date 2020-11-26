@@ -1,0 +1,73 @@
+.animation-loose {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 50px;
+}
+
+.div-rocket-miss {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 75px;
+}
+
+.div-planet-loose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 75px;
+}
+
+.rocket-miss {
+  animation-duration: 3s;
+  animation-name: rocketmiss;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  transform: rotate(45deg);
+}
+
+.planet-loose {
+  animation: rotatePlanet 10s infinite linear;
+}
+
+@keyframes rocketmiss {
+  0% {
+    margin-right: 0%;
+  }
+
+  100% {
+    margin-left: 60%;
+    visibility: hidden;
+  }
+}
+
+@keyframes rotatePlanet {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .rocket-miss {
+    width: 300px;
+    height: 300px;
+  }
+  .planet-loose {
+    width: 300px;
+    height: 300px;
+  }
+  .animation-loose img {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .animation-loose img {
+    width: 100px;
+  }
+}
