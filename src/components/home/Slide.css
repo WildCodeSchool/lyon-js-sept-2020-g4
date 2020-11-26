@@ -21,7 +21,7 @@ a {
 
 @media screen and (max-width: 600px) {
   .slide {
-    width: 30%;
+    width: 50%;
     align-self: center;
   }
 }

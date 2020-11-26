@@ -9,7 +9,6 @@
 .containerCharacters {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
 }
 .img-characters {
   display: flex;

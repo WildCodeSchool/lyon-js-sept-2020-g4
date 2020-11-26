@@ -55,7 +55,7 @@ function Game() {
     setCannon(e.target.id);
 
     switch (e.target.id) {
-      case 'Longue Portée':
+      case 'Longue portée':
         setCanonDescription(planets[2][0].description);
         setCannonImg('./rocketProjet/longRangeRocket-test.png');
         break;
@@ -269,6 +269,9 @@ function Game() {
             ))}
           </div>
         </div>
+        <Button variant="contained" onClick={matchGame} type="submit">
+          TIRER !!
+        </Button>
         <div className="descriptionAmo">
           <p id="selectedwpn"> </p>
 
@@ -279,9 +282,6 @@ function Game() {
           <p className="selectedWpns">{cannon}</p>
           <p>{canonDescription}</p>
         </div>
-        <Button variant="contained" onClick={matchGame} type="submit">
-          TIRER !!
-        </Button>
       </div>
     </div>
   );
