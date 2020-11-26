@@ -33,7 +33,7 @@
   color: white;
   text-align: center;
   margin-top: 100px;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .renderingPlanets {
@@ -59,6 +59,10 @@
   }
   .carousel-nav {
     width: 100%;
+  }
+
+  .carousel-title {
+    margin-top: 0;
   }
 }
 /*Flex for rendering planets to align all the items on column in the main page*/

@@ -22,16 +22,14 @@
   width: 100%;
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width: 600px) {
   .loose img {
     width: 50%;
   }
 }
 
-@media screen and (min-width:1024px){
-  .loose{
+@media screen and (min-width: 1024px) {
+  .loose {
     margin-top: 0;
   }
 }
-
-

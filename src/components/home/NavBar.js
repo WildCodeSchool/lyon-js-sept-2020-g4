@@ -12,13 +12,16 @@ const NavBar = () => {
           <span />
           <ul>
             <div className="ourSupaLogo">
-              <img
-                src="https://cdn.discordapp.com/attachments/768372391960117251/781113562998243378/logo.png"
-                alt="le logo"
-                width="150px"
-                height="auto"
-              />
+              <Link to="/">
+                <img
+                  src="https://cdn.discordapp.com/attachments/768372391960117251/781113562998243378/logo.png"
+                  alt="le logo"
+                  width="150px"
+                  height="auto"
+                />
+              </Link>
             </div>
+
             <li>
               <Link to="/">Accueil</Link>
             </li>

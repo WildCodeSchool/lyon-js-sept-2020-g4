@@ -66,7 +66,7 @@ class IssStatus extends React.Component {
 
     return (
       <div className="issContainer">
-        <h1>Ou se trouve l'ISS ?</h1>
+        <h1>Où se trouve l'ISS ?</h1>
         <div className="issMapContainer">
           <MapContainer center={marker} zoom={1} scrollWheelZoom={false}>
             <TileLayer
