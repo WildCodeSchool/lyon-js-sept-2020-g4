@@ -64,58 +64,65 @@ class PlanetDetails extends React.Component {
                     <li>
                       <GiPathDistance size={70} />{' '}
                       <span className="textDetails">
-                        {e.fromSun} Millions km from sun
+                        Distance par rapport au soleil : {e.fromSun} millions de
+                        km
                       </span>
                     </li>
                     <br />
                     <li>
                       {' '}
                       <GiPlanetCore size={70} />
-                      <span className="textDetails">{e.composition}</span>
+                      <span className="textDetails">
+                        Composition : {e.composition}
+                      </span>
                     </li>
                     <br />
                     <li>
                       <FaTemperatureLow size={70} />{' '}
-                      <span className="textDetails">Min: {e.tempMin}°</span>
+                      <span className="textDetails">
+                        Température min : {e.tempMin}°
+                      </span>
                     </li>
                     <br />
                     <li>
                       <FaTemperatureHigh size={70} />{' '}
-                      <span className="textDetails">Max: {e.tempMax}°</span>
+                      <span className="textDetails">
+                        Température max: {e.tempMax}°
+                      </span>
                     </li>
                     <br />
                     <li>
                       <RiSpeedLine size={70} />
                       <span className="textDetails">
-                        rotation: {e.rotation} km/h
+                        Vitesse de rotation: {e.rotation} km/h
                       </span>
                     </li>
                     <br />
                     <li>
                       <FiRotateCcw size={70} />
                       <span className="textDetails">
-                        Période de roration: {e.periodeRotation}h
+                        Période de rotation: {e.periodeRotation}h
                       </span>
                     </li>
                     <br />
                     <li>
                       <RiSunLine size={70} />
                       <span className="textDetails">
-                        Révolution Solaire: {e.revolutionSolaire} jours
+                        Révolution solaire: {e.revolutionSolaire} jours
                       </span>
                     </li>
                     <br />
                     <li>
                       <FaGrav size={70} />
                       <span className="textDetails">
-                        Gravity: {e.gravity} m/s²
+                        Gravité : {e.gravity} m/s²
                       </span>
                     </li>
                     <br />
                     <li>
                       <FaWeightHanging size={70} />
                       <span className="textDetails">
-                        Density: {e.density} g/cm3
+                        Densité : {e.density} g/cm3
                       </span>
                     </li>
                     <br />

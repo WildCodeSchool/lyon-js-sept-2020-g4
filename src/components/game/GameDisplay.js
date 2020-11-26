@@ -228,7 +228,7 @@ function Game() {
 
         <div className="containerWpns">
           <div className="chooseAmo">
-            <h2>Munitions</h2>
+            <h2>Munition</h2>
             {planets[1].map((item) => (
               <div
                 key={item.munition}

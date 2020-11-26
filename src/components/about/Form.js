@@ -125,7 +125,7 @@ const Form = () => {
         .then(() => {
           console.log('ok');
         });
-      alert('Form send');
+      alert('Votre message a bien été envoyé. Merci !');
       setLastName('');
       setFirstName('');
       setEmail('');
@@ -135,7 +135,7 @@ const Form = () => {
 
   return (
     <div className="form-contact">
-      <h1>Contact Us</h1>
+      <h1>Nous contacter</h1>
       <div className="contact-lastname">
         <TextField
           className={classes.root}
